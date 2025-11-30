@@ -1,4 +1,4 @@
-/* Portfolio Website V1 - Blue Accent Corporate Theme */
+/* Portfolio Website - Blue Corporate Theme (Full-width Sections) */
 
 /* Global Styles */
 * {
@@ -15,8 +15,8 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navigation */
-header {
+/* Header / Navigation */
+header.navbar {
   width: 100%;
   position: fixed;
   top: 0;
@@ -24,50 +24,44 @@ header {
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   z-index: 1000;
-}
-
-.navbar {
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
-.navbar .logo {
+header.navbar .logo {
   font-size: 1.5rem;
   font-weight: 700;
   color: #0d6efd;
 }
 
-.navbar ul {
+header.navbar nav ul.nav-links {
   display: flex;
   gap: 30px;
 }
 
-.navbar ul li {
+header.navbar nav ul.nav-links li {
   list-style: none;
 }
 
-.navbar ul li a {
+header.navbar nav ul.nav-links li a {
   text-decoration: none;
   color: #222;
   font-weight: 500;
   transition: 0.3s;
 }
 
-.navbar ul li a:hover {
+header.navbar nav ul.nav-links li a:hover {
   color: #0d6efd;
 }
 
 /* Hero Section */
 .hero {
-  max-width: 1200px;
-  margin: auto;
-  padding-top: 140px;
-  padding-bottom: 100px;
+  width: 100%;
+  padding: 140px 20px 100px 20px;
   text-align: center;
+  background: #f8f9fa;
 }
 
 .hero h1 {
@@ -76,22 +70,17 @@ header {
   margin-bottom: 15px;
 }
 
-.hero h2 {
-  font-size: 1.4rem;
-  font-weight: 500;
+.hero h1 span {
   color: #0d6efd;
-  margin-bottom: 20px;
 }
 
 .hero p {
-  max-width: 800px;
-  margin: auto;
   font-size: 1.1rem;
   color: #444;
   margin-bottom: 30px;
 }
 
-.btn-primary {
+.btn {
   display: inline-block;
   background: #0d6efd;
   color: #fff;
@@ -103,41 +92,115 @@ header {
   font-weight: 600;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: #084298;
 }
 
-/* About Section */
+/* Sections */
 section {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
   padding: 80px 20px;
+  text-align: center;
 }
 
 section h2 {
   font-size: 2rem;
   font-weight: 700;
-  text-align: center;
   color: #0d6efd;
   margin-bottom: 40px;
+}
+
+section p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 800px;
+  margin: auto;
 }
 
 /* Footer */
 footer {
   background: #f8f9fa;
   text-align: center;
-  padding: 25px;
+  padding: 25px 20px;
   border-top: 1px solid #e2e8f0;
   color: #555;
 }
 
-/* Responsive */
+/* Responsive Styles */
+
+/* Large tablets / small desktops */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets / Mobile */
 @media (max-width: 768px) {
-  .navbar ul {
-    display: none; /* convert to mobile menu later */
+  header.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  header.navbar nav ul.nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Mobile menu hidden by default */
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  header.navbar nav ul.nav-links.show {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  section p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  section p {
+    font-size: 0.9rem;
   }
 }
