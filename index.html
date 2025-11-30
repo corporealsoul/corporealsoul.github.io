@@ -1,172 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Anup — DevOps / SRE Manager</title>
-  <meta name="description" content="Experienced DevOps/SRE Manager — infrastructure automation, CI/CD, cloud operations, production reliability." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b1020; --card:#0f1724; --muted:#9fb0c8; --accent:#60a5fa; --glass: rgba(255,255,255,0.04);
-      --radius:14px; --container:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#061022 0%, #071428 60%);color:#e6eef7}
-    a{color:inherit}
-    .container{max-width:var(--container);margin:36px auto;padding:28px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:20px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    header{display:flex;gap:20px;align-items:center}
-    .avatar{width:96px;height:96px;border-radius:16px;flex:0 0 96px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042033;font-size:28px}
-    h1{margin:0;font-size:28px}
-    .subtitle{color:var(--muted);margin-top:6px}
-    .cta{margin-top:12px;display:flex;gap:10px}
-    .btn{background:var(--accent);color:#042033;padding:8px 14px;border-radius:10px;font-weight:700;text-decoration:none}
-    .layout{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:22px}
-    .section{margin-bottom:14px}
-    h3{margin:0 0 8px 0}
-    .muted{color:var(--muted);font-size:15px;line-height:1.6}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;font-weight:600;color:var(--muted);font-size:13px}
-    .timeline{display:grid;gap:10px}
-    .timeline-item{background:transparent;border-radius:10px;padding:12px;border-left:3px solid rgba(96,165,250,0.12)}
-    .projects{display:grid;gap:10px}
-    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));}
-    footer{text-align:center;margin-top:18px;color:var(--muted);font-size:13px}
-    .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-    .icons{display:flex;gap:10px}
-    .link-muted{color:var(--muted);text-decoration:none}
-    @media(max-width:980px){.layout{grid-template-columns:1fr}.avatar{width:80px;height:80px;font-size:22px}}
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anup | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container card" role="main">
-    <div class="topbar">
-      <div style="display:flex;align-items:center;gap:12px">
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44'><rect rx='10' width='44' height='44' fill='%2360a5fa'/></svg>" alt="logo" style="width:44px;height:44px;border-radius:10px">
-        <div style="line-height:1">
-          <div style="font-weight:800">Anup — DevOps / SRE Manager</div>
-          <div class="subtitle">Infrastructure automation • CI/CD • Cloud operations • Production reliability</div>
-        </div>
-      </div>
-      <div class="icons">
-        <a class="link-muted" href="#contact">Contact</a>
-        <a class="link-muted" href="#projects">Projects</a>
-        <a class="link-muted" href="#resume">Resume</a>
-      </div>
-    </div>
-
-    <header>
-      <div class="avatar">AN</div>
-      <div style="flex:1">
-        <h1>Anup — DevOps / SRE Manager</h1>
-        <p class="subtitle">Leading global teams and driving operational excellence across Europe, Brazil, and India. Automation-first, security-aware, delivery-focused.</p>
-        <div class="cta">
-          <a class="btn" href="#contact">Get in touch</a>
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn" id="downloadResume" href="#resume">Download Resume</a>
-        </div>
-      </div>
+    <header class="navbar">
+        <div class="logo">Anup</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="layout">
-      <section>
-        <div class="section card">
-          <h3>About</h3>
-          <p class="muted">Experienced DevOps/SRE Manager with a strong background in infrastructure automation, CI/CD, cloud operations, and production reliability, now leading global teams and driving operational excellence across Europe, Brazil, and India. Proven expertise in OS patching and upgrades, infrastructure provisioning, and secure deployment automation using Jenkins, Terraform, Ansible, Docker, Kubernetes, Nomad, Consul, and GCP.</p>
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span>Anup</span></h1>
+        <p>DevOps / SRE Engineer | Cloud | Automation | CI/CD</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </section>
 
-          <p class="muted">Successfully led end-to-end CI/CD pipelines and microservices deployments, supporting both modern containerized platforms and legacy enterprise systems via the SAP Ariba portal, ensuring seamless software delivery and zero-downtime releases. Automated and optimized cloud environments across GCP and Converge Cloud, focusing on capacity planning, resource optimization, performance, and cost efficiency. Strengthened infrastructure security through automated certificate rotation, secrets management, and credential governance using Vault and Terraform.</p>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Write about your profile here...</p>
+    </section>
 
-          <p class="muted">Hands-on experience in monitoring and incident management utilizing Splunk, Site24, Nomad, Cobalt, Inspector, and Front Doors, proactively identifying issues and minimizing service disruptions. Strong commitment to Infrastructure as Code (IaC), using Git, GitHub, and Perforce for configuration automation and compliance.</p>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+    </section>
 
-          <p class="muted">In the current role as Reporting Manager, responsible for leading cross-functional global teams, managing attendance, timesheets, resource allocation, task assignment, and ensuring operational visibility via JIRA dashboards, Confluence documentation, and sprint planning. Experienced in shift planning, workload distribution, approvals, and driving continuous improvement through feedback, coaching, and structured communication.</p>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+    </section>
 
-          <p class="muted">Actively collaborate with clients, leadership teams, engineering, DB, and security groups, providing timely status updates, progress reports, and performance tracking. Manage stakeholder expectations, streamline processes, and enhance delivery efficiency through strategic planning, automation, and process optimization.</p>
-
-          <p class="muted">Passionate about team development, conducting technical training, interviews, onboarding, and maintaining high-performance culture. Strong advocate for operational transparency, documentation standards, and scalable DevOps practices.</p>
-        </div>
-
-        <div class="section card" style="margin-top:14px">
-          <h3>Selected Projects & Impact</h3>
-          <div class="projects">
-            <div class="project">
-              <strong>CI/CD & Microservices Delivery</strong>
-              <div class="muted">Led end-to-end pipelines for microservices (containerized + legacy), achieving predictable, zero-downtime releases via Jenkins, Git workflows, and deployment orchestration.</div>
-            </div>
-            <div class="project">
-              <strong>Cloud Optimization & Automation</strong>
-              <div class="muted">Automated infra provisioning and cost-optimised cloud operations across GCP and Converge Cloud using Terraform, monitoring, and capacity planning.</div>
-            </div>
-            <div class="project">
-              <strong>Secrets & Certificate Management</strong>
-              <div class="muted">Implemented automated certificate rotation and secrets governance using Vault, Terraform, and CI jobs — reducing manual exposure and incidents.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section card" style="margin-top:14px">
-          <h3>Monitoring & Reliability</h3>
-          <div class="muted">Experienced with Splunk, Site24, Nomad, Cobalt, Inspector and Front Doors for alerting, incident response, and proactive reliability engineering. Built dashboards and runbooks to accelerate MTTR and improve SLO compliance.</div>
-        </div>
-
-        <div class="section card" style="margin-top:14px">
-          <h3 id="projects">Open Source / Tools</h3>
-          <div class="skills" style="margin-top:8px">
-            <div class="skill">Jenkins</div>
-            <div class="skill">Terraform</div>
-            <div class="skill">Ansible</div>
-            <div class="skill">Docker</div>
-            <div class="skill">Kubernetes</div>
-            <div class="skill">Nomad</div>
-            <div class="skill">Consul</div>
-            <div class="skill">GCP</div>
-            <div class="skill">Vault</div>
-            <div class="skill">Splunk</div>
-            <div class="skill">Prometheus</div>
-            <div class="skill">Grafana</div>
-          </div>
-        </div>
-
-      </section>
-
-      <aside>
-        <div class="card section">
-          <h3>Contact</h3>
-          <p class="muted">Location — Europe, Brazil & India</p>
-          <p class="muted">Open to leadership & advisory roles. Available for consulting and training engagements.</p>
-          <p style="margin-top:10px"><a class="btn" href="mailto:you@example.com">Email me</a></p>
-
-          <h4 style="margin-top:14px">Quick links</h4>
-          <p class="muted" style="margin:6px 0"><a class="link-muted" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></p>
-          <p class="muted" style="margin:6px 0"><a class="link-muted" href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></p>
-          <p class="muted" style="margin:6px 0"><a class="link-muted" id="resume" href="#">Resume (PDF)</a></p>
-        </div>
-
-        <div class="card section" style="margin-top:14px">
-          <h3>Reporting & People Ops</h3>
-          <div class="muted">Managed cross-functional teams — attendance, timesheets, resource allocation, task assignment, JIRA dashboards, Confluence docs, and sprint planning. Strong experience in shift planning and workload distribution.</div>
-        </div>
-
-        <div class="card section" style="margin-top:14px">
-          <h3>Availability</h3>
-          <p class="muted">Timezone overlap: Europe / India / Americas. Flexible for early/late meetings. Willing to travel for important stakeholder engagements.</p>
-        </div>
-      </aside>
-    </div>
-
-    <footer>
-      © <span id="yr"></span> Anup — Built with GitHub Pages • Template provided by ChatGPT
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    // simple resume download placeholder (replace href with real file link)
-    document.getElementById('downloadResume').addEventListener('click', function(e){
-      e.preventDefault();
-      alert('Replace the \"Resume (PDF)\" link in the HTML with a path to your actual resume file (resume.pdf) uploaded to the repo.');
-    });
-  </script>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: youremail@example.com</p>
+    </section>
 </body>
 </html>
