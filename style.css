@@ -1,1 +1,143 @@
+/* Portfolio Website V1 - Blue Accent Corporate Theme */
 
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #0d6efd;
+}
+
+/* Hero Section */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 140px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #084298;
+}
+
+/* About Section */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #e2e8f0;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* convert to mobile menu later */
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
