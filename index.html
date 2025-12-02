@@ -8,9 +8,11 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">Anup Kumar Mondal</div>
+        <a href="#home" class="logo">Anup Kumar Mondal</a>
         <nav>
-            <ul class="nav-links">
+            <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                &#9776; </button>
+            <ul class="nav-links" id="primary-navigation">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -41,7 +43,33 @@
 
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Email: youremail@example.com</p>
+        <p>Email: corporealsoul@outlook.com</p>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Anup Kumar Mondal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('show');
+        });
+
+        // Optional: Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if screen is small (based on CSS breakpoint 768px)
+                if (window.innerWidth <= 768) {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
