@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISS - Rocky-10</title>
+    
+    <link rel="stylesheet" href="../../../../style.css" /> 
+    
+    <link rel="stylesheet" href="initial-server-setup.css" />
+</head>
+<body>
+    <header class="navbar">
+        <a href="../../../../index.html" class="logo">Anup Kumar Mondal</a>
+        <nav>
+            <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">&#9776;</button>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="../../../../index.html#home">Home</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <section class="doc-page-section">
+        <div class="doc-container">
+            
+            <header class="doc-header">
+                <h1>Initial Server Setup with <span class="doc-title-command">Rocky-10</span></h1>
+                <p class="doc-summary">A detailed guide to viewing detailed file information in the Linux terminal.</p>
+            </header>
+
+            <article class="doc-article">
+                
+                <h2>Step-by-Step Executions</h2>
+                
+                <h3>Update repositories,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@localhost:~$ </span> <code class="input-command">sudo yum update -y</code>
+                </div>
+
+
+                <h3>Name assigned to the machine on the network,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@localhost:~$ </span> <code class="input-command">sudo vi /etc/hostname</code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@localhost:~$ </span> <code class="input-command">cat /etc/hostname</code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+corporealsoul-server
+                    </pre>
+                </div>
+
+
+                <h3>Resolve hostnames without the need for a DNS server,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@localhost:~$ </span> <code class="input-command">sudo vi /etc/hosts</code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@localhost:~$ </span> <code class="input-command">cat /etc/hosts</code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+192.168.56.4 corporealsoul-server
+                    </pre>
+                </div>
+
+
+                <h3>Configure Static IP,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@localhost:~$ </span> <code class="input-command">sudo nmtui </code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+Static Address : 192.168.56.4 
+Gateway : 192.168.56.1 
+DNS Server : 8.8.8.8, 8.8.4.4
+                    </pre>
+                </div>
+
+                <h3>Customizing the Shell Environment - User,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@corporealsoul-server:~$ </span> <code class="input-command">vi .bashrc </code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+export PS1="\[\e[01;37m\][\[\e[0m\]\[\e[01;32m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[01;34m\]\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;37m\]\t\[\e[0m\]\[\e[01;37m\] \W]\\$ \[\e[0m\]" 
+                    </pre>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@corporealsoul-server:~$ </span> <code class="input-command">source ~/.bashrc </code>
+                </div>
+
+            
+                <h3>Customizing the Shell Environment - Root,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">corporealsoul@corporealsoul-server:~$ </span> <code class="input-command">sudo su -  </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">root@corporealsoul-server:~# </span> <code class="input-command">vi .bashrc </code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+export PS1="\[\e[01;37m\][\[\e[0m\]\[\e[01;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[01;34m\]\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;37m\]\t\[\e[0m\]\[\e[01;37m\] \W]\\$ \[\e[0m\]"
+                    </pre>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">root@corporealsoul-server:~# </span> <code class="input-command">source ~/.bashrc </code>
+                </div>                
+
+
+                <h3>Generate a new SSH key pair,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">ssh-keygen -t ed25519 </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">ssh-copy-id corporealsoul@192.168.56.4 </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">ssh-copy-id corporealsoul@192.168.56.8 </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">cat ./.ssh/authorized_keys </code>
+                </div>
+
+
+                <h3>Elevated privileges (root access) without requiring a password,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo visudo </code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+corporealsoul ALL=(ALL) NOPASSWD:ALL
+                    </pre>
+                </div>
+
+
+                <h3>Required Software Installation,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum update -y  </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum install epel-release -y </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum install htop -y </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum install make -y </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum install git -y </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum install curl wget -y </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo yum install net-tools -y </code>
+                </div>
+
+
+                <h3>Manage Firewall,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo systemctl status firewalld.service </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo systemctl enable --now sshd </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo systemctl enable --now firewalld </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo firewall-cmd --permanent --add-service=ssh </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo firewall-cmd --permanent --add-service=http </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo firewall-cmd --permanent --add-service=https </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo firewall-cmd --reload </code>
+                </div>
+
+
+                <h3>Manage SELinux,</h3>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo setenforce 1 </code>
+                </div>
+                <div class="command-input-block">
+                    <span class="prompt-symbol">[corporealsoul@corporealsoul-server 16:18:27 ~]$ </span> <code class="input-command">sudo vi /etc/selinux/config </code>
+                </div>
+                <div class="output-block">
+                    <pre class="output-content">
+# Set SELINUX=enforcing 
+                    </pre>
+                </div>                
+
+            </article>
+
+            <div class="doc-navigation">
+                <a href="../../../../index.html" class="btn nav-btn">← Previous Command</a>
+                <a href="../../../../index.html" class="btn nav-btn">Next Command →</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Anup Kumar Mondal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+        // ... (etc.)
+    </script>
+</body>
+</html>
