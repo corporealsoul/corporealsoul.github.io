@@ -110,6 +110,31 @@ header.navbar nav ul.nav-links li a:hover {
     background: #084298;
 }
 
+/* New: Profile Photo Styles */
+.profile-photo-container {
+    margin-bottom: 30px; /* Space between photo and heading */
+    display: inline-block; 
+    position: relative;
+}
+
+.profile-photo {
+    /* Define a minimum size for the photo */
+    width: 150px; 
+    height: 150px;
+    
+    /* Make it a perfect circle */
+    border-radius: 50%;
+    
+    /* Ensure the image fills the circle without distortion (cropping if needed) */
+    object-fit: cover; 
+    
+    /* Add a clean, prominent border */
+    border: 4px solid #0d6efd; 
+    
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* Sections */
 section {
     width: 100%;
@@ -131,6 +156,67 @@ section p {
     margin: auto;
 }
 
+/* --- Project Section Styles (ADD THIS SECTION) --- */
+
+.projects .project-grid {
+    /* Use grid for a flexible, horizontal layout */
+    display: grid;
+    /* Create 4 columns of equal size for desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; /* Spacing between cards */
+    max-width: 1200px; /* Make the grid wider than the standard text */
+    margin: 40px auto; /* Center the grid */
+    padding: 0 20px; /* Ensure space from viewport edges */
+}
+
+.project-card {
+    /* Make the entire card clickable and style it */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-decoration: none;
+    color: #222;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: #0d6efd; /* Highlight border on hover */
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows descriptions of different lengths to keep tags aligned at bottom */
+    max-width: 100%; /* Override max-width set on generic section p */
+}
+
+.card-tag {
+    /* Simple tag styling at the bottom of the card */
+    display: inline-block;
+    background: #e6f7ff; /* Light blue background */
+    color: #0d6efd;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start; /* Stick to the left */
+}
+
 /* Footer */
 footer {
     background: #f8f9fa;
@@ -141,6 +227,13 @@ footer {
 }
 
 /* Responsive Styles */
+
+@media (max-width: 1200px) {
+    .projects .project-grid {
+        /* On slightly smaller screens, drop to 3 columns */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* Large tablets / small desktops */
 @media (max-width: 1024px) {
@@ -221,6 +314,11 @@ footer {
     section p {
         font-size: 0.95rem;
     }
+
+    .projects .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 /* Small phones */
@@ -239,5 +337,9 @@ footer {
 
     section p {
         font-size: 0.9rem;
+    }
+
+    .projects .project-grid {
+        grid-template-columns: 1fr;
     }
 }
