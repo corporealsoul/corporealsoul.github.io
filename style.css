@@ -217,6 +217,65 @@ section p {
     align-self: flex-start; /* Stick to the left */
 }
 
+/* --- Skills Section Styles (Clean Tiles UI) --- */
+
+.skills .skills-grid {
+    /* Use grid for flexible, multi-column layout */
+    display: grid;
+    /* Default: 4 columns for large screens */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+    
+    /* Centering the skills grid */
+    max-width: 1100px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.skill-tile {
+    /* Make the entire tile clickable and style it */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.skill-tile:hover {
+    transform: translateY(-8px); /* Lift tile higher on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #0d6efd; /* Highlight border on hover */
+}
+
+.skill-icon {
+    /* Style for the emoji/icon */
+    font-size: 3rem;
+    margin-bottom: 15px;
+    line-height: 1; /* Helps vertically center emojis */
+}
+
+.skill-tile h3 {
+    font-size: 1.3rem;
+    color: #0d6efd;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.skill-tile p {
+    font-size: 0.95rem;
+    color: #555;
+    /* Reset max-width set on generic section p */
+    max-width: 100%; 
+    margin: 0; 
+}
+
 /* Footer */
 footer {
     background: #f8f9fa;
@@ -243,6 +302,11 @@ footer {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .skills .skills-grid {
+        /* Drop to 3 columns on small desktops/large tablets */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -319,6 +383,12 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
+    .skills .skills-grid {
+        /* Drop to 2 columns for tablets/medium screens */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 /* Small phones */
@@ -340,6 +410,11 @@ footer {
     }
 
     .projects .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills .skills-grid {
+        /* Stack vertically in 1 column for phones */
         grid-template-columns: 1fr;
     }
 }
