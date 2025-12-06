@@ -386,6 +386,183 @@ section p {
 }
 
 
+/* --- Resume Section Styles --- */
+
+.resume {
+    /* Use standard section padding */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.resume h2 {
+    /* Ensure the title uses the standard style */
+    margin-bottom: 50px;
+}
+
+.resume-container {
+    max-width: 1000px; /* Set a wide, centered container */
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center; /* Center the button below the viewer */
+}
+
+/* Style for the PDF Viewer box */
+.pdf-viewer {
+    width: 100%;
+    /* Use a fixed aspect ratio or height to ensure visibility */
+    height: 800px; 
+    margin-bottom: 30px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden; /* Important for containing the iframe cleanly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-viewer iframe {
+    /* Remove any default browser styling/gaps on the iframe */
+    display: block;
+    border: none;
+}
+
+/* Style for the Download Button (Uses the existing .btn class) */
+.resume-download-btn {
+    /* Override standard button size if needed, otherwise uses .btn style */
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    background: #0d6efd;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+
+/* --- Contact Section Styles --- */
+.contact {
+    background: #f8f9fa; /* Optional: Use a light background for contrast */
+}
+
+.contact-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    gap: 40px;
+    text-align: left; /* Reset general section centering */
+}
+
+/* Left Column Styling (Details Card) */
+.contact-details-card {
+    flex: 1; /* Takes up one part of the space */
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details-card h3,
+.contact-form-embed h3 {
+    font-size: 1.5rem;
+    color: #0d6efd;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center; /* Center column titles */
+}
+
+.contact-intro, .form-instructions {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.info-list li a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-list li a:hover {
+    color: #084298;
+}
+
+.info-icon {
+    font-size: 1.4rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.social-btn .social-icon {
+    font-size: 1.1rem;
+    margin-right: 5px;
+}
+
+/* Specific Social Button Colors */
+.github { background: #333; color: #fff; }
+.github:hover { background: #555; }
+.linkedin { background: #0077b5; color: #fff; }
+.linkedin:hover { background: #005582; }
+.stack-overflow { background: #f48024; color: #fff; }
+.stack-overflow:hover { background: #c8691b; }
+
+
+/* Right Column Styling (Google Form Embed) */
+.contact-form-embed {
+    flex: 1.5; /* Takes up slightly more space for the form */
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-viewer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-viewer iframe {
+    /* Ensures the iframe takes the full width and has a fixed height */
+    display: block;
+    border: none;
+    height: 600px;
+}
+
+
 /* Footer */
 footer {
     background: #f8f9fa;
@@ -424,6 +601,15 @@ footer {
     .expertise-highlights-grid {
         /* Drop to 2 columns on medium screens */
         grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-layout {
+        /* On medium screens, stack the two columns vertically */
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-details-card,
+    .contact-form-embed {
+        flex: 1 1 100%; /* Take full width */
     }
 }
 
@@ -506,6 +692,24 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
+    .pdf-viewer {
+        /* Reduce height on smaller screens to prevent taking up too much vertical space */
+        height: 600px; 
+        margin-bottom: 20px;
+    }
+
+    .resume-download-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .expertise-highlights-grid {
+        /* Drop to 1 column on small phones */
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Small phones */
@@ -534,12 +738,14 @@ footer {
         /* Stack vertically in 1 column for phones */
         grid-template-columns: 1fr;
     }
-}
 
+    .pdf-viewer {
+        /* Reduce height further for phones */
+        height: 500px; 
+    }
 
-@media (max-width: 550px) {
-    .expertise-highlights-grid {
-        /* Drop to 1 column on small phones */
-        grid-template-columns: 1fr;
+    .form-viewer iframe {
+        /* Reduce height of the form on very small screens */
+        height: 500px;
     }
 }
