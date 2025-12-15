@@ -1,6 +1,8 @@
 /* Portfolio Website - Blue Corporate Theme (Full-width Sections) */
 
-/* Global Styles */
+/* ======================================= */
+/* 0. GLOBAL STYLES & RESETS */
+/* ======================================= */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,47 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Header / Navigation */
+/* Base Link/Button Styles */
+.btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: #fff;
+    padding: 14px 32px;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #084298;
+}
+
+/* Base Section Styles */
+section {
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 40px;
+}
+
+section p {
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 800px; /* Standardize max width for main text blocks */
+    margin: auto;
+}
+
+/* ======================================= */
+/* 1. HEADER / NAVIGATION */
+/* ======================================= */
 header.navbar {
     width: 100%;
     position: fixed;
@@ -57,7 +99,6 @@ header.navbar nav ul.nav-links li a:hover {
     color: #0d6efd;
 }
 
-/* New: Mobile Menu Toggle Button Styles (Hidden on Desktop) */
 .menu-toggle {
     display: none; /* Hidden by default on desktop */
     background: none;
@@ -66,16 +107,15 @@ header.navbar nav ul.nav-links li a:hover {
     cursor: pointer;
     color: #222;
     padding: 5px;
-    line-height: 1; /* Adjust to better center the hamburger icon */
+    line-height: 1;
 }
 
-
-/* Hero Section */
+/* ======================================= */
+/* 2. HERO SECTION */
+/* ======================================= */
 .hero {
-    width: 100%;
-    padding: 140px 20px 100px 20px;
-    text-align: center;
     background: #f8f9fa;
+    padding: 140px 20px 100px 20px;
 }
 
 .hero h1 {
@@ -94,205 +134,50 @@ header.navbar nav ul.nav-links li a:hover {
     margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    background: #0d6efd;
-    color: #fff;
-    padding: 14px 32px;
-    font-size: 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: #084298;
-}
-
-/* New: Profile Photo Styles */
 .profile-photo-container {
-    margin-bottom: 30px; /* Space between photo and heading */
+    margin-bottom: 30px; 
     display: inline-block; 
     position: relative;
 }
 
 .profile-photo {
-    /* Define a minimum size for the photo */
     width: 150px; 
     height: 150px;
-    
-    /* Make it a perfect circle */
     border-radius: 50%;
-    
-    /* Ensure the image fills the circle without distortion (cropping if needed) */
     object-fit: cover; 
-    
-    /* Add a clean, prominent border */
     border: 4px solid #ffffff; 
-    
-    /* Add a subtle shadow for depth */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Sections */
-section {
-    width: 100%;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #0d6efd;
-    margin-bottom: 40px;
-}
-
-section p {
-    font-size: 1.05rem;
-    color: #444;
-    max-width: 800px;
-    margin: auto;
-}
-
-/* --- Project Section Styles (ADD THIS SECTION) --- */
-
-.projects .project-grid {
-    /* Use grid for a flexible, horizontal layout */
-    display: grid;
-    /* Create 4 columns of equal size for desktop */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 25px; /* Spacing between cards */
-    max-width: 1200px; /* Make the grid wider than the standard text */
-    margin: 40px auto; /* Center the grid */
-    padding: 0 20px; /* Ensure space from viewport edges */
-}
-
-.project-card {
-    /* Make the entire card clickable and style it */
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    text-decoration: none;
-    color: #222;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px); /* Lift the card on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-color: #0d6efd; /* Highlight border on hover */
-}
-
-.project-card h3 {
-    font-size: 1.25rem;
-    color: #0d6efd;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.project-card p {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 15px;
-    flex-grow: 1; /* Allows descriptions of different lengths to keep tags aligned at bottom */
-    max-width: 100%; /* Override max-width set on generic section p */
-}
-
-.card-tag {
-    /* Simple tag styling at the bottom of the card */
-    display: inline-block;
-    background: #e6f7ff; /* Light blue background */
-    color: #0d6efd;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 4px;
-    align-self: flex-start; /* Stick to the left */
-}
-
-/* --- Skills Section Styles (Clean Tiles UI) --- */
-
-.skills .skills-grid {
-    /* Use grid for flexible, multi-column layout */
-    display: grid;
-    /* Default: 4 columns for large screens */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 25px; 
-    
-    /* Centering the skills grid */
-    max-width: 1100px; 
-    margin: 40px auto; 
-    padding: 0 20px;
-}
-
-.skill-tile {
-    /* Make the entire tile clickable and style it */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center;
-    text-decoration: none;
-    color: #222;
-    background: #ffffff;
-    padding: 30px 20px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.skill-tile:hover {
-    transform: translateY(-8px); /* Lift tile higher on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-color: #0d6efd; /* Highlight border on hover */
-}
-
-.skill-icon {
-    /* Style for the emoji/icon */
-    font-size: 3rem;
-    margin-bottom: 15px;
-    line-height: 1; /* Helps vertically center emojis */
-}
-
-.skill-tile h3 {
-    font-size: 1.3rem;
-    color: #0d6efd;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.skill-tile p {
-    font-size: 0.95rem;
-    color: #555;
-    /* Reset max-width set on generic section p */
-    max-width: 100%; 
-    margin: 0; 
-}
-
-
-/* --- New About Section Styles (Single Column with Highlights) --- */
+/* ======================================= */
+/* 3. ABOUT SECTION */
+/* ======================================= */
 
 .about-summary-lead {
     font-size: 1.15rem;
     line-height: 1.7;
     color: #222;
-    /* This overrides the generic section p styles for the main pitch */
     max-width: 900px !important; 
     margin: 20px auto 40px auto; 
     text-align: center;
 }
 
-/* 1. Expertise Highlight Grid (Horizontal Cards) */
+/* NEW: Styles for the newly added sub-sections in About (My Journey, etc.) */
+.about-sub-section {
+    max-width: 900px;
+    margin: 50px auto 40px auto; /* Provides separation between the content blocks */
+    text-align: center; 
+}
+
+.about-sub-section h3 {
+    color: #222; /* Use primary color for sub-headings */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Expertise Highlight Grid (Horizontal Cards) */
 .expertise-highlights-grid {
     display: grid;
-    /* Use 3 columns for desktop */
     grid-template-columns: repeat(3, 1fr); 
     gap: 25px;
     max-width: 1100px; 
@@ -301,7 +186,7 @@ section p {
 }
 
 .highlight-card {
-    background: #f8f9fa; /* Light background for contrast */
+    background: #f8f9fa; 
     padding: 25px;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
@@ -330,16 +215,15 @@ section p {
 .highlight-card p {
     font-size: 0.95rem;
     color: #555;
-    /* Reset generic paragraph styles */
     margin: 0;
     max-width: none;
 }
 
-/* 2. Recent Impact Section */
+/* Recent Impact Section */
 .recent-impact-container {
     max-width: 900px;
     margin: 50px auto 40px auto;
-    text-align: left; /* Keep bullet points aligned */
+    text-align: left;
 }
 
 .recent-impact-container h3 {
@@ -360,7 +244,7 @@ section p {
     color: #444;
 }
 
-/* 3. Simple CTA Box */
+/* Simple CTA Box */
 .cta-box-simple {
     max-width: 600px;
     margin: 40px auto 0 auto;
@@ -385,48 +269,303 @@ section p {
     margin: 0;
 }
 
+/* --- Career Timeline Styles (Alternating Left/Right) --- */
 
-/* --- Resume Section Styles --- */
-
-.resume {
-    /* Use standard section padding */
-    padding-top: 80px;
-    padding-bottom: 80px;
+.career-timeline {
+    /* Center the timeline itself within the section */
+    max-width: 1000px; /* Increased width for better visual spread */
+    margin: 40px auto;
+    position: relative;
+    padding: 0 20px;
+    /* We will use text-align: left on the content cards, not the container */
 }
 
+/* The main vertical line */
+.career-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Center the line */
+    width: 2px;
+    height: 100%;
+    background: #e2e8f0; 
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the overall item */
+}
+
+.timeline-point {
+    /* The circular point on the line */
+    width: 16px;
+    height: 16px;
+    min-width: 16px; 
+    background: #0d6efd; 
+    border-radius: 50%;
+    border: 3px solid #ffffff; 
+    box-shadow: 0 0 0 2px #0d6efd; 
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 0; /* Align to the top of the item container */
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 45%; /* Use 45% of the container width */
+    text-align: left; /* Ensure text is left aligned within the card */
+}
+
+/* ------------------------------------- */
+/* Positioning Left Side Items (Odd) */
+/* ------------------------------------- */
+.timeline-item:nth-child(odd) .timeline-content {
+    /* Push content to the left of the center line */
+    margin-right: 50%; /* Pushes the left edge to the center */
+    transform: translateX(-20px); /* Small offset for visual balance */
+}
+
+/* ------------------------------------- */
+/* Positioning Right Side Items (Even) */
+/* ------------------------------------- */
+.timeline-item:nth-child(even) .timeline-content {
+    /* Push content to the right of the center line */
+    margin-left: 50%; /* Pushes the right edge to the center */
+    transform: translateX(20px); /* Small offset for visual balance */
+}
+
+
+.timeline-content:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.timeline-year {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    max-width: none;
+}
+
+/* --- Organization Grid Styles (5 Equal Cards) --- */
+
+.organization-grid {
+    display: grid;
+    /* Create 5 columns of equal fractional width (1fr) */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    max-width: 1250px; /* INCREASED: Wider container for bigger cards */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.org-card {
+    background: #ffffff;
+    padding: 30px 15px; /* INCREASED: More padding for bigger appearance */
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: #0d6efd;
+}
+
+.org-logo {
+    max-width: 80%;
+    height: auto;
+    max-height: 60px; /* SLIGHTLY INCREASED: Give logos a bit more space */
+    object-fit: contain; 
+    margin: 0 auto 15px auto;
+}
+
+.org-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.org-role {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: auto; /* Pushes the role to the bottom of the card */
+    max-width: 100%;
+}
+
+
+/* ======================================= */
+/* 4. SKILLS SECTION */
+/* ======================================= */
+
+.skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+    max-width: 1100px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.skill-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.skill-tile:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #0d6efd; 
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.skill-tile h3 {
+    font-size: 1.3rem;
+    color: #0d6efd;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.skill-tile p {
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 100%; 
+    margin: 0; 
+}
+
+
+/* ======================================= */
+/* 5. PROJECTS SECTION */
+/* ======================================= */
+
+.projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-decoration: none;
+    color: #222;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: #0d6efd; 
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; 
+    max-width: 100%; 
+}
+
+.card-tag {
+    display: inline-block;
+    background: #e6f7ff; 
+    color: #0d6efd;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start; 
+}
+
+
+/* ======================================= */
+/* 6. CERTIFICATES & UPDATES SECTIONS */
+/* (General section styles apply, no new specific CSS needed here) */
+/* ======================================= */
+
+
+/* ======================================= */
+/* 7. RESUME SECTION */
+/* ======================================= */
+
 .resume h2 {
-    /* Ensure the title uses the standard style */
-    margin-bottom: 50px;
+    margin-bottom: 30px; /* Reduced margin to bring summary closer */
 }
 
 .resume-container {
-    max-width: 1000px; /* Set a wide, centered container */
-    margin: 0 auto;
+    max-width: 1000px; 
+    margin: 30px auto 0 auto;
     padding: 0 20px;
-    text-align: center; /* Center the button below the viewer */
+    text-align: center; 
 }
 
-/* Style for the PDF Viewer box */
-.pdf-viewer {
-    width: 100%;
-    /* Use a fixed aspect ratio or height to ensure visibility */
-    height: 800px; 
-    margin-bottom: 30px;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    overflow: hidden; /* Important for containing the iframe cleanly */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.pdf-viewer iframe {
-    /* Remove any default browser styling/gaps on the iframe */
-    display: block;
-    border: none;
-}
-
-/* Style for the Download Button (Uses the existing .btn class) */
+/* Moved download button outside of pdf-viewer in HTML for cleaner structure */
 .resume-download-btn {
-    /* Override standard button size if needed, otherwise uses .btn style */
+    margin-bottom: 30px; /* Space between button and viewer */
     padding: 15px 40px;
     font-size: 1.1rem;
     background: #0d6efd;
@@ -434,30 +573,51 @@ section p {
     transition: background 0.3s;
 }
 
+.pdf-viewer {
+    width: 100%;
+    height: 800px; 
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
-/* --- Contact Section Styles --- */
+.pdf-viewer iframe {
+    display: block;
+    border: none;
+}
+
+
+/* ======================================= */
+/* 8. CONTACT SECTION */
+/* ======================================= */
 .contact {
-    background: #f8f9fa; /* Optional: Use a light background for contrast */
+    background: #f8f9fa;
 }
 
 .contact-layout {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content to the top */
+    align-items: stretch; /* CRITICAL FIX: Forces both columns to match the height of the tallest one */
     max-width: 1100px;
     margin: 40px auto 0 auto;
     gap: 40px;
-    text-align: left; /* Reset general section centering */
+    text-align: left;
 }
 
 /* Left Column Styling (Details Card) */
 .contact-details-card {
-    flex: 1; /* Takes up one part of the space */
+    flex: 1; 
     padding: 30px;
     background: #ffffff;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* --- FINAL HEIGHT/ALIGNMENT FIX --- */
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; /* Important for stretch */
 }
 
 .contact-details-card h3,
@@ -466,7 +626,7 @@ section p {
     color: #0d6efd;
     margin-bottom: 20px;
     font-weight: 600;
-    text-align: center; /* Center column titles */
+    text-align: center; 
 }
 
 .contact-intro, .form-instructions {
@@ -480,6 +640,11 @@ section p {
     list-style: none;
     padding: 0;
     margin-bottom: 30px;
+    /* Pushed content down by making the space below flexible */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /* Vertically center the list items if needed */
 }
 
 .info-list li {
@@ -511,7 +676,7 @@ section p {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center; /* Center the buttons */
+    justify-content: center; 
     margin-top: 20px;
 }
 
@@ -542,12 +707,13 @@ section p {
 
 /* Right Column Styling (Google Form Embed) */
 .contact-form-embed {
-    flex: 1.5; /* Takes up slightly more space for the form */
+    flex: 1; /* Set to 1 for equal width */
     padding: 30px;
     background: #ffffff;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Important for stretch */
 }
 
 .form-viewer {
@@ -556,14 +722,15 @@ section p {
 }
 
 .form-viewer iframe {
-    /* Ensures the iframe takes the full width and has a fixed height */
     display: block;
     border: none;
     height: 600px;
 }
 
 
-/* Footer */
+/* ======================================= */
+/* 9. FOOTER */
+/* ======================================= */
 footer {
     background: #f8f9fa;
     text-align: center;
@@ -572,180 +739,182 @@ footer {
     color: #555;
 }
 
-/* Responsive Styles */
+
+/* ======================================= */
+/* 10. RESPONSIVE STYLES */
+/* ======================================= */
 
 @media (max-width: 1200px) {
     .projects .project-grid {
-        /* On slightly smaller screens, drop to 3 columns */
         grid-template-columns: repeat(3, 1fr);
+    }
+    .organization-grid {
+        grid-template-columns: repeat(4, 1fr); /* Drop to 4 columns */
     }
 }
 
-/* Large tablets / small desktops */
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 2.4rem;
     }
-
     .hero p {
         font-size: 1rem;
     }
-
     .skills .skills-grid {
-        /* Drop to 3 columns on small desktops/large tablets */
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 900px) {
     .expertise-highlights-grid {
-        /* Drop to 2 columns on medium screens */
         grid-template-columns: repeat(2, 1fr);
     }
+    /* Contact Section: Stack columns vertically */
     .contact-layout {
-        /* On medium screens, stack the two columns vertically */
         flex-direction: column;
         gap: 30px;
     }
     .contact-details-card,
     .contact-form-embed {
         flex: 1 1 100%; /* Take full width */
+        height: auto; /* Allow height to collapse to content */
+    }
+    /* Undo the vertical alignment trick on mobile */
+    .contact-details-card {
+        display: block;
+    }
+    .social-links {
+        margin-top: 20px;
+    }
+    .organization-grid {
+        grid-template-columns: repeat(3, 1fr); /* Drop to 3 columns */
     }
 }
 
-/* Tablets / Mobile */
 @media (max-width: 768px) {
+    /* Navbar Mobile Styles */
     header.navbar {
-        /* Modified: Keep logo and toggle on the same line */
         flex-direction: row; 
         justify-content: space-between; 
-        align-items: center; 
         padding: 15px 20px;
     }
-
-    /* New: Show the toggle button */
     header.navbar .menu-toggle {
         display: block; 
     }
-
     header.navbar nav ul.nav-links {
         flex-direction: column;
-        width: 100%;
-        display: none; /* Mobile menu hidden by default */
-        gap: 15px;
-        margin-top: 0; /* Remove top margin */
-
-        /* New: Positioning and styling for the open menu */
+        display: none; 
         position: absolute;
-        top: 61px; /* Height of the navbar + border */
+        top: 61px; 
         left: 0;
         background: #ffffff; 
         border-top: 1px solid #e2e8f0;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         padding: 20px;
     }
-
     header.navbar nav ul.nav-links.show {
-        display: flex; /* Show the menu when the 'show' class is active */
+        display: flex;
     }
-    
-    /* New: Ensure nav links fill the width and have padding for better click areas */
     header.navbar nav ul.nav-links li a {
         display: block;
         padding: 10px 0;
         text-align: left;
     }
-
+    /* General Mobile Adjustments */
     .hero {
         padding-top: 100px;
         padding-bottom: 60px;
     }
-
     .hero h1 {
         font-size: 2rem;
     }
-
     .hero p {
         font-size: 0.95rem;
     }
-
-    .btn {
-        padding: 12px 28px;
-        font-size: 0.95rem;
-    }
-
     section h2 {
         font-size: 1.8rem;
     }
-
-    section p {
-        font-size: 0.95rem;
-    }
-
     .projects .project-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-
     .skills .skills-grid {
-        /* Drop to 2 columns for tablets/medium screens */
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-
     .pdf-viewer {
-        /* Reduce height on smaller screens to prevent taking up too much vertical space */
         height: 600px; 
         margin-bottom: 20px;
     }
+    .career-timeline::before {
+        left: 20px; 
+        transform: none;
+    }
+    
+    /* Reset all alternating positions on mobile */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 0;
+        margin-right: 0;
+        transform: none;
+    }
 
-    .resume-download-btn {
-        padding: 12px 30px;
-        font-size: 1rem;
+    .timeline-item {
+        justify-content: flex-start;
+        padding-left: 20px; 
+    }
+    
+    .timeline-point {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content {
+        width: auto; /* Allow card to take up remaining width */
+        margin-left: 40px !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .organization-grid {
+        grid-template-columns: repeat(2, 1fr); /* Drop to 2 columns on tablets/mobile */
+        gap: 15px;
     }
 }
 
 @media (max-width: 550px) {
     .expertise-highlights-grid {
-        /* Drop to 1 column on small phones */
         grid-template-columns: 1fr;
     }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.8rem;
     }
-
-    .hero p {
+    .hero p, section p {
         font-size: 0.9rem;
     }
-
     section h2 {
         font-size: 1.6rem;
     }
-
-    section p {
-        font-size: 0.9rem;
-    }
-
     .projects .project-grid {
         grid-template-columns: 1fr;
     }
-
     .skills .skills-grid {
-        /* Stack vertically in 1 column for phones */
         grid-template-columns: 1fr;
     }
-
     .pdf-viewer {
-        /* Reduce height further for phones */
         height: 500px; 
     }
-
     .form-viewer iframe {
-        /* Reduce height of the form on very small screens */
         height: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    .organization-grid {
+        grid-template-columns: 1fr; /* Stack vertically on small phones */
     }
 }
