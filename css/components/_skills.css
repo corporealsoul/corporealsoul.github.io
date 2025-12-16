@@ -1,0 +1,51 @@
+/* COMPONENTS / SKILLS SECTION */
+
+.skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px; 
+    max-width: 1100px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.skill-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text-main);
+    background: var(--color-card-bg);
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.skill-tile:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary); 
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;  
+    line-height: 1;
+}
+
+.skill-tile h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.skill-tile p {
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 100%; 
+    margin: 0; 
+}

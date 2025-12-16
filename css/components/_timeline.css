@@ -1,0 +1,147 @@
+/* COMPONENTS / CAREER TIMELINE & ORGANIZATION GRID */
+
+/* --- Career Timeline Styles (Alternating Left/Right) --- */
+
+.career-timeline {
+    max-width: 1000px; 
+    margin: 40px auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* The main vertical line */
+.career-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    width: 2px;
+    height: 100%;
+    background: var(--color-border); 
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+}
+
+.timeline-point {
+    width: 16px;
+    height: 16px;
+    min-width: 16px; 
+    background: var(--color-primary); 
+    border-radius: 50%;
+    border: 3px solid var(--color-card-bg); 
+    box-shadow: 0 0 0 2px var(--color-primary); 
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 0; 
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    padding: 20px;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 45%; 
+    text-align: left; 
+}
+
+/* Positioning Left Side Items (Odd) */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 50%; 
+    transform: translateX(-20px); 
+}
+
+/* Positioning Right Side Items (Even) */
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 50%; 
+    transform: translateX(20px); 
+}
+
+.timeline-content:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.timeline-year {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    max-width: none;
+}
+
+/* --- Organization Grid Styles (5 Equal Cards) --- */
+
+.organization-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    max-width: 1250px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.org-card {
+    background: var(--color-card-bg);
+    padding: 30px 15px; 
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+.org-logo {
+    max-width: 80%;
+    height: auto;
+    max-height: 60px; 
+    object-fit: contain; 
+    margin: 0 auto 15px auto;
+}
+
+.org-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 5px;
+}
+
+.org-role {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: auto; 
+    max-width: 100%;
+}

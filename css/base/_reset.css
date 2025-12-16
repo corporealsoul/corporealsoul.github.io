@@ -1,0 +1,15 @@
+/* BASE / RESET & GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: var(--color-card-bg);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}

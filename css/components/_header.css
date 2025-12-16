@@ -1,0 +1,54 @@
+/* COMPONENTS / HEADER & NAVIGATION */
+
+header.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-card-bg);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: var(--spacing-header-height);
+}
+
+header.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+header.navbar nav ul.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+header.navbar nav ul.nav-links li {
+    list-style: none;
+}
+
+header.navbar nav ul.nav-links li a {
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header.navbar nav ul.nav-links li a:hover {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--color-text-main);
+    padding: 5px;
+    line-height: 1;
+}

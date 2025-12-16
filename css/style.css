@@ -1,0 +1,27 @@
+/*
+|=============================================|
+| MAIN STYLESHEET (Portfolio Theme)           |
+| Imports all modules using the 7-1 pattern   |
+|=============================================|
+*/
+
+/* 1. BASE */
+@import url('base/_variables.css');
+@import url('base/_reset.css');
+@import url('base/_typography.css');
+
+/* 2. LAYOUT */
+@import url('layout/_sections.css');
+@import url('layout/_footer.css');
+
+/* 3. COMPONENTS */
+@import url('components/_header.css');
+@import url('components/_hero.css');
+@import url('components/_about.css');
+@import url('components/_timeline.css');
+@import url('components/_skills.css');
+@import url('components/_projects.css');
+@import url('components/_contact.css');
+
+/* 4. RESPONSIVE UTILITIES (Media Queries) */
+@import url('_responsive.css');

@@ -1,0 +1,9 @@
+/* LAYOUT / FOOTER */
+
+footer {
+    background: var(--color-light-bg);
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid var(--color-border);
+    color: #555;
+}

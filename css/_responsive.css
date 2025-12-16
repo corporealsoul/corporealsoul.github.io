@@ -1,0 +1,176 @@
+/* RESPONSIVE STYLES (All Media Queries) */
+
+@media (max-width: 1200px) {
+    .projects .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .organization-grid {
+        grid-template-columns: repeat(4, 1fr); /* Drop to 4 columns */
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .skills .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .expertise-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Contact Section: Stack columns vertically */
+    .contact-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-details-card,
+    .contact-form-embed {
+        flex: 1 1 100%; /* Take full width */
+        height: auto; /* Allow height to collapse to content */
+    }
+    /* Undo the vertical alignment trick on mobile */
+    .contact-details-card {
+        display: block;
+    }
+    .info-list {
+        display: block;
+        flex-grow: 0;
+    }
+    .social-links {
+        margin-top: 20px;
+    }
+    .organization-grid {
+        grid-template-columns: repeat(3, 1fr); /* Drop to 3 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar Mobile Styles */
+    header.navbar {
+        padding: 15px 20px;
+    }
+    header.navbar .menu-toggle {
+        display: block; 
+    }
+    header.navbar nav ul.nav-links {
+        flex-direction: column;
+        display: none; 
+        position: absolute;
+        top: var(--spacing-header-height); 
+        left: 0;
+        width: 100%; 
+        background: var(--color-card-bg); 
+        border-top: 1px solid var(--color-border);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    header.navbar nav ul.nav-links.show {
+        display: flex;
+    }
+    header.navbar nav ul.nav-links li a {
+        display: block;
+        padding: 10px 0;
+        text-align: left;
+    }
+    /* General Mobile Adjustments */
+    .hero {
+        padding-top: calc(var(--spacing-header-height) + 40px);
+        padding-bottom: 60px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    section h2 {
+        font-size: 1.8rem;
+    }
+    .projects .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .skills .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .pdf-viewer {
+        height: 600px; 
+        margin-bottom: 20px;
+    }
+    
+    /* Career Timeline Mobile Resets (Left Align) */
+    .career-timeline::before {
+        left: 20px; 
+        transform: none;
+    }
+    
+    .timeline-point {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        justify-content: flex-start;
+        padding-left: 0; 
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content,
+    .timeline-content {
+        width: auto; 
+        margin-left: 45px !important; 
+        margin-right: 0 !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .organization-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .expertise-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p, section p {
+        font-size: 0.9rem;
+    }
+    section h2 {
+        font-size: 1.6rem;
+    }
+    .projects .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .skills .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .pdf-viewer {  
+        height: 500px; 
+    }
+    .form-viewer iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    .organization-grid {
+        grid-template-columns: 1fr; 
+    }
+}

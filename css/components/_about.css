@@ -1,0 +1,117 @@
+/* COMPONENTS / ABOUT & EXPERTISE GRID (Excludes Timeline) */
+
+.about-summary-lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text-main);
+    max-width: 900px !important; 
+    margin: 20px auto 40px auto; 
+    text-align: center;
+}
+
+/* Styles for the newly added sub-sections in About (My Journey, etc.) */
+.about-sub-section {
+    max-width: 900px;
+    margin: 50px auto 40px auto; 
+    text-align: center; 
+}
+
+.about-sub-section h3 {
+    color: var(--color-text-main); 
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Expertise Highlight Grid (Horizontal Cards) */
+.expertise-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    max-width: 1100px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.highlight-card {
+    background: var(--color-light-bg); 
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
+
+.highlight-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.highlight-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    max-width: none;
+}
+
+/* Recent Impact Section */
+.recent-impact-container {
+    max-width: 900px;
+    margin: 50px auto 40px auto;
+    text-align: left;
+}
+
+.recent-impact-container h3 {
+    text-align: center;
+    color: var(--color-text-main);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.impact-list {
+    list-style-type: '— '; 
+    padding-left: 20px;
+}
+
+.impact-list li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+}
+
+/* Simple CTA Box */
+.cta-box-simple {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    background: var(--color-cta-bg); 
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-primary);
+    text-align: center;
+}
+
+.cta-box-simple h4 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.cta-box-simple p {
+    font-size: 1rem;
+    color: #333;
+    max-width: none;
+    margin: 0;
+}

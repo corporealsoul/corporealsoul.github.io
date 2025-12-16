@@ -1,0 +1,26 @@
+/* LAYOUT / BASE SECTION STYLES */
+
+section {
+    width: 100%;
+    padding: var(--spacing-section-padding);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+section p {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    max-width: 800px; /* Standardize max width for main text blocks */
+    margin: auto;
+}
+
+/* Resume section h2 specific margin */
+.resume h2 {
+    margin-bottom: 30px; 
+}
