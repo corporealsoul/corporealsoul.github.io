@@ -140,36 +140,3 @@
     letter-spacing: 2px;
 }
 
-
-
-@media (max-width: 650px) {
-    .pizza-chart-container {
-        height: auto;
-        display: block;
-    }
-    .pizza-chart-center {
-        position: relative;
-        transform: none;
-        top: 0; left: 0;
-        margin: 0 auto 30px;
-    }
-    .pizza-slices-wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        pointer-events: auto;
-    }
-    .pizza-slice {
-        position: relative;
-        width: 100%; height: auto;
-        top: 0; left: 0;
-    }
-    .slice-content {
-        position: relative;
-        transform: none !important; /* Forces cards into a list */
-        top: 0; left: 0;
-        width: 100%;
-        text-align: left;
-    }
-}
