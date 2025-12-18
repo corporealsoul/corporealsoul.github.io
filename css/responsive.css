@@ -19,6 +19,9 @@
     .skills .skills-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .organization-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x4 layout on tablets */
+    }
 }
 
 @media (max-width: 900px) {
@@ -48,6 +51,9 @@
     }
     .organization-grid {
         grid-template-columns: repeat(3, 1fr); /* Drop to 3 columns */
+    }
+    .beyond-keyboard-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
     }
 }
 
@@ -214,6 +220,31 @@
     .organization-grid {
         grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
+    }
+    .organization-grid {
+        grid-template-columns: 1fr; /* Stacked on mobile */
+        gap: 20px;
+    }
+    .org-card {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+    .beyond-keyboard-grid {
+        grid-template-columns: 1fr; /* 1 card per row on phones */
+        gap: 15px;
+    }
+    
+    .beyond-overlay {
+        opacity: 1; /* Make labels always visible on mobile since no hover */
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+    
+    .beyond-overlay span {
+        border: none;
+        transform: none;
+        font-size: 1rem;
     }
 }
 

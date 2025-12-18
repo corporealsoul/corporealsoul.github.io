@@ -23,6 +23,8 @@
 @import url('components/projects.css');
 @import url('components/contact.css');
 @import url('components/value_wheel.css');
+@import url('components/beyond_keyboard.css');
+@import url('components/organization_grid.css');
 
 /* 4. RESPONSIVE UTILITIES (Media Queries) */
 @import url('responsive.css');
