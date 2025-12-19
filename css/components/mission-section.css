@@ -1,0 +1,59 @@
+/* --- Mission Sub-Section Styling --- */
+.mission-clean-layout {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.mission-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-statement {
+    font-size: 1.6rem; /* Large and impactful */
+    line-height: 1.8;
+    color: #1e293b; /* Deep slate for readability */
+    font-weight: 300; /* Light weight for a modern look */
+    margin-bottom: 30px;
+}
+
+.mission-statement strong {
+    color: #0d6efd; /* Your brand blue */
+    font-weight: 600;
+}
+
+.mission-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.mission-tags .separator {
+    color: #cbd5e1;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .mission-statement {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+    
+    .mission-tags {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .mission-tags .separator {
+        display: none; /* Hide dots on mobile for a cleaner vertical list */
+    }
+}

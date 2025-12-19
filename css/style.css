@@ -25,6 +25,9 @@
 @import url('components/value_wheel.css');
 @import url('components/beyond_keyboard.css');
 @import url('components/organization_grid.css');
+@import url('components/achievements_grid.css');
+@import url('components/mission-section.css');
+
 
 /* 4. RESPONSIVE UTILITIES (Media Queries) */
 @import url('responsive.css');
