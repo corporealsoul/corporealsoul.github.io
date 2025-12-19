@@ -1,21 +1,12 @@
-/*
-|=============================================|
-| MAIN STYLESHEET (Portfolio Theme)           |
-| Imports all modules using the 7-1 pattern   |
-|=============================================|
-*/
 
-/* 1. BASE */
 @import url('base/variables.css');
 @import url('base/reset.css');
 @import url('base/typography.css');
 
-/* 2. LAYOUT */
 @import url('layout/sections.css');
 @import url('layout/footer.css');
 
-/* 3. COMPONENTS */
-@import url('components/header.css');
+@import url('header.css');
 @import url('components/hero.css');
 @import url('components/about.css');
 @import url('components/timeline.css');
@@ -28,6 +19,4 @@
 @import url('components/achievements_grid.css');
 @import url('components/mission-section.css');
 
-
-/* 4. RESPONSIVE UTILITIES (Media Queries) */
 @import url('responsive.css');

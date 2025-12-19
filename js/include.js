@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const includes = document.querySelectorAll("[data-include]");
 
-    includes.forEach(async (el) => {
+    for (const el of includes) {
         const file = el.getAttribute("data-include");
-        try {
-            const response = await fetch(file);
-            el.innerHTML = await response.text();
-        } catch (err) {
-            el.innerHTML = "<p>Failed to load content.</p>";
-        }
-    });
+        const response = await fetch(file);
+        el.innerHTML = await response.text();
+    }
+
+    if (typeof initNavigation === "function") {
+        initNavigation();
+    }
 });

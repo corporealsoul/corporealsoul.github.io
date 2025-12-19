@@ -9,6 +9,10 @@
     }
 }
 
+
+
+
+
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 2.4rem;
@@ -23,6 +27,10 @@
         grid-template-columns: repeat(2, 1fr); /* 2x4 layout on tablets */
     }
 }
+
+
+
+
 
 @media (max-width: 900px) {
     .expertise-highlights-grid {
@@ -56,6 +64,10 @@
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
     }
 }
+
+
+
+
 
 @media (max-width: 768px) {
     /* Navbar Mobile Styles */
@@ -138,13 +150,19 @@
     }
 }
 
-/* Ensure the Expertise Highlight Grid remains visible on desktop, outside the chart logic */
+
+
+
+
 @media (min-width: 651px) {
     /* Stack the content back to back on smaller screens */
     .about-sub-section#expertise-chart + .about-sub-section {
         margin-top: 0;
     }
 }
+
+
+
 
 
 @media (max-width: 650px) {
@@ -216,6 +234,10 @@
     }
 }
 
+
+
+
+
 @media (max-width: 600px) {
     .organization-grid {
         grid-template-columns: repeat(2, 1fr); 
@@ -248,11 +270,19 @@
     }
 }
 
+
+
+
+
 @media (max-width: 550px) {
     .expertise-highlights-grid {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
 
 @media (max-width: 480px) {
     .hero h1 {
@@ -278,11 +308,19 @@
     }
 }
 
+
+
+
+
 @media (max-width: 400px) {
     .organization-grid {
         grid-template-columns: 1fr; 
     }
 }
+
+
+
+
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0px rgba(40, 167, 69, 0.7); }
