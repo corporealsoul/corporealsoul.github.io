@@ -7,23 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header class="navbar">
-        <a href="#home" class="logo">Anup Kumar Mondal</a>
-        <nav>
-            <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                &#9776; </button>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#updates">Updates</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div data-include="partials/header.html"></div>
 
     <section id="home" class="hero">
         <div class="profile-photo-container">
@@ -524,26 +508,7 @@
         <p>&copy; 2025 corporealsoul. All rights reserved.</p>
     </footer>
 
-    <script>
-        const navLinks = document.querySelector('.nav-links');
-        const menuToggle = document.querySelector('.menu-toggle');
-
-        menuToggle.addEventListener('click', () => {
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            navLinks.classList.toggle('show');
-        });
-
-        // Optional: Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                // Check if screen is small (based on CSS breakpoint 768px)
-                if (window.innerWidth <= 768) {
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    navLinks.classList.remove('show');
-                }
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/include.js"></script>
 </body>
 </html>
