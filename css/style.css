@@ -3,20 +3,24 @@
 @import url('base/reset.css');
 @import url('base/typography.css');
 
-@import url('layout/sections.css');
-@import url('layout/footer.css');
 
-@import url('header.css');
-@import url('components/hero.css');
+@import url('components/header.css');
+@import url('components/sections.css');
+@import url('components/home.css');
 @import url('components/about.css');
-@import url('components/timeline.css');
+@import url('components/about-timeline.css');
+@import url('components/about-organizations.css');
+@import url('components/about-value_wheel.css');
+@import url('components/about-beyond_keyboard.css');
+@import url('components/about-achievements_grid.css');
+@import url('components/about-mission-section.css');
 @import url('components/skills.css');
 @import url('components/projects.css');
+@import url('components/certificates.css');
+@import url('components/updates.css');
+@import url('components/resume.css');
 @import url('components/contact.css');
-@import url('components/value_wheel.css');
-@import url('components/beyond_keyboard.css');
-@import url('components/organization_grid.css');
-@import url('components/achievements_grid.css');
-@import url('components/mission-section.css');
+@import url('components/footer.css');
 
-@import url('responsive.css');
+
+@import url('responsive/responsive.css');

@@ -1,5 +1,3 @@
-/* LAYOUT / BASE SECTION STYLES */
-
 section {
     width: 100%;
     padding: var(--spacing-section-padding);
@@ -20,7 +18,6 @@ section p {
     margin: auto;
 }
 
-/* Resume section h2 specific margin */
 .resume h2 {
     margin-bottom: 30px; 
 }
