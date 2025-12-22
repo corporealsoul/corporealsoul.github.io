@@ -21,3 +21,16 @@ section p {
 .resume h2 {
     margin-bottom: 30px; 
 }
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+    section h2 { font-size: 1.6rem; }
+    section p { font-size: 0.9rem; }
+}

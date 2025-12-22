@@ -13,3 +13,10 @@
     --spacing-section-padding: 80px 20px;
     --spacing-header-height: 61px; /* 20px padding top/bottom + 1px border */
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

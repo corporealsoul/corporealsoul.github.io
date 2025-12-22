@@ -92,3 +92,22 @@
     margin: 0;
     max-width: none;
 }
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .career-timeline::before { left: 20px; transform: none; }
+    .timeline-point { left: 20px; transform: translateX(-50%); }
+    .timeline-item { justify-content: flex-start; padding-left: 0; }
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content,
+    .timeline-content {
+        width: auto; 
+        margin-left: 45px !important; 
+        margin-right: 0 !important;
+        transform: none !important;
+    }
+}

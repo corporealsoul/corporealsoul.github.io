@@ -69,3 +69,27 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
 }
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .beyond-keyboard-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .beyond-keyboard-grid { grid-template-columns: 1fr; gap: 15px; }
+    .beyond-overlay {
+        opacity: 1; 
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        align-items: flex-end;
+        padding-bottom: 20px;
+    }
+    .beyond-overlay span {
+        border: none;
+        transform: none;
+        font-size: 1rem;
+    }
+}

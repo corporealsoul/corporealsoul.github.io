@@ -53,24 +53,23 @@
     align-self: flex-start; 
 }
 
-/* Resume Section (PDF Viewer) */
-.resume-container {
-    max-width: 1000px; 
-    margin: 30px auto 0 auto;
-    padding: 0 20px;
-    text-align: center; 
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .projects .project-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-.pdf-viewer {
-    width: 100%;
-    height: 800px; 
-    border: 2px solid var(--color-border);
-    border-radius: 8px;
-    overflow: hidden; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+@media (max-width: 768px) {
+    .projects .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
-.pdf-viewer iframe {
-    display: block;
-    border: none;
+@media (max-width: 480px) {
+    .projects .project-grid { grid-template-columns: 1fr; }
 }

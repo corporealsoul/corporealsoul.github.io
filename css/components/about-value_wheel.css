@@ -140,3 +140,38 @@
     letter-spacing: 2px;
 }
 
+
+
+
+
+/* Responsive Design */
+@media (min-width: 651px) {
+    .about-sub-section#expertise-chart + .about-sub-section { margin-top: 0; }
+}
+
+@media (max-width: 650px) {
+    .pizza-chart-container {
+        width: 100% !important; height: auto !important;
+        margin: 20px 0 !important; display: block !important;
+        overflow: hidden;
+    }
+    .pizza-chart-center {
+        position: relative !important; top: 0 !important; left: 0 !important;
+        transform: none !important; margin: 0 auto 40px auto !important;
+    }
+    .pizza-slices-wrapper {
+        position: relative !important; display: flex !important;
+        flex-direction: column !important; gap: 20px !important;
+        width: 90% !important; margin: 0 auto !important;
+    }
+    .pizza-slice {
+        position: relative !important; top: 0 !important; left: 0 !important;
+        width: 100% !important; height: auto !important; transform: none !important;
+    }
+    .slice-content {
+        position: relative !important; transform: none !important; 
+        width: 100% !important; max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    .slice-icon { float: left; margin-right: 15px; font-size: 1.5rem; }
+}

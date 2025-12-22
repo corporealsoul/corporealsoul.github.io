@@ -1,6 +1,6 @@
 
-@import url('base/variables.css');
-@import url('base/reset.css');
+@import url('base/global-layout.css');
+@import url('base/variables-and-reset.css');
 @import url('base/typography.css');
 
 
@@ -13,7 +13,7 @@
 @import url('components/about-value_wheel.css');
 @import url('components/about-beyond_keyboard.css');
 @import url('components/about-achievements_grid.css');
-@import url('components/about-mission-section.css');
+@import url('components/about-mission_section.css');
 @import url('components/skills.css');
 @import url('components/projects.css');
 @import url('components/certificates.css');

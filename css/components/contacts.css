@@ -131,3 +131,20 @@
     border: none;
     height: 600px;
 }
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .contact-layout { flex-direction: column; gap: 30px; }
+    .contact-details-card, .contact-form-embed { flex: 1 1 100%; height: auto; }
+    .contact-details-card { display: block; }
+    .info-list { display: block; flex-grow: 0; }
+    .social-links { margin-top: 20px; }
+}
+
+@media (max-width: 480px) {
+    .form-viewer iframe { height: 500px; }
+}
