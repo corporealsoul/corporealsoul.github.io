@@ -1,0 +1,1 @@
+However, if you ever add a "Scroll to Top" button or a "Dark Mode" toggle later, those should go into a main.js

@@ -1,7 +1,4 @@
-
-@import url('base/global-layout.css');
-@import url('base/variables-and-reset.css');
-@import url('base/typography.css');
+@import url('base/global.css');
 
 
 @import url('components/header.css');
@@ -21,6 +18,3 @@
 @import url('components/resume.css');
 @import url('components/contacts.css');
 @import url('components/footer.css');
-
-
-@import url('responsive/responsive.css');
