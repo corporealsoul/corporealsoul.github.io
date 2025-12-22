@@ -7,7 +7,6 @@ header.navbar {
     background: rgba(var(--color-card-bg-rgb), 0.8);
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
-    
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
     height: var(--spacing-header-height);
@@ -18,12 +17,10 @@ header.navbar {
 
 .header-container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 4%;
 }
 
 header.navbar .logo {
@@ -60,8 +57,7 @@ header.navbar nav ul.nav-links li a.active::after {
     content: '';
     position: absolute;
     bottom: -2px;
-    left: 0;
-    width: 100%;
+    left: 0;    width: 100%;
     height: 2px;
     background: var(--color-primary);
 }
@@ -70,18 +66,68 @@ header.navbar nav ul.nav-links li a.active::after {
     display: none;
     background: none;
     border: none;
-    font-size: 1.8rem;
     cursor: pointer;
-    color: var(--color-text-main);
-    padding: 5px;
-    line-height: 1;
+    padding: 10px;
+    line-height: 0;
+}
+
+.hamburger-box {
+    width: 24px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text-main);
+    border-radius: 4px;
+    position: absolute;
+    left: 0; 
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hamburger-inner {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-inner::before {
+    content: "";
+    top: -7px; 
+}
+
+.hamburger-inner::after {
+    content: "";
+    bottom: -7px;
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger-inner {
+    background-color: transparent;
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger-inner::before {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger-inner::after {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 
 
 
 
+
+/* --- Responsive Rules --- */
 @media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+    }
+
     .menu-toggle {
         display: block; 
     }
@@ -98,6 +144,7 @@ header.navbar nav ul.nav-links li a.active::after {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 20px;
         gap: 0;
+        z-index: 1001;
     }
 
     header.navbar nav ul.nav-links.show {
@@ -119,7 +166,6 @@ header.navbar nav ul.nav-links li a.active::after {
         border-bottom: none;
     }
 
-    /* Remove active underline on mobile for a cleaner look */
     header.navbar nav ul.nav-links li a.active::after {
         display: none;
     }
