@@ -1,16 +1,23 @@
 .hero {
-    min-height: 80vh; 
+    /* 1. Change 80vh to 100vh to fill the whole screen */
+    height: 100vh; 
     display: flex;
     align-items: center;
+    justify-content: center; /* Ensures vertical centering */
     text-align: center;
     background: var(--color-light-bg);
-    padding-top: calc(var(--spacing-header-height) + 40px);
+    /* 2. Remove fixed top padding so content centers based on the whole screen */
+    padding: 0; 
+    margin: 0;
+    position: relative;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* 3. Add a small offset if you want to push it down slightly to account for the navbar visually */
+    margin-top: var(--spacing-header-height); 
 }
 
 .hero h1 {
@@ -68,8 +75,10 @@
 /* Responsive Design Overrides */
 @media (max-width: 768px) {
     .hero {
-        padding-top: calc(var(--spacing-header-height) + 60px);
-        padding-bottom: 60px;
+        /* Ensure it stays full screen on mobile */
+        height: 100vh; 
+        padding-top: 0;
+        padding-bottom: 0;
     }
     
     .profile-photo {
@@ -80,6 +89,6 @@
     .hero-btns {
         flex-direction: column;
         width: 100%;
-        max-width: 300px;
+        max-width: 250px; /* Slightly narrower for better mobile aesthetic */
     }
 }
