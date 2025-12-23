@@ -1,113 +1,192 @@
-/* COMPONENTS / CAREER TIMELINE & ORGANIZATION GRID */
-
-/* --- Career Timeline Styles (Alternating Left/Right) --- */
-
-.career-timeline {
-    max-width: 1000px; 
-    margin: 40px auto;
-    position: relative;
-    padding: 0 20px;
+/* --- Journey Section Wrapper --- */
+.journey-section {
+    padding: 80px 0;
+    background-color: var(--color-light-bg); 
+    font-family: inherit;
 }
 
-/* The main vertical line */
+.journey-section .section-title {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 15px;
+    color: var(--color-text-main);
+    font-weight: 800;
+}
+
+.journey-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 4px;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+/* --- The Timeline Logic --- */
+.career-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 40px; 
+}
+
+/* THE LINE */
 .career-timeline::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 50%; 
+    top: 40px; 
+    bottom: 0; 
+    left: 50%;
     width: 2px;
-    height: 100%;
-    background: var(--color-border); 
+    /* Gradient shows the flow of time: Light to Dark/Bold */
+    background: linear-gradient(to bottom, 
+                var(--color-border) 0%, 
+                var(--color-primary) 100%);
     transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* START HOLLOW BALL */
+.career-timeline::after {
+    content: '';
+    position: absolute;
+    top: 25px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background: var(--color-light-bg); 
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+/* END SOLID BALL */
+.timeline-end-ball {
+    position: absolute;
+    bottom: -10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    z-index: 3;
+    /* Adds a subtle 'live' pulse to show you are currently active */
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(13, 110, 253, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0); }
 }
 
 .timeline-item {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     position: relative;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    width: 100%;
+    z-index: 5; /* Increased to ensure cards are hoverable over the line */
 }
 
 .timeline-point {
-    width: 16px;
-    height: 16px;
-    min-width: 16px; 
-    background: var(--color-primary); 
-    border-radius: 50%;
-    border: 3px solid var(--color-card-bg); 
-    box-shadow: 0 0 0 2px var(--color-primary); 
-    z-index: 10;
     position: absolute;
     left: 50%;
-    top: 0; 
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border: 2px solid var(--color-card-bg);
+    border-radius: 50%;
     transform: translateX(-50%);
+    z-index: 6;
+    transition: transform 0.3s ease; /* Point can react to hover too */
 }
 
 .timeline-content {
-    padding: 20px;
+    width: 44%;
+    padding: 25px;
     background: var(--color-card-bg);
     border: 1px solid var(--color-border);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 45%; 
-    text-align: left; 
+    border-radius: 16px; /* Modern, rounder corners */
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
 }
 
-/* Positioning Left Side Items (Odd) */
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-right: 50%; 
-    transform: translateX(-20px); 
+/* --- THE RESTORED HOVER EFFECT --- */
+.timeline-item:hover .timeline-content {
+    transform: scale(1.02) translateY(-5px);
+    background: #ffffff; /* Brighter on hover */
+    border-color: var(--color-primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Positioning Right Side Items (Even) */
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: 50%; 
-    transform: translateX(20px); 
+.timeline-item:hover .timeline-point {
+    transform: translateX(-50%) scale(1.4); /* Point gets slightly larger */
 }
 
-.timeline-content:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-}
+.timeline-item:nth-child(odd) { justify-content: flex-start; }
+.timeline-item:nth-child(even) { justify-content: flex-end; }
+.timeline-item:nth-child(odd) .timeline-content { margin-right: calc(50% + 30px); }
+.timeline-item:nth-child(even) .timeline-content { margin-left: calc(50% + 30px); }
 
 .timeline-year {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 8px;
-    text-transform: uppercase;
 }
 
 .timeline-content h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--color-text-main);
     margin-bottom: 10px;
 }
 
 .timeline-content p {
-    font-size: 0.95rem;
-    color: #555;
-    margin: 0;
-    max-width: none;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
 }
 
-
-
-
-
-/* Responsive Design */
+/* --- RESPONSIVE FIX (Mobile) --- */
 @media (max-width: 768px) {
-    .career-timeline::before { left: 20px; transform: none; }
-    .timeline-point { left: 20px; transform: translateX(-50%); }
-    .timeline-item { justify-content: flex-start; padding-left: 0; }
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content,
+    .career-timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .career-timeline::after, .timeline-end-ball {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-point {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        justify-content: flex-start;
+        padding-left: 45px;
+        margin-bottom: 40px;
+    }
+
     .timeline-content {
-        width: auto; 
-        margin-left: 45px !important; 
-        margin-right: 0 !important;
-        transform: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Keep hover lift subtle on mobile to avoid layout shifts */
+    .timeline-item:hover .timeline-content {
+        transform: translateY(-3px); 
     }
 }
