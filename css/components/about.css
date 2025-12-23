@@ -7,7 +7,6 @@
     text-align: center;
 }
 
-/* Styles for the newly added sub-sections in About (My Journey, etc.) */
 .about-sub-section {
     max-width: 900px;
     margin: 50px auto 40px auto; 
@@ -20,7 +19,6 @@
     margin-bottom: 15px;
 }
 
-/* Expertise Highlight Grid (Horizontal Cards) */
 .expertise-highlights-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -64,7 +62,6 @@
     max-width: none;
 }
 
-/* Recent Impact Section */
 .recent-impact-container {
     max-width: 900px;
     margin: 50px auto 40px auto;
@@ -89,7 +86,6 @@
     color: var(--color-text-secondary);
 }
 
-/* Simple CTA Box */
 .cta-box-simple {
     max-width: 600px;
     margin: 40px auto 0 auto;
