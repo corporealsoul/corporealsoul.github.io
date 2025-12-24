@@ -1,8 +1,10 @@
+/* --- UNIVERSAL BRAND VARIABLES --- */
 :root {
+    /* Brand Colors */
     --color-primary: #0d6efd; 
     --color-primary-dark: #084298;
-    --color-text-main: #222;
-    --color-text-secondary: #444;
+    --color-text-main: #0f172a; /* Deeper slate for Inter font beauty */
+    --color-text-secondary: #475569;
     --color-light-bg: #f8f9fa; 
     --color-card-bg: #ffffff;
     --color-card-bg-rgb: 255, 255, 255; 
@@ -10,73 +12,124 @@
     --color-border-rgb: 226, 232, 240;
     --color-cta-bg: #e6f7ff; 
 
-    --spacing-section-padding: 80px 0; 
+    /* Layout Spacing */
+    --spacing-section-padding: 100px 0; 
     --spacing-header-height: 70px; 
+
+    /* Typography: Standardized System [cite: 2025-12-24] */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+/* --- RESET & GLOBAL DEFAULTS --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-main);
+    /* Professional font smoothing for all browsers */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--spacing-header-height);
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+    font-size: 16px;
 }
 
 body {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-main);
     color: var(--color-text-main);
+    line-height: 1.6;
     background-color: var(--color-light-bg);
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* Specific Inter tracking for high-end feel [cite: 2025-12-24] */
+    letter-spacing: -0.011em;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
+/* --- SECTION TYPOGRAPHY [cite: 2025-12-23, 2025-12-24] --- */
 section {
     padding: var(--spacing-section-padding);
 }
 
-a {
-    text-decoration: none;
-    transition: color 0.3s ease, background 0.3s ease;
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-ul {
-    list-style: none;
-}
-
-.btn {
+/* Heavy Executive Titles [cite: 2025-12-24] */
+h1, h2, .section-title {
+    color: var(--color-primary);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.04em; /* Tight tracking for heavy weight */
+    position: relative;
     display: inline-block;
-    padding: 12px 28px;
-    font-size: 1rem;
+}
+
+/* Brand Underline Consistency [cite: 2025-12-23] */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background: #000000;
+    border-radius: 10px;
+}
+
+h3, .card-title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 700px;
+    margin: 15px auto 0;
+    font-weight: 400;
+}
+
+/* --- BUTTON SYSTEM --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    font-size: 0.95rem;
     font-weight: 600;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 12px; /* Standardized radius [cite: 2025-12-23] */
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
+    letter-spacing: -0.01em;
 }
 
 .btn-primary {
     background: var(--color-primary);
     color: #ffffff;
+    box-shadow: 0 4px 14px rgba(13, 110, 253, 0.25);
 }
 
 .btn-primary:hover {
     background: var(--color-primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.35);
 }
 
 .btn-outline {
@@ -90,17 +143,28 @@ ul {
     color: #ffffff;
 }
 
+/* --- SHARED COMPONENTS --- */
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--color-primary);
+}
+
+ul {
+    list-style: none;
+}
+
 img, video, canvas {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: 12px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--color-text-main);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    font-weight: 700;
+/* --- ACCESSIBILITY & UTILITY --- */
+::selection {
+    background-color: var(--color-primary);
+    color: white;
 }
 
 :focus-visible {
@@ -119,7 +183,14 @@ h1, h2, h3, h4, h5, h6 {
     border: 0;
 }
 
-::selection {
-    background-color: var(--color-primary);
-    color: white;
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    :root {
+        --spacing-section-padding: 60px 0;
+    }
+    
+    h1, h2, .section-title {
+        font-size: 2.2rem;
+        letter-spacing: -0.03em;
+    }
 }

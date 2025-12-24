@@ -1,0 +1,177 @@
+/* --- UPDATES SECTION --- */
+.updates-section {
+    padding: 100px 0;
+    background-color: var(--color-bg-main);
+}
+
+/* Header UI: Blue Text + Black Line */
+.updates-section .section-title {
+    font-size: clamp(2.2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.updates-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 4px;
+    background: #000000;
+    border-radius: 10px;
+}
+
+.updates-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* --- FEED LAYOUT --- */
+.updates-feed {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* --- UPDATE CARD --- */
+.update-card {
+    display: flex;
+    gap: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--color-border);
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+/* Date Stamp Style */
+.update-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: 80px;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.update-date .day {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.update-date .month {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 1px;
+}
+
+/* Content Area */
+.update-content {
+    flex: 1;
+}
+
+.update-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.update-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.update-tag.tech { background: rgba(13, 110, 253, 0.08); color: var(--color-primary); }
+.update-tag.achievement { background: rgba(16, 185, 129, 0.08); color: #10b981; }
+.update-tag.project { background: rgba(139, 92, 246, 0.08); color: #8b5cf6; }
+
+.read-time {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.update-content h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.update-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Footer Link */
+.read-more {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.read-more i { transition: transform 0.3s; }
+
+/* --- HOVER EFFECTS --- */
+.update-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: var(--color-primary);
+}
+
+.update-card:hover .read-more i {
+    transform: translateX(5px);
+}
+
+/* Archive Button */
+.updates-action {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.view-all-updates {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 2px solid var(--color-border);
+    border-radius: 50px;
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.view-all-updates:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 650px) {
+    .update-card { flex-direction: column; gap: 20px; }
+    .update-date { flex-direction: row; width: 100%; height: auto; gap: 10px; padding: 10px; }
+}
