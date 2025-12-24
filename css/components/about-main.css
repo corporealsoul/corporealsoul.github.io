@@ -1,5 +1,5 @@
 .about {
-    background-color: var(--color-card-bg);
+    background-color: var(--color-light-bg);
     padding: var(--spacing-section-padding); 
 }
 
@@ -9,7 +9,8 @@
     margin-bottom: 40px;
     position: relative;
     padding-bottom: 15px;
-    font-weight: 800;
+    font-weight: 900;
+    letter-spacing: -0.04em;
     color: var(--color-primary);
 }
 
@@ -20,12 +21,13 @@
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
-    height: 4px;
+    height: 5px;
     background: #000000;
     border-radius: 10px;
 }
 
 .about-summary-lead {
+    letter-spacing: -0.011em;
     font-size: 1.15rem; 
     line-height: 1.8;
     color: var(--color-text-secondary);
@@ -36,12 +38,12 @@
 
 .about-summary-lead span {
     color: var(--color-primary);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .about-summary-lead strong {
     color: var(--color-text-main);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 
