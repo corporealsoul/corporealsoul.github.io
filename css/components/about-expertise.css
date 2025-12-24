@@ -1,4 +1,3 @@
-/* --- EXPERTISE SECTION --- */
 .expertise-section {
     padding: 100px 0;
     background-color: var(--color-bg-alt);
@@ -25,7 +24,6 @@
     border-radius: 10px;
 }
 
-/* --- THE WHEEL --- */
 .expertise-wheel-container {
     position: relative;
     width: 650px;
@@ -36,23 +34,18 @@
     align-items: center;
 }
 
-/* Technical Architecture Lines (New!) */
 .wheel-slices-wrapper::before {
     content: '';
     position: absolute;
     top: 50%; 
     left: 50%;
-    /* Increased size slightly to align perfectly with card centers */
     width: 550px; 
     height: 550px;
-    /* Made the border thicker (2px) and adjusted the dash pattern */
     border: 2px dashed var(--color-primary);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    /* Increased visibility from 0.15 to 0.4 */
     opacity: 0.4; 
     pointer-events: none;
-    /* Added a very subtle outer glow to make it look 'powered on' */
     filter: drop-shadow(0 0 5px rgba(13, 110, 253, 0.2));
 }
 
@@ -63,19 +56,16 @@
     left: 50%;
     width: 550px; 
     height: 550px;
-    /* Clean dashed line, no filters or shadows */
     border: 2px dashed var(--color-primary);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.4; 
     pointer-events: none;
     
-    /* Pushes line behind cards */
     z-index: -1; 
 }
 
 
-/* Improved Minimalist Hub */
 .wheel-center {
     position: absolute;
     width: 160px;
@@ -86,7 +76,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Clean white ring and minimal shadow */
     box-shadow: 0 0 0 8px #ffffff, 0 8px 20px rgba(13, 110, 253, 0.15);
     transition: all 0.3s ease;
 }
@@ -106,7 +95,6 @@
     font-weight: 500;
 }
 
-/* Slices Logic */
 .wheel-slice {
     position: absolute;
     top: 50%; left: 50%;
@@ -120,12 +108,11 @@
 .wheel-slice[data-rotation="240"] { --rot: 240; }
 .wheel-slice[data-rotation="300"] { --rot: 300; }
 
-/* Refined Slice Card */
 .slice-card {
     position: absolute;
     width: 250px;
     padding: 42px 24px 24px;
-    background: #ffffff; /* Solid white background masks the line */
+    background: #ffffff;
     border-radius: 18px;
     border: 1px solid var(--color-border);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -137,7 +124,7 @@
                translateX(275px) 
                rotate(calc(var(--rot) * -1deg));
                
-    z-index: 2; /* Ensures card sits on top of the line */
+    z-index: 2;
 }
 
 .slice-card:hover {
@@ -151,13 +138,12 @@
     z-index: 50;
 }
 
-/* Modern Card Header */
 .slice-header {
     position: absolute;
     top: 0; left: 0; width: 100%;
     height: 34px;
     background: rgba(248, 250, 252, 0.8);
-    backdrop-filter: blur(4px); /* Glass effect */
+    backdrop-filter: blur(4px);
     border-bottom: 1px solid var(--color-border);
     display: flex;
     align-items: center;
@@ -172,7 +158,6 @@
     letter-spacing: 2px;
 }
 
-/* Dynamic Operational Indicator */
 .dot-indicator {
     width: 8px; height: 8px;
     background: #22c55e;
@@ -208,11 +193,12 @@
     margin: 0;
 }
 
-/* --- RESPONSIVE FIXES --- */
-/* --- UPDATED RESPONSIVE LOGIC --- */
 
+
+
+
+/* Responsive Design */
 @media (max-width: 1024px) {
-    /* Reduce container size for tablets before breaking to list */
     .expertise-wheel-container {
         width: 100%;
         height: 600px;
@@ -223,6 +209,7 @@
 @media (max-width: 991px) {
     .expertise-section {
         padding: 60px 0;
+        overflow: visible !important; 
     }
 
     .expertise-wheel-container {
@@ -232,33 +219,35 @@
         flex-direction: column;
         align-items: center;
         margin: 20px auto;
-        transform: none; /* Reset scaling */
+        transform: none;
+        overflow: visible; 
     }
 
-    /* Move the Center Hub to the top of the list */
     .wheel-center {
         position: relative;
-        margin-bottom: 40px;
+        margin: 20px auto 50px; 
         top: 0; left: 0;
         transform: none !important;
         width: 140px;
         height: 140px;
-        box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+        
+        background: var(--color-primary);
+        box-shadow: 0 8px 25px rgba(13, 110, 253, 0.25), 0 0 0 6px #ffffff;
+        z-index: 10;
     }
 
-    /* Convert Wheel Slices into a clean vertical stack */
     .wheel-slices-wrapper {
         position: relative;
         width: 100%;
-        height: auto;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         padding: 0 20px;
+        overflow: visible;
     }
 
     .wheel-slices-wrapper::before {
-        display: none; /* Remove architecture line on mobile */
+        display: none; 
     }
 
     .wheel-slice {
@@ -268,16 +257,13 @@
         height: auto;
     }
 
-    /* Reset all rotation math for mobile stacking */
     .slice-card {
         position: relative;
         width: 100%;
-        max-width: 450px; /* Limits width on larger phones/tablets */
+        max-width: 450px;
         margin: 0 auto;
-        top: 0; left: 0;
-        transform: none !important; /* Forces cards out of the wheel orbit */
-        padding: 40px 20px 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transform: none !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
     }
 
     .slice-card:hover {
@@ -285,7 +271,6 @@
         box-shadow: 0 10px 25px rgba(13, 110, 253, 0.1);
     }
 
-    /* Ensure icons and text scale slightly for small screens */
     .slice-icon {
         font-size: 2rem;
         margin-bottom: 10px;

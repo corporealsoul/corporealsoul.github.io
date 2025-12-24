@@ -47,9 +47,10 @@
 
 
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .about-summary-lead {
-        text-align: center; /* Easier to read long paragraphs on mobile */
+        text-align: center; 
         font-size: 1.05rem;
     }
 }

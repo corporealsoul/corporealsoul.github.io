@@ -1,12 +1,10 @@
 .hero {
-    /* 1. Change 80vh to 100vh to fill the whole screen */
     height: 100vh; 
     display: flex;
     align-items: center;
-    justify-content: center; /* Ensures vertical centering */
+    justify-content: center; 
     text-align: center;
     background: var(--color-light-bg);
-    /* 2. Remove fixed top padding so content centers based on the whole screen */
     padding: 0; 
     margin: 0;
     position: relative;
@@ -16,7 +14,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 3. Add a small offset if you want to push it down slightly to account for the navbar visually */
     margin-top: var(--spacing-header-height); 
 }
 
@@ -48,7 +45,7 @@
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(13, 110, 253, 0.2); /* Soft blue glow */
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.2);
     z-index: -1;
 }
 
@@ -71,11 +68,9 @@
 
 
 
-
-/* Responsive Design Overrides */
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero {
-        /* Ensure it stays full screen on mobile */
         height: 100vh; 
         padding-top: 0;
         padding-bottom: 0;
@@ -89,6 +84,6 @@
     .hero-btns {
         flex-direction: column;
         width: 100%;
-        max-width: 250px; /* Slightly narrower for better mobile aesthetic */
+        max-width: 250px;
     }
 }

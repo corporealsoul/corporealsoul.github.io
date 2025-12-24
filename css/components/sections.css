@@ -25,6 +25,7 @@ section p {
 
 
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     section h2 { font-size: 1.8rem; }

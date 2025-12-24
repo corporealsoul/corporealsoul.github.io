@@ -1,73 +1,157 @@
-/* --- BEYOND THE KEYBOARD GRID --- */
-.beyond-keyboard-grid {
+.beyond-section {
+    padding: 100px 0;
+    background-color: var(--color-bg-main);
+    -webkit-text-size-adjust: 100%;
+}
+
+.beyond-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.beyond-section .section-title {
+    font-size: clamp(2.2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.beyond-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 4px;
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.beyond-section .section-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.beyond-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 20px;
-    max-width: 1000px;
-    margin: 40px auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 .beyond-card {
     position: relative;
-    aspect-ratio: 4 / 3; /* Keeps all images the same size */
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .beyond-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents image distortion */
-    transition: transform 0.5s ease;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    filter: brightness(0.95);
 }
 
-/* Hover Effect: Image zooms slightly */
-.beyond-card:hover img {
-    transform: scale(1.1);
-}
-
-/* The Blue Overlay */
 .beyond-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(13, 110, 253, 0.85); /* Your theme blue with transparency */
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(13, 110, 253, 0.45) 60%,
+        transparent 100%
+    );
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(2px);
+}
+
+.overlay-content {
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-primary);
+    background: #ffffff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.overlay-content h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-family: inherit;
+}
+
+.card-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.card-link {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.beyond-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15);
+}
+
+.beyond-card:hover img {
+    transform: scale(1.1);
 }
 
 .beyond-card:hover .beyond-overlay {
     opacity: 1;
 }
 
-.beyond-overlay span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 2px solid #fff;
-    padding: 8px 16px;
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
-}
-
-.beyond-card:hover .beyond-overlay span {
+.beyond-card:hover .overlay-content {
     transform: translateY(0);
-}
-
-.beyond-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
 }
 
 
@@ -75,21 +159,40 @@
 
 
 /* Responsive Design */
-@media (max-width: 900px) {
-    .beyond-keyboard-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1024px) {
+    .beyond-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 600px) {
-    .beyond-keyboard-grid { grid-template-columns: 1fr; gap: 15px; }
+@media (max-width: 768px) {
+    .beyond-section { padding: 60px 0; }
+    
+    .beyond-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
     .beyond-overlay {
         opacity: 1; 
-        background: linear-gradient(transparent, rgba(0,0,0,0.7));
-        align-items: flex-end;
-        padding-bottom: 20px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+        padding: 25px;
+        backdrop-filter: none;
     }
-    .beyond-overlay span {
-        border: none;
+    
+    .overlay-content {
         transform: none;
-        font-size: 1rem;
+    }
+
+    .overlay-content h4 {
+        font-size: 1.35rem !important;
+    }
+    
+    .card-description {
+        font-size: 0.85rem !important;
+        margin-bottom: 10px;
+    }
+    
+    .card-tag {
+        font-size: 0.65rem;
+        padding: 3px 8px;
     }
 }

@@ -1,0 +1,125 @@
+.mission-section {
+    padding: 120px 0;
+    background-color: var(--color-bg-main);
+    text-align: center;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+}
+
+.mission-section .section-header {
+    margin-bottom: 50px;
+}
+
+.mission-section .section-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #000000;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-family: inherit;
+}
+
+.mission-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.mission-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mission-quote-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+    opacity: 0.15;
+    margin-bottom: 20px;
+}
+
+.mission-statement {
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    line-height: 1.7;
+    color: var(--color-text-main);
+    font-weight: 300; 
+    margin-bottom: 40px;
+    letter-spacing: -0.01em;
+}
+
+.mission-statement strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.mission-highlight {
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.mission-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 30px;
+    background: #f8fafc;
+    border-radius: 50px;
+    border: 1px solid var(--color-border);
+}
+
+.tag-item {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.tag-dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-section {
+        padding: 80px 0;
+    }
+    
+    .mission-statement {
+        font-size: 1.35rem !important;
+    }
+    
+    .mission-tags {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        gap: 12px;
+    }
+    
+    .tag-dot {
+        display: none;
+    }
+    
+    .tag-item {
+        background: #f1f5f9;
+        padding: 6px 15px;
+        border-radius: 6px;
+        width: 100%;
+        font-size: 0.75rem;
+    }
+}

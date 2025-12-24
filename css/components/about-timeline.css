@@ -1,4 +1,3 @@
-/* --- Journey Section Wrapper --- */
 .journey-section {
     padding: 80px 0;
     background-color: var(--color-light-bg); 
@@ -25,7 +24,6 @@
     border-radius: 2px;
 }
 
-/* --- The Timeline Logic --- */
 .career-timeline {
     max-width: 1000px;
     margin: 0 auto;
@@ -33,7 +31,6 @@
     padding-top: 40px; 
 }
 
-/* THE LINE */
 .career-timeline::before {
     content: '';
     position: absolute;
@@ -41,7 +38,6 @@
     bottom: 0; 
     left: 50%;
     width: 2px;
-    /* Gradient shows the flow of time: Light to Dark/Bold */
     background: linear-gradient(to bottom, 
                 var(--color-border) 0%, 
                 var(--color-primary) 100%);
@@ -49,7 +45,6 @@
     z-index: 1;
 }
 
-/* START HOLLOW BALL */
 .career-timeline::after {
     content: '';
     position: absolute;
@@ -64,7 +59,6 @@
     z-index: 3;
 }
 
-/* END SOLID BALL */
 .timeline-end-ball {
     position: absolute;
     bottom: -10px; 
@@ -75,7 +69,6 @@
     background: var(--color-primary);
     border-radius: 50%;
     z-index: 3;
-    /* Adds a subtle 'live' pulse to show you are currently active */
     box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
     animation: pulse 2s infinite;
 }
@@ -87,7 +80,7 @@
 }
 
 .timeline-item {
-    margin-bottom: 20px; /* REDUCED: Was 50px - this brings cards closer */
+    margin-bottom: 20px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -98,7 +91,7 @@
 .timeline-point {
     position: absolute;
     left: 50%;
-    top: 20px; /* Keeps dot aligned with the top area of the closer cards */
+    top: 20px;
     width: 12px;
     height: 12px;
     background: var(--color-primary);
@@ -111,7 +104,7 @@
 
 .timeline-content {
     width: 44%;
-    padding: 18px 25px; /* TIGHTENED: Reduced vertical padding from 25px to 18px */
+    padding: 18px 25px;
     background: var(--color-card-bg);
     border: 1px solid var(--color-border);
     border-radius: 16px; 
@@ -120,16 +113,15 @@
     z-index: 5;
 }
 
-/* --- THE RESTORED HOVER EFFECT --- */
 .timeline-item:hover .timeline-content {
     transform: scale(1.02) translateY(-5px);
-    background: #ffffff; /* Brighter on hover */
+    background: #ffffff;
     border-color: var(--color-primary);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .timeline-item:hover .timeline-point {
-    transform: translateX(-50%) scale(1.4); /* Point gets slightly larger */
+    transform: translateX(-50%) scale(1.4);
 }
 
 .timeline-item:nth-child(odd) { justify-content: flex-start; }
@@ -157,7 +149,11 @@
     line-height: 1.6;
 }
 
-/* --- RESPONSIVE FIX (Mobile) --- */
+
+
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .career-timeline::before {
         left: 20px;
@@ -177,7 +173,7 @@
     .timeline-item {
         justify-content: flex-start;
         padding-left: 45px;
-        margin-bottom: 15px; /* REDUCED: Even tighter on mobile screens */
+        margin-bottom: 15px;
     }
 
     .timeline-content {
@@ -185,7 +181,6 @@
         margin: 0 !important;
     }
 
-    /* Keep hover lift subtle on mobile to avoid layout shifts */
     .timeline-item:hover .timeline-content {
         transform: translateY(-3px); 
     }
