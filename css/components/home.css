@@ -62,8 +62,51 @@
 
 .hero-btns {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
+    margin-top: 30px;
+}
+
+/* Base Pill Style (Shared) */
+.btn-hero-pill {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape from Archive image */
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    font-family: 'Roboto', sans-serif; /* Your new font choice */
+}
+
+/* 1. View Projects: Solid Visible State */
+.btn-filled {
+    background-color: var(--color-primary); /* Use your primary blue */
+    color: #ffffff !important; /* Force white text to be visible */
+    border: 1.5px solid var(--color-primary);
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.15);
+    visibility: visible; /* Ensures it is not hidden */
+    opacity: 1;
+}
+
+.btn-filled:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.3);
+}
+
+/* 2. Contact Me: Ghost/Outline State */
+.btn-outline {
+    background: transparent;
+    color: #5c728e; /* Blue-grey from your Archive image */
+    border: 1.5px solid #e2e8f0;
+}
+
+.btn-outline:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: rgba(13, 110, 253, 0.04);
+    transform: translateY(-3px);
 }
 
 
@@ -87,5 +130,12 @@
         flex-direction: column;
         width: 100%;
         max-width: 250px;
+        align-items: center;
+    }
+
+    .btn-hero-pill {
+        width: 100%;
+        text-align: center;
+        padding: 12px 30px;
     }
 }
