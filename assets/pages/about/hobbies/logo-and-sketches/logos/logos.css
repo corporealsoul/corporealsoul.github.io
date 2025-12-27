@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,19 +15,22 @@ body {
     padding: 0 5%;
 }
 
-/* Header */
-.logo-header { padding: 80px 0 60px; text-align: center; }
+/* Header Consistency */
+.logo-header { padding: 100px 0 60px; text-align: center; }
 
 .back-link {
     display: inline-block;
     color: #0D6EFD;
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    margin-bottom: 25px;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
 }
+
+.back-link:hover { transform: translateY(-3px); }
 
 .logo-title {
     font-size: 3.5rem;
@@ -35,7 +38,7 @@ body {
     letter-spacing: -2px;
     position: relative;
     display: block;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 .logo-title::after {
@@ -49,46 +52,63 @@ body {
     background-color: #0D6EFD;
 }
 
-.logo-subtitle { color: #444e59; margin-top: 25px; }
+.logo-subtitle { 
+    color: #444e59; 
+    margin: 25px auto 0;
+    max-width: 500px;
+    font-size: 1.1rem;
+}
 
-/* Grid */
+/* The Stack */
 .logo-stack {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    margin-bottom: 100px;
+    gap: 80px; /* Increased gap for better project separation */
+    margin-bottom: 120px;
 }
 
-/* Card - Management UI Style */
+/* The "Management" Logo Card */
 .logo-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.image-box {
-    margin: 15px; /* Creates that sharp inset border look */
-    aspect-ratio: 16 / 9; /* Matches 1920x1080 exactly */
+/* Logo Stage: The clean background for the logo */
+.logo-stage {
+    margin: 15px;
+    background-color: #f8fafc; /* Signature Light Gray */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.image-box img {
+.image-wrapper {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Forces the photo to fill the box edges */
-    transition: transform 0.6s ease;
+    transition: transform 0.8s ease;
 }
 
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Perfectly fills the stage edges */
+}
+
+/* Interaction */
 .logo-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: #0D6EFD;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
 }
 
-.logo-card:hover img { transform: scale(1.03); }
+.logo-card:hover .image-wrapper {
+    transform: scale(1.05);
+}
 
-/* Divider */
+/* Divider: Edge-to-Edge Logic */
 .card-divider {
     border: 0;
     height: 1px;
@@ -97,27 +117,39 @@ body {
     width: 100%;
 }
 
-.logo-info { padding: 15px 0 25px; }
+.logo-info { padding: 15px 0 30px; }
 
-.logo-meta, .brand-name, .logo-info p { padding: 0 25px; }
+/* Inset padding for text content */
+.logo-meta, .brand-name, .logo-info p { padding: 0 30px; }
 
 .meta-tag {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 800;
     color: #0D6EFD;
     text-transform: uppercase;
-    margin-right: 15px;
+    letter-spacing: 1.2px;
+    margin-right: 20px;
 }
 
 .brand-name {
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
+    letter-spacing: -0.5px;
     color: #0f172a;
 }
 
-.logo-info p { color: #444e59; font-size: 1rem; margin-top: 10px; }
+.logo-info p { 
+    color: #444e59; 
+    font-size: 1rem; 
+    margin-top: 12px;
+    max-width: 700px;
+}
 
+/* Mobile Fixes */
 @media (max-width: 768px) {
-    .logo-title { font-size: 2.2rem; }
+    .logo-title { font-size: 2.5rem; }
+    .brand-name { font-size: 1.5rem; }
+    .logo-info { padding-bottom: 20px; }
+    .logo-meta, .brand-name, .logo-info p { padding: 0 20px; }
 }
