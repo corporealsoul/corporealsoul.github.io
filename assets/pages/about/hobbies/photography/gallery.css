@@ -1,0 +1,183 @@
+/* SELF-CONTAINED GALLERY STYLES 
+    Matches "Perfect UI" Branding (Inter-style, Sharp Edges, Management Logic)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Header Section & Brand Blue Underline */
+.gallery-header {
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.back-link {
+    color: #0D6EFD;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.gallery-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0 auto;
+    letter-spacing: -2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+/* The Signature Blue Underline */
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #0D6EFD;
+}
+
+.gallery-subtitle {
+    color: #444e59;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 25px auto 0;
+}
+
+/* Grid Logic */
+.portrait-grid, .landscape-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.portrait-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    margin-bottom: 30px;
+}
+
+.landscape-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 80px;
+}
+
+/* Sharp Card UI */
+.photo-card {
+    background: #ffffff;
+    border-radius: 0 !important;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.image-box {
+    background: #f1f5f9;
+    border-radius: 0 !important;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.portrait .image-box { aspect-ratio: 3 / 4; }
+.landscape .image-box { aspect-ratio: 16 / 9; }
+
+/* Interactive Hover */
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+    border-color: #0D6EFD;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Visible Technical Divider */
+.card-divider {
+    border: 0;
+    height: 1px;
+    /* Adjusted for better visibility: Medium Slate Gray */
+    background-color: #cbd5e1; 
+    margin: 15px 0;
+}
+
+/* Typography & Meta Info */
+.photo-info h4 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #0f172a;
+}
+
+.photo-info p {
+    margin: 8px 0 0;
+    color: #444e59;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.photo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.meta-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #0D6EFD;
+    letter-spacing: 0.8px;
+}
+
+/* Desktop Asymmetric Layout */
+@media (min-width: 992px) {
+    .landscape-grid .photo-card:nth-child(3n+1) {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .landscape-grid { grid-template-columns: 1fr; }
+    .gallery-title { font-size: 2.2rem; }
+    .gallery-header { padding: 60px 0 40px; }
+}
