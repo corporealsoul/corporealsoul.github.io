@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Header */
+.logo-header { padding: 80px 0 60px; text-align: center; }
+
+.back-link {
+    display: inline-block;
+    color: #0D6EFD;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.logo-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    position: relative;
+    display: block;
+    padding-bottom: 20px;
+}
+
+.logo-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #0D6EFD;
+}
+
+.logo-subtitle { color: #444e59; margin-top: 25px; }
+
+/* Grid */
+.logo-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+/* Card - Management UI Style */
+.logo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.image-box {
+    margin: 15px; /* Creates that sharp inset border look */
+    aspect-ratio: 16 / 9; /* Matches 1920x1080 exactly */
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Forces the photo to fill the box edges */
+    transition: transform 0.6s ease;
+}
+
+.logo-card:hover {
+    transform: translateY(-8px);
+    border-color: #0D6EFD;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.logo-card:hover img { transform: scale(1.03); }
+
+/* Divider */
+.card-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.logo-info { padding: 15px 0 25px; }
+
+.logo-meta, .brand-name, .logo-info p { padding: 0 25px; }
+
+.meta-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #0D6EFD;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.brand-name {
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #0f172a;
+}
+
+.logo-info p { color: #444e59; font-size: 1rem; margin-top: 10px; }
+
+@media (max-width: 768px) {
+    .logo-title { font-size: 2.2rem; }
+}

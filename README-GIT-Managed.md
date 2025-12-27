@@ -9,3 +9,6 @@ corporealsoul.github.io>  git status
 
 corporealsoul.github.io>  git commit -m "corporealsoul.github.io"
 corporealsoul.github.io>  git push origin main
+
+corporealsoul> git fetch origin 
+corporealsoul> git reset --hard origin/main
