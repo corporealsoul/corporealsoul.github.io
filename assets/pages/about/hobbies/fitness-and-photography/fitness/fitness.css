@@ -187,6 +187,32 @@ body {
 .fitness-footer { padding: 100px 0; text-align: center; border-top: 1px solid #f1f5f9; }
 .fitness-footer p { opacity: 0.4; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
 
+/* --- Rounded Ghost Button --- */
+.btn-ghost {
+    display: inline-block;
+    padding: 12px 32px;
+    background: transparent;
+    border: 2px solid #0D6EFD;
+    color: #0D6EFD;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+    border-radius: 50px; /* Makes the button perfectly rounded */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-ghost:hover {
+    background: #0D6EFD;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
+    transform: translateY(-3px);
+}
+
+
+
 /* --- Responsive Layer --- */
 @media (max-width: 900px) {
     .pr-grid { grid-template-columns: 1fr 1fr; }
