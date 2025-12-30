@@ -1,7 +1,3 @@
-/* TEACHING PORTAL - MANAGEMENT VERSION 
-   Branding: Inter-style, Sharp Edges, Technical Insets
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,6 +41,21 @@ body {
     color: #ffffff;
     box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
     transform: translateY(-3px);
+}
+
+/* --- New Management: Side-by-Side Button Logic --- */
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;             /* Professional 15px gap between pill buttons */
+    margin-bottom: 30px;   /* Maintains your signature vertical rhythm */
+    flex-wrap: wrap;       /* Ensures buttons wrap on smaller mobile screens */
+}
+
+/* Reset margin-bottom on individual buttons inside this specific container */
+.header-actions .btn-ghost {
+    margin-bottom: 0;
 }
 
 /* --- New Management: Side-by-Side Button Logic --- */
