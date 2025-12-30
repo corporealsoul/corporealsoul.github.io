@@ -15,7 +15,6 @@ body {
     padding: 0 5%;
 }
 
-/* Header: Optical Centering */
 .sketch-header { padding: 100px 0 60px; text-align: center; }
 
 .back-link {
@@ -59,12 +58,11 @@ body {
     font-size: 1.1rem;
 }
 
-/* Row Spacing Logic */
 .sketch-grid-landscape {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    margin-bottom: 80px; /* High-end visual separation */
+    margin-bottom: 80px;
 }
 
 .sketch-grid-portrait {
@@ -74,7 +72,6 @@ body {
     margin-bottom: 120px;
 }
 
-/* Sketch Card: Sharp-Edge Management UI */
 .sketch-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -89,7 +86,6 @@ body {
     position: relative;
 }
 
-/* Ratio Management */
 .image-box.landscape { aspect-ratio: 16 / 9; }
 .image-box.portrait { aspect-ratio: 3 / 4; }
 
@@ -97,10 +93,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1s ease; /* Slower zoom for "Artistic" feel */
+    transition: transform 1s ease; 
 }
 
-/* Subtle Inner Glow on hover */
 .image-box::after {
     content: '';
     position: absolute;
@@ -110,7 +105,6 @@ body {
     pointer-events: none;
 }
 
-/* Interaction Effects */
 .sketch-card:hover {
     transform: translateY(-10px);
     border-color: #0D6EFD;
@@ -123,10 +117,8 @@ body {
 
 .sketch-card:hover img { transform: scale(1.06); }
 
-/* Information Management */
 .sketch-info { padding: 10px 0 25px 0; }
 
-/* Global Brand Inset */
 .sketch-meta, .work-title { padding: 0 25px; }
 
 .sketch-meta {
@@ -137,7 +129,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Signature Edge-to-Edge Divider */
 .card-divider {
     border: 0;
     height: 1px;
@@ -154,7 +145,6 @@ body {
     color: #0f172a;
 }
 
-/* --- Pill-Shaped Ghost Button Selection --- */
 .btn-ghost {
     display: inline-block;
     padding: 12px 32px;
@@ -179,17 +169,15 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- New Management: Side-by-Side Button Logic --- */
 .header-actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;             /* Clean spacing between the pill buttons */
-    margin-bottom: 30px;   /* Matches your signature vertical rhythm */
-    flex-wrap: wrap;       /* Smooth stacking for mobile responsiveness */
+    gap: 15px; 
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
-/* Reset individual margin-bottom to allow the container to control spacing */
 .header-actions .btn-ghost {
     margin-bottom: 0;
 }
@@ -198,7 +186,7 @@ body {
 
 
 
-/* Responsive Logic */
+
 @media (max-width: 900px) {
     .sketch-grid-portrait { grid-template-columns: 1fr 1fr; }
 }

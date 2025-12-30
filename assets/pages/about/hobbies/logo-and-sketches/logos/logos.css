@@ -15,7 +15,6 @@ body {
     padding: 0 5%;
 }
 
-/* Header Consistency */
 .logo-header { padding: 100px 0 60px; text-align: center; }
 
 .back-link {
@@ -59,25 +58,22 @@ body {
     font-size: 1.1rem;
 }
 
-/* The Stack */
 .logo-stack {
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Increased gap for better project separation */
+    gap: 80px;
     margin-bottom: 120px;
 }
 
-/* The "Management" Logo Card */
 .logo-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Logo Stage: The clean background for the logo */
 .logo-stage {
     margin: 15px;
-    background-color: #f8fafc; /* Signature Light Gray */
+    background-color: #f8fafc; 
     aspect-ratio: 16 / 9;
     overflow: hidden;
     display: flex;
@@ -94,10 +90,9 @@ body {
 .image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Perfectly fills the stage edges */
+    object-fit: cover; 
 }
 
-/* Interaction */
 .logo-card:hover {
     transform: translateY(-10px);
     border-color: #0D6EFD;
@@ -108,7 +103,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Divider: Edge-to-Edge Logic */
 .card-divider {
     border: 0;
     height: 1px;
@@ -119,7 +113,6 @@ body {
 
 .logo-info { padding: 15px 0 30px; }
 
-/* Inset padding for text content */
 .logo-meta, .brand-name, .logo-info p { padding: 0 30px; }
 
 .meta-tag {
@@ -146,7 +139,6 @@ body {
     max-width: 700px;
 }
 
-/* --- Pill-Shaped Ghost Button Selection --- */
 .btn-ghost {
     display: inline-block;
     padding: 12px 32px;
@@ -159,7 +151,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 30px;
-    border-radius: 50px; /* Perfect pill shape */
+    border-radius: 50px; 
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
 }
@@ -171,17 +163,15 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- New Management: Side-by-Side Button Logic --- */
 .header-actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;             /* Professional gap between pill buttons */
-    margin-bottom: 30px;   /* Maintains your signature vertical rhythm */
-    flex-wrap: wrap;       /* Responsive stacking for mobile screens */
+    gap: 15px;
+    margin-bottom: 30px; 
+    flex-wrap: wrap;
 }
 
-/* Reset margin-bottom on individual buttons inside this specific container */
 .header-actions .btn-ghost {
     margin-bottom: 0;
 }
@@ -191,7 +181,6 @@ body {
 
 
 
-/* Mobile Fixes */
 @media (max-width: 768px) {
     .logo-title { font-size: 2.5rem; }
     .brand-name { font-size: 1.5rem; }

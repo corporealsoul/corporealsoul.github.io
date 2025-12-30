@@ -1,7 +1,3 @@
-/* SELF-CONTAINED PORTAL STYLES 
-   Branding: Inter-style, Sharp Edges, Management Logic
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
 
 * {
@@ -23,7 +19,6 @@ body {
     padding: 0 5%;
 }
 
-/* Header Section: Centered & Balanced */
 .creative-header {
     padding: 100px 0 80px;
 }
@@ -76,7 +71,6 @@ body {
     margin: 25px auto 0;
 }
 
-/* Portal Grid Logic */
 .portal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,7 +78,6 @@ body {
     margin-bottom: 120px;
 }
 
-/* Professional Card UI: Sharp & Technical */
 .portal-card {
     text-decoration: none;
     color: inherit;
@@ -99,7 +92,7 @@ body {
 .image-box {
     position: relative;
     overflow: hidden;
-    margin: 15px 15px 0 15px; /* Technical Inset */
+    margin: 15px 15px 0 15px;
     background: #f1f5f9;
     aspect-ratio: 16 / 10;
 }
@@ -111,11 +104,10 @@ body {
     transition: transform 0.8s ease;
 }
 
-/* Overlay Interaction */
 .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(15, 23, 42, 0.85); /* Dark Slate for contrast */
+    background: rgba(15, 23, 42, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +126,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Interaction Effects */
 .portal-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 25px 50px rgba(15, 23, 42, 0.1);
@@ -145,7 +136,6 @@ body {
 .portal-card:hover img { transform: scale(1.08); }
 .portal-card:hover .view-btn { background: #0D6EFD; border-color: #0D6EFD; }
 
-/* The "Management" Divider: Full Width Edge-to-Edge */
 .card-divider {
     border: 0;
     height: 1px;
@@ -158,7 +148,6 @@ body {
     padding: 20px 0;
 }
 
-/* Padding only on text contents to allow divider to touch card edges */
 .portal-meta, .portal-title, .portal-info p {
     padding: 0 20px;
 }
@@ -188,7 +177,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* --- Pill-Shaped Ghost Button Selection --- */
 .btn-ghost {
     display: inline-block;
     padding: 12px 32px;
@@ -201,7 +189,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 25px;
-    border-radius: 50px; /* Perfect pill shape */
+    border-radius: 50px; 
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
 }
@@ -213,17 +201,15 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- New Management: Side-by-Side Button Logic --- */
 .header-actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;             /* Clean 15px gap between pill buttons */
-    margin-bottom: 25px;   /* Retains your signature vertical rhythm */
-    flex-wrap: wrap;       /* Responsive stacking for mobile screens */
+    gap: 15px;             
+    margin-bottom: 25px;   
+    flex-wrap: wrap;       
 }
 
-/* Reset margin-bottom on individual buttons inside this specific container */
 .header-actions .btn-ghost {
     margin-bottom: 0;
 }
@@ -232,7 +218,7 @@ body {
 
 
 
-/* Mobile & Tablet Logic */
+
 @media (max-width: 1024px) {
     .portal-grid { gap: 25px; }
 }

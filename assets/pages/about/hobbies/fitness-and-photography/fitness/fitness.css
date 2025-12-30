@@ -16,7 +16,6 @@ body {
     padding: 0 5%;
 }
 
-/* --- Header Section --- */
 .fitness-header { padding: 100px 0 60px; text-align: center; }
 
 .back-link {
@@ -60,7 +59,6 @@ body {
     margin-right: auto;
 }
 
-/* --- Awards Section --- */
 .awards-section { margin-bottom: 50px; }
 .awards-grid {
     display: grid;
@@ -93,7 +91,6 @@ body {
 .award-info h5 { font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
 .award-info p { font-size: 0.75rem; color: #64748b; margin-top: 2px; }
 
-/* --- PR Dashboard --- */
 .performance-dashboard { margin-bottom: 80px; }
 .pr-grid {
     display: grid;
@@ -123,7 +120,6 @@ body {
 .lift-meta { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; margin-top: 15px; letter-spacing: 1px; color: #64748b; }
 .pr-card.highlight .lift-meta { color: #94a3b8; }
 
-/* --- Action Gallery (Masonry) --- */
 .action-gallery { margin-bottom: 20px; }
 .masonry-grid {
     display: grid;
@@ -155,7 +151,6 @@ body {
 }
 .masonry-item:hover .img-overlay { opacity: 1; transform: translateY(0); }
 
-/* --- Triple Pillars Grid --- */
 .triple-grid-section { margin-bottom: 120px; }
 .triple-grid {
     display: grid;
@@ -183,11 +178,9 @@ body {
 }
 .triple-item:hover img { transform: scale(1.15); }
 
-/* --- Footer --- */
 .fitness-footer { padding: 100px 0; text-align: center; border-top: 1px solid #f1f5f9; }
 .fitness-footer p { opacity: 0.4; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
 
-/* --- Rounded Ghost Button --- */
 .btn-ghost {
     display: inline-block;
     padding: 12px 32px;
@@ -211,24 +204,24 @@ body {
     transform: translateY(-3px);
 }
 
-/* --- New Management: Side-by-Side Button Logic --- */
 .header-actions {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;             /* Professional spacing between pill buttons */
-    margin-bottom: 40px;   /* Matches your existing .btn-ghost margin logic */
-    flex-wrap: wrap;       /* Responsive behavior for mobile devices */
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-/* Reset individual margin to allow the container to control the spacing */
 .header-actions .btn-ghost {
     margin-bottom: 0;
 }
 
 
 
-/* --- Responsive Layer --- */
+
+
+
 @media (max-width: 900px) {
     .pr-grid { grid-template-columns: 1fr 1fr; }
     .portal-title { font-size: 2.8rem; }
