@@ -213,6 +213,21 @@ body {
     align-items: center;
 }
 
+/* --- New Management: Side-by-Side Button Logic --- */
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;             /* Professional spacing between buttons */
+    margin-bottom: 25px;   /* Maintains logic-driven spacing to the title */
+    flex-wrap: wrap;       /* Responsive behavior for smaller screens */
+}
+
+/* Reset margin-bottom on individual buttons inside the container to prevent double spacing */
+.header-actions .btn-ghost {
+    margin-bottom: 0;
+}
+
 
 
 

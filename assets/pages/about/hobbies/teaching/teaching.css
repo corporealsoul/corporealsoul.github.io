@@ -1,0 +1,191 @@
+/* TEACHING PORTAL - MANAGEMENT VERSION 
+   Branding: Inter-style, Sharp Edges, Technical Insets
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Header Section */
+.teaching-header { padding: 100px 0 80px; text-align: center; }
+
+/* --- Refined Management "Back" Button --- */
+.btn-ghost {
+    display: inline-block;
+    padding: 12px 32px;
+    background: transparent;
+    border: 2px solid #0D6EFD;
+    color: #0D6EFD;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Reverted to your saved 1.5px */
+    margin-bottom: 30px;
+    border-radius: 50px; /* Your saved pill shape */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.btn-ghost:hover {
+    background: #0D6EFD;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
+    transform: translateY(-3px);
+}
+
+/* --- New Management: Side-by-Side Button Logic --- */
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;             /* Professional 15px gap between pill buttons */
+    margin-bottom: 30px;   /* Maintains your signature vertical rhythm */
+    flex-wrap: wrap;       /* Ensures buttons wrap on smaller mobile screens */
+}
+
+/* Reset margin-bottom on individual buttons inside this specific container */
+.header-actions .btn-ghost {
+    margin-bottom: 0;
+}
+
+
+.teaching-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    position: relative;
+    display: block;
+    padding-bottom: 25px;
+}
+
+.teaching-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 4px;
+    background-color: #0D6EFD;
+}
+
+.teaching-subtitle {
+    color: #444e59;
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 25px auto 0;
+}
+
+/* Teaching Grid Architecture */
+.teaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    margin-bottom: 120px;
+}
+
+/* The Management Card */
+.teaching-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    margin: 15px; 
+    background: #f8fafc;
+    aspect-ratio: 16 / 10;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #0f172a;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+/* Card Interaction */
+.teaching-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+    border-color: #0D6EFD;
+}
+
+.teaching-card:hover img { transform: scale(1.08); }
+
+/* Content Styling */
+.teaching-info { padding: 10px 0 30px 0; }
+.teaching-meta, .institute-name, .teaching-info p { padding: 0 30px; }
+
+.meta-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #0D6EFD;
+    letter-spacing: 1.2px;
+    margin-right: 15px;
+}
+
+.card-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.institute-name {
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+}
+
+.teaching-info p {
+    margin-top: 10px;
+    color: #444e59;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .teaching-grid { grid-template-columns: 1fr; gap: 30px; }
+    .teaching-title { font-size: 2.5rem; }
+    .teaching-header { padding: 60px 0 40px; }
+}

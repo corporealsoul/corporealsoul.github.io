@@ -211,6 +211,21 @@ body {
     transform: translateY(-3px);
 }
 
+/* --- New Management: Side-by-Side Button Logic --- */
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;             /* Professional spacing between pill buttons */
+    margin-bottom: 40px;   /* Matches your existing .btn-ghost margin logic */
+    flex-wrap: wrap;       /* Responsive behavior for mobile devices */
+}
+
+/* Reset individual margin to allow the container to control the spacing */
+.header-actions .btn-ghost {
+    margin-bottom: 0;
+}
+
 
 
 /* --- Responsive Layer --- */

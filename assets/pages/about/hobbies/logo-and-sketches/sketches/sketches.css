@@ -179,6 +179,21 @@ body {
     transform: translateY(-3px);
 }
 
+/* --- New Management: Side-by-Side Button Logic --- */
+.header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;             /* Clean spacing between the pill buttons */
+    margin-bottom: 30px;   /* Matches your signature vertical rhythm */
+    flex-wrap: wrap;       /* Smooth stacking for mobile responsiveness */
+}
+
+/* Reset individual margin-bottom to allow the container to control spacing */
+.header-actions .btn-ghost {
+    margin-bottom: 0;
+}
+
 
 
 
