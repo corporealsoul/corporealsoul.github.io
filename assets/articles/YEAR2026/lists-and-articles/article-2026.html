@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log_08: eBPF Hardening | Technical Archives</title>
+    <link rel="stylesheet" href="article-2026.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="management-nav">
+    <div class="container nav-container">
+        <div class="nav-brand">corporealsoul.archive</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="archives.html" class="nav-link">Archives</a></li>
+            <li><a href="categories-2026.html" class="nav-link">Domains</a></li>
+            <li><a href="lists-2026.html" class="nav-link">Ledger</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <div class="breadcrumb-nav">
+            <span class="root-path">ARCHIVE</span> 
+            <i class="fas fa-chevron-right path-sep"></i> 2026 
+            <i class="fas fa-chevron-right path-sep"></i> K8S 
+            <i class="fas fa-chevron-right path-sep"></i> LOG_08
+        </div>
+        <h1 class="matrix-title">Hardening Production Clusters with eBPF and Cilium</h1>
+        <div class="article-meta-top">
+            <span class="meta-item"><i class="far fa-calendar"></i> JAN 12, 2026</span>
+            <span class="meta-item"><i class="far fa-clock"></i> 8 MIN READ</span>
+            <span class="meta-item"><i class="fas fa-shield-alt"></i> SECURITY_LEVEL: HIGH</span>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="article-wrapper">
+        <article class="content-area">
+            <section class="prose">
+                <p class="lead-text">Securing modern Kubernetes environments requires moving beyond standard Layer 3/4 firewalls. By leveraging eBPF, we can achieve deep kernel-level visibility and enforce granular security policies without the overhead of traditional sidecars.</p>
+                
+                <h2>The Architecture Shift</h2>
+                <p>Traditional network policies often fall short in high-churn environments. With Cilium and eBPF, the security logic is embedded directly into the kernel, allowing for identity-aware enforcement.</p>
+
+                
+                
+                <div class="info-callout">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Note:</strong> Ensure your Linux Kernel version is 5.10+ to support the latest eBPF helper functions used in this log.</p>
+                </div>
+
+                <h2>Implementation: Network Policies</h2>
+                <p>To restrict traffic between the <code>frontend</code> and <code>backend</code> namespaces, apply the following manifest:</p>
+
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">network-policy.yaml</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "secure-backend-access"
+spec:
+  endpointSelector:
+    matchLabels:
+      app: backend
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app: frontend
+    toPorts:
+    - ports:
+      - port: "8080"
+        protocol: TCP</code></pre>
+                </div>
+
+                <h2>Verification via CLI</h2>
+                <p>Execute the following command to verify the status of the eBPF maps and verify endpoint security status:</p>
+                
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>$ cilium status --wait
+$ cilium bpf endpoint list</code></pre>
+                </div>
+
+                <div class="resource-grid">
+                    <a href="https://github.com/your-repo" class="resource-card github">
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div class="card-icon"><i class="fab fa-github"></i></div>
+                                <span class="card-status-pill">PUBLIC</span>
+                            </div>
+                            <div class="card-text-content">
+                                <span class="card-label">REPOSITORY</span>
+                                <h3 class="card-title">Access Source Code</h3>
+                                <p class="card-desc">Clone the hardening manifests and automated shell scripts used in this log.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer-action">
+                            <span>Explore Repo</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://youtube.com/your-video" class="resource-card youtube">
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div class="card-icon"><i class="fab fa-youtube"></i></div>
+                                <span class="card-status-pill">HD VIDEO</span>
+                            </div>
+                            <div class="card-text-content">
+                                <span class="card-label">DEMONSTRATION</span>
+                                <h3 class="card-title">Watch Implementation</h3>
+                                <p class="card-desc">A 15-minute walkthrough of the eBPF map verification and policy testing.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer-action">
+                            <span>Watch Now</span>
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>By shifting enforcement to the kernel level, we eliminate the latency penalty of user-space proxies while gaining a cryptographically verifiable identity for every packet.</p>
+            </section>
+        </article>
+    </div>
+</main>
+
+<script>
+    function copyCode(button) {
+        const pre = button.parentElement.nextElementSibling;
+        const text = pre.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            button.innerHTML = '<i class="fas fa-check"></i> Copied';
+            setTimeout(() => {
+                button.innerHTML = '<i class="far fa-copy"></i> Copy';
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>

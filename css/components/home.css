@@ -5,6 +5,11 @@
     justify-content: center; 
     text-align: center;
     background: var(--color-light-bg);
+    /* background: linear-gradient(135deg, #f7fbff 0%, #d9f6f3 25%, #baf1e4 45%, #a7def8 70%, #cfe3ff 100%); */
+    /* background: linear-gradient(135deg, #eef6ff 0%, #c9f1ec 25%, #9fe8d6 45%, #87ccf3 70%, #b7d4ff 100%); */
+    /* background: radial-gradient(circle at top, #ffffff 0%, #dff7f4 40%, #bfe8ff 100%); */
+    /* background: radial-gradient(circle at top, #ffffff 0%, #e9fbf8 35%, #cbefff 70%, #b6dcff 100%); */
+    /* background: radial-gradient(circle at top, #f7fbff 0%, #d9f6f3 25%, #baf1e4 45%, #a7def8 70%, #cfe3ff 100%); */
     padding: 0; 
     margin: 0;
     position: relative;
