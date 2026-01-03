@@ -28,7 +28,7 @@ body {
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .nav-brand { font-weight: 900; font-size: 1.2rem; letter-spacing: -1px; }
 .nav-menu { list-style: none; display: flex; gap: 40px; }
-.nav-link { text-decoration: none; color: #64748b; font-size: 0.9rem; font-weight: 700; transition: color 0.3s; }
+.nav-link { text-decoration: none; color: #64748b; font-size: 1.0rem; font-weight: 700; transition: color 0.3s; }
 .nav-link:hover { color: #0D6EFD; }
 
 /* --- Header & Underline --- */
@@ -145,9 +145,50 @@ body {
     transform: translateX(10px);
 }
 
-/* Mobile Responsiveness */
+
+
+
+
 @media (max-width: 768px) {
-    .ledger-row { flex-direction: column; align-items: flex-start; padding: 30px; }
-    .row-date { border-right: none; border-bottom: 1px solid #f1f5f9; width: 100%; align-items: flex-start; margin-bottom: 20px; padding-bottom: 10px; }
+    /* Menu Centering Fix */
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    /* Ledger Mobile Optimization */
+    .ledger-row { 
+        flex-direction: column; 
+        align-items: center; /* Centered for a clean list look on mobile */
+        text-align: center;
+        padding: 30px; 
+    }
+
+    .ledger-row:hover {
+        padding-left: 30px; /* Disable the slide-in on mobile for stability */
+    }
+
+    .row-date { 
+        border-right: none; 
+        border-bottom: 1px solid #f1f5f9; 
+        width: 100%; 
+        align-items: center; 
+        margin-right: 0;
+        margin-bottom: 20px; 
+        padding-bottom: 15px; 
+    }
+
+    .entry-meta { justify-content: center; }
+
     .row-action { display: none; }
+
+    .matrix-title { font-size: 2.5rem; }
 }
