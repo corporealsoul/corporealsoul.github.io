@@ -40,19 +40,20 @@
                 <ul class="dropdown-list">
                     <li data-value="*">All Categories</li>
                     <li data-value=".os">Operating System</li>
-                    <li data-value=".security">Computer Networks</li>
-                    <li data-value=".security">DBMS</li>
-                    <li data-value=".security">Languages</li>
-                    <li data-value=".security">System Design</li>
+                    <li data-value=".ops">Administration</li>
+                    <li data-value=".networks">Computer Networks</li>
+                    <li data-value=".dbms">DBMS</li>
+                    <li data-value=".languages">Languages</li>
+                    <li data-value=".scm">Version Control</li>
+                    <li data-value=".architecture">System Design</li>
                     <li data-value=".devops">DevOps & SRE</li>
-                    <li data-value=".security">Cloud Computing</li>
-                    <li data-value=".security">Containerization</li>
-                    <li data-value=".security">CI/CD Pipelines</li>
+                    <li data-value=".cloud">Cloud Computing</li>
+                    <li data-value=".containerization">Containerization</li>
+                    <li data-value=".pipelines">CI/CD Pipelines</li>
                     <li data-value=".security">IaC</li>
                     <li data-value=".security">Observability</li>
                     <li data-value=".security">Security</li>
                     <li data-value=".security">Scripting</li>
-                    <li data-value=".ops">Linux</li>
                     <li data-value=".networking">AIOps</li>
                 </ul>
             </div>
@@ -61,9 +62,25 @@
                 <div class="selected-option" data-value="*">All Tools</div>
                 <ul class="dropdown-list">
                     <li data-value="*">All Tools</li>
+                    <li data-value=".linux">Linux</li>
+                    <li data-value=".shell">Shell Scripting</li>
+                    <li data-value=".git">Git</li>
+                    <li data-value=".github">GitHub</li>
+                    <li data-value=".actions">GitHub Actions</li>
+                    <li data-value=".jenkins">Jenkins</li>
+                    <li data-value=".argocd">Argo CD</li>
+                    <li data-value=".docker">Docker</li>
                     <li data-value=".k8s">Kubernetes</li>
+                    <li data-value=".helm">Helm</li>
+                    <li data-value=".terraform">Terraform</li>
+                    <li data-value=".ansible">Ansible</li>
+                    <li data-value=".prometheus">prometheus</li>
+                    <li data-value=".grafana">grafana</li>
+                    <li data-value=".datadog">Datadog</li>
+                    <li data-value=".vault">Vault</li>
+                    <li data-value=".trivy">Trivy</li>
+                    <li data-value=".pagerduty">PagerDuty</li>
                     <li data-value=".aws">AWS</li>
-                    <li data-value=".ebpf">eBPF</li>
                 </ul>
             </div>
 
@@ -71,9 +88,9 @@
                 <div class="selected-option" data-value="*">All Types</div>
                 <ul class="dropdown-list">
                     <li data-value="*">All Types</li>
-                    <li data-value=".cheatsheet">Cheatsheet</li>
-                    <li data-value=".note">Note</li>
-                    <li data-value=".question">Question Set</li>
+                    <li data-value=".articles">Articles</li>
+                    <li data-value=".cheatsheet">One-Pager</li>
+                    <li data-value=".jobsearch">Job Search</li>
                 </ul>
             </div>
         </div>
@@ -85,73 +102,25 @@
 
     <div class="ledger-wrapper grid">
 
-        <a href="article-ebpf.html" class="ledger-row y2024 security ebpf note">
-            <div class="row-date">
-                <span class="day">12</span>
-                <span class="month">JAN</span>
-            </div>
-            <div class="row-main">
-                <div class="entry-meta">
-                    <span class="entry-serial">LOG_08_SEC</span>
-                    <span class="entry-tag">#ebpf</span>
-                    <span class="entry-tag">#security</span>
-                    <span class="doc-type-tag">NOTE</span>
-                </div>
-                <h2 class="entry-title">Hardening Production Clusters with eBPF 2024</h2>
-                <p class="entry-excerpt">Deep dive into kernel-level security monitoring and network policy enforcement.</p>
-            </div>
-        </a>
-
-        <a href="article-ebpf.html" class="ledger-row y2026 security ebpf note">
-            <div class="row-date">
-                <span class="day">12</span>
-                <span class="month">JAN</span>
-            </div>
-            <div class="row-main">
-                <div class="entry-meta">
-                    <span class="entry-serial">LOG_08_SEC</span>
-                    <span class="entry-tag">#ebpf</span>
-                    <span class="entry-tag">#security</span>
-                    <span class="doc-type-tag">NOTE</span>
-                </div>
-                <h2 class="entry-title">Hardening Production Clusters with eBPF</h2>
-                <p class="entry-excerpt">Deep dive into kernel-level security monitoring and network policy enforcement.</p>
-            </div>
-        </a>
-
-        <a href="article-karpenter.html" class="ledger-row y2025 ops k8s cheatsheet">
-            <div class="row-date">
-                <span class="day">28</span>
-                <span class="month">DEC</span>
-            </div>
-            <div class="row-main">
-                <div class="entry-meta">
-                    <span class="entry-serial">LOG_07_OPS</span>
-                    <span class="entry-tag">#k8s</span>
-                    <span class="entry-tag">#karpenter</span>
-                    <span class="doc-type-tag">CHEATSHEET</span>
-                </div>
-                <h2 class="entry-title">Karpenter Provisioning Manifests</h2>
-                <p class="entry-excerpt">Quick reference for node templates and spot instance disruption settings.</p>
-            </div>
-        </a>
-
-        <a href="article-networking.html" class="ledger-row y2026 networking aws question">
+        <a href="article-networking.html" class="ledger-row y2026 sysadmin linux">
             <div class="row-date">
                 <span class="day">05</span>
                 <span class="month">JAN</span>
             </div>
             <div class="row-main">
                 <div class="entry-meta">
-                    <span class="entry-serial">LOG_09_NET</span>
-                    <span class="entry-tag">#aws</span>
-                    <span class="entry-tag">#vpc</span>
-                    <span class="doc-type-tag">QUESTION SET</span>
+                    <span class="entry-serial">LOG_01</span>
+                    <span class="entry-tag">#SystemAdministration</span>
+                    <span class="entry-tag">#ServerAdministration</span>
+                    <span class="entry-tag">#LinuxAdmin</span>
+                    <span class="entry-tag">#ITOperations</span>
+                    <span class="doc-type-tag">ARTICLE</span>
                 </div>
-                <h2 class="entry-title">Advanced VPC Architecture Q&A</h2>
-                <p class="entry-excerpt">Scenario-based questions regarding Transit Gateway and PrivateLink implementations.</p>
+                <h2 class="entry-title">Initial Server Setup – Red Hat Linux (RHEL)</h2>
+                <p class="entry-excerpt">Production-grade Initial Server Setup checklist for Red Hat Linux (RHEL / Alma / Rocky).</p>
             </div>
         </a>
+        
     </div>
 </main>
 
