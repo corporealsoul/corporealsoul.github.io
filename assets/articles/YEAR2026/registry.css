@@ -5,14 +5,64 @@
 body { background-color: #f8fafc; color: #0f172a; font-family: 'Inter', sans-serif; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
 
-/* --- Nav --- */
-.management-nav { border-bottom: 1px solid #e2e8f0; padding: 25px 0; background: #fff; position: sticky; top: 0; z-index: 1000; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-brand { font-weight: 900; font-size: 1.2rem; letter-spacing: -1px; }
-.nav-menu { list-style: none; display: flex; gap: 40px; }
-.nav-link { text-decoration: none; color: #64748b; font-size: 0.9rem; font-weight: 700; }
+/* --- UPDATED: EXACT BLOG-MATRIX NAV CSS --- */
+.management-nav {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 25px 0;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-/* --- Header --- */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    color: #0f172a;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 1rem; 
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0D6EFD;
+}
+
+/* Mobile Nav Logic from Blog Matrix */
+@media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-link { font-size: 0.8rem; white-space: nowrap; }
+}
+
+/* --- REST OF REGISTRY STYLE (UNCHANGED) --- */
 .registry-header { padding: 80px 0 60px; text-align: center; background: #fff; border-bottom: 1px solid #e2e8f0; }
 .breadcrumb-nav { font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; color: #94a3b8; margin-bottom: 20px; }
 
@@ -20,7 +70,6 @@ body { background-color: #f8fafc; color: #0f172a; font-family: 'Inter', sans-ser
 .matrix-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background-color: #0D6EFD; }
 .matrix-subtitle { color: #64748b; max-width: 600px; margin: 25px auto 45px; font-size: 1.1rem; line-height: 1.6; }
 
-/* --- Custom Dropdowns --- */
 .control-panel { display: flex; justify-content: center; gap: 15px; margin-top: 10px; flex-wrap: wrap; }
 .dropdown-wrapper { position: relative; width: 190px; user-select: none; }
 .selected-option { background: #fff; padding: 12px 18px; border-radius: 12px; border: 1px solid #f1f5f9; font-weight: 700; font-size: 0.85rem; color: #475569; cursor: pointer; transition: all 0.3s ease; display: flex; justify-content: space-between; align-items: center; }
@@ -35,7 +84,6 @@ body { background-color: #f8fafc; color: #0f172a; font-family: 'Inter', sans-ser
 .dropdown-list li { padding: 10px 15px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; color: #475569; cursor: pointer; transition: all 0.2s; text-align: left; }
 .dropdown-list li:hover { background-color: #0D6EFD; color: #ffffff; }
 
-/* --- Status & Ledger (Original Meta Restored) --- */
 .results-meta { margin-top: 50px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: #94a3b8; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
 .results-meta::before { content: ''; width: 8px; height: 8px; background: #10b981; border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0% { transform: scale(0.95); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { transform: scale(0.95); } }
