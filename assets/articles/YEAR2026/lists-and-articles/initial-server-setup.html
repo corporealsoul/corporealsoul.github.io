@@ -3,37 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log_08: eBPF Hardening | Technical Archives</title>
-    <link rel="stylesheet" href="article-2026.css">
+    <title>Technical Registry - corporealsoul</title>
+    <link rel="stylesheet" href="initial-server-setup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
 <nav class="management-nav">
     <div class="container nav-container">
-        <div class="nav-brand">corporealsoul.archive</div>
+        <div class="nav-brand">corporealsoul.</div>
         <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Portfolio</a></li>
-            <li><a href="archives.html" class="nav-link">Archives</a></li>
-            <li><a href="categories-2026.html" class="nav-link">Domains</a></li>
-            <li><a href="lists-2026.html" class="nav-link">Ledger</a></li>
+            <li><a href="/index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="/index.html#updates" class="nav-link">Recent Articles</a></li>
+            <li><a href="/assets/articles/registry.html" class="nav-link">Technical Registry</a></li>
         </ul>
     </div>
 </nav>
 
 <header class="article-header">
     <div class="container">
-        <div class="breadcrumb-nav">
-            <span class="root-path">ARCHIVE</span> 
-            <i class="fas fa-chevron-right path-sep"></i> 2026 
-            <i class="fas fa-chevron-right path-sep"></i> K8S 
-            <i class="fas fa-chevron-right path-sep"></i> LOG_08
-        </div>
-        <h1 class="matrix-title">Hardening Production Clusters with eBPF and Cilium</h1>
+        <h1 class="matrix-title">Initial Server Setup</h1>
         <div class="article-meta-top">
-            <span class="meta-item"><i class="far fa-calendar"></i> JAN 12, 2026</span>
+            <span class="meta-item"><i class="far fa-calendar"></i> JAN 5, 2026</span>
             <span class="meta-item"><i class="far fa-clock"></i> 8 MIN READ</span>
-            <span class="meta-item"><i class="fas fa-shield-alt"></i> SECURITY_LEVEL: HIGH</span>
+            <span class="meta-item"><i class="fas fa-shield-alt"></i> SECURITY_LEVEL: MEDIUM</span>
         </div>
     </div>
 </header>
@@ -42,7 +35,7 @@
     <div class="article-wrapper">
         <article class="content-area">
             <section class="prose">
-                <p class="lead-text">Securing modern Kubernetes environments requires moving beyond standard Layer 3/4 firewalls. By leveraging eBPF, we can achieve deep kernel-level visibility and enforce granular security policies without the overhead of traditional sidecars.</p>
+                <p class="lead-text">A clean, production-ready “Initial Server Setup for Red Hat (RHEL / Rocky / Alma)” checklist that DevOps/SRE teams typically follow. </p>
                 
                 <h2>The Architecture Shift</h2>
                 <p>Traditional network policies often fall short in high-churn environments. With Cilium and eBPF, the security logic is embedded directly into the kernel, allowing for identity-aware enforcement.</p>

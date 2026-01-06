@@ -13,21 +13,23 @@
     <div class="container nav-container">
         <div class="nav-brand">corporealsoul.</div>
         <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Portfolio</a></li>
-            <li><a href="categories-2026.html" class="nav-link">Recent Articles</a></li>
-            <li><a href="lists-2026.html" class="nav-link">Archives</a></li>
-            <li><a href="archives.html" class="nav-link">Technical Registry</a></li>
+            <li><a href="/index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="/index.html#updates" class="nav-link">Recent Articles</a></li>
+            <li><a href="/assets/articles/registry.html" class="nav-link">Technical Registry</a></li>
         </ul>
     </div>
 </nav>
 
 <header class="article-header">
     <div class="container">
-        <h1 class="matrix-title">Hardening Production Clusters with eBPF and Cilium</h1>
+        <span class="breadcrumb-nav"><span class="root-path">REGISTRY</span> <span class="path-sep">//</span> <span class="root-path">SYSYEM ADMINISTRATION</span> <span class="path-sep">//</span>LINUX</span>
+        <h1 class="matrix-title">Initial Server Setup - Red Hat</h1>
         <div class="article-meta-top">
-            <span class="meta-item"><i class="far fa-calendar"></i> JAN 12, 2026</span>
+            <span class="meta-item"><i class="far fa-calendar"></i> JAN 5, 2026</span>
             <span class="meta-item"><i class="far fa-clock"></i> 8 MIN READ</span>
-            <span class="meta-item"><i class="fas fa-shield-alt"></i> SECURITY_LEVEL: HIGH</span>
+            <span class="meta-item doc-type"><i class="fas fa-file-code"></i>Article</span>
+            <span class="meta-item video-log"><i class="fas fa-video"></i> 026001</span>
+            <span class="meta-item"><i class="fas fa-microchip"></i> RHEL 10.0</span>
         </div>
     </div>
 </header>
@@ -36,57 +38,211 @@
     <div class="article-wrapper">
         <article class="content-area">
             <section class="prose">
-                <p class="lead-text">Securing modern Kubernetes environments requires moving beyond standard Layer 3/4 firewalls. By leveraging eBPF, we can achieve deep kernel-level visibility and enforce granular security policies without the overhead of traditional sidecars.</p>
-                
-                <h2>The Architecture Shift</h2>
-                <p>Traditional network policies often fall short in high-churn environments. With Cilium and eBPF, the security logic is embedded directly into the kernel, allowing for identity-aware enforcement.</p>
-
-                
+                <p class="lead-text">A clean, production-ready “Initial Server Setup for Red Hat".</p>
                 
                 <div class="info-callout">
                     <i class="fas fa-info-circle"></i>
-                    <p><strong>Note:</strong> Ensure your Linux Kernel version is 5.10+ to support the latest eBPF helper functions used in this log.</p>
-                </div>
-
-                <h2>Implementation: Network Policies</h2>
-                <p>To restrict traffic between the <code>frontend</code> and <code>backend</code> namespaces, apply the following manifest:</p>
-
-                <div class="code-wrapper">
-                    <div class="code-header">
-                        <span class="file-name">network-policy.yaml</span>
-                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    <div>
+                        <strong>System Notice:</strong> Ensure you have <code>sudo</code> privileges or root access before executing these hardening commands.
                     </div>
-                    <pre><code>apiVersion: "cilium.io/v2"
-kind: CiliumNetworkPolicy
-metadata:
-  name: "secure-backend-access"
-spec:
-  endpointSelector:
-    matchLabels:
-      app: backend
-  ingress:
-  - fromEndpoints:
-    - matchLabels:
-        app: frontend
-    toPorts:
-    - ports:
-      - port: "8080"
-        protocol: TCP</code></pre>
                 </div>
 
-                <h2>Verification via CLI</h2>
-                <p>Execute the following command to verify the status of the eBPF maps and verify endpoint security status:</p>
-                
+
+
+
+                <h2>Update Repositories</h2>
                 <div class="terminal-block">
                     <div class="terminal-header">
                         <span class="terminal-title">Terminal</span>
                     </div>
-                    <pre class="terminal-body"><code>$ cilium status --wait
-$ cilium bpf endpoint list</code></pre>
+                    <pre class="terminal-body"><code>corporealsoul@localhost:~$ sudo yum update -y</code></pre>
+                </div>      
+                
+
+
+
+                <h2>Network Identity</h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>corporealsoul@localhost:~$ sudo vi /etc/hostname
+root@localhost:~# cat /etc/hostname</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">hostname.conf</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>corporealsoul-server</code></pre>
                 </div>
 
+
+
+
+                <h2>Local Host Resolution</h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>corporealsoul@localhost:~$ sudo vi /etc/hosts</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">hosts.conf</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>192.168.56.4 corporealsoul-server</code></pre>
+                </div>
+
+
+
+
+                <h2>Static IP Configuration</h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>corporealsoul@localhost:~$ sudo nmtui</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">code-wrap</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>Static Address : 192.168.56.4 
+Gateway : 192.168.56.1 
+DNS Server : 8.8.8.8, 8.8.4.4</code></pre>
+                </div>
+
+
+
+
+                <h2>Customizing the Shell Environment - User</h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>corporealsoul@corporealsoul-server:~$ vi .bashrc
+corporealsoul@corporealsoul-server:~$ source ~/.bashrc</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">code-wrap</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>export PS1="\[\e[01;37m\][\[\e[0m\]\[\e[01;32m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[01;34m\]\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;37m\]\t\[\e[0m\]\[\e[01;37m\] \W]\\$ \[\e[0m\]"</code></pre>
+                </div>
+
+
+
+
+                <h2>Customizing the Shell Environment - Root</h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>corporealsoul@corporealsoul-server:~$ sudo su -
+root@corporealsoul-server:~# vi .bashrc
+root@corporealsoul-server:~# source ~/.bashrc</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">code-wrap</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>export PS1="\[\e[01;37m\][\[\e[0m\]\[\e[01;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[01;34m\]\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;37m\]\t\[\e[0m\]\[\e[01;37m\] \W]\\$ \[\e[0m\]"</code></pre>
+                </div>
+
+
+
+
+                <h2>Generate a New SSH key pair</h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ ssh-keygen -t ed25519
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ ssh-copy-id corporealsoul@192.168.56.4
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ ssh-copy-id corporealsoul@192.168.56.8
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ cat ./.ssh/authorized_keys</code></pre>
+                </div> 
+
+
+
+
+                <h2>Elevated Privileges (root access) </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo visudo</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">code-wrap</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>corporealsoul ALL=(ALL) NOPASSWD:ALL</code></pre>
+                </div>
+
+
+
+
+                <h2>Required Software Installation </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum update -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install epel-release -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install htop -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install make -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install git -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install curl wget -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install net-tools -y</code></pre>
+                </div> 
+
+
+
+
+                <h2>Manage Firewall </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo systemctl status firewalld.service
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo systemctl enable --now sshd
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo systemctl enable --now firewalld
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --permanent --add-service=ssh
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --permanent --add-service=http
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --permanent --add-service=https
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --reload</code></pre>
+                </div>
+
+
+
+
+                <h2>Manage SELinux </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo setenforce 1
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo vi /etc/selinux/config</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">code-wrap</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code># Set SELINUX=enforcing </code></pre>
+                </div>
+
+
+                <h2>Explore the Verified Assets Below.</h2>
                 <div class="resource-grid">
-                    <a href="https://github.com/your-repo" class="resource-card github">
+                    <a href="#" class="resource-card github">
                         <div class="card-body">
                             <div class="card-header-row">
                                 <div class="card-icon"><i class="fab fa-github"></i></div>
@@ -95,7 +251,7 @@ $ cilium bpf endpoint list</code></pre>
                             <div class="card-text-content">
                                 <span class="card-label">REPOSITORY</span>
                                 <h3 class="card-title">Access Source Code</h3>
-                                <p class="card-desc">Clone the hardening manifests and automated shell scripts used in this log.</p>
+                                <p class="card-desc">Repositories to Follow.</p>
                             </div>
                         </div>
                         <div class="card-footer-action">
@@ -104,7 +260,7 @@ $ cilium bpf endpoint list</code></pre>
                         </div>
                     </a>
 
-                    <a href="https://youtube.com/your-video" class="resource-card youtube">
+                    <a href="#" class="resource-card youtube">
                         <div class="card-body">
                             <div class="card-header-row">
                                 <div class="card-icon"><i class="fab fa-youtube"></i></div>
@@ -113,7 +269,7 @@ $ cilium bpf endpoint list</code></pre>
                             <div class="card-text-content">
                                 <span class="card-label">DEMONSTRATION</span>
                                 <h3 class="card-title">Watch Implementation</h3>
-                                <p class="card-desc">A 15-minute walkthrough of the eBPF map verification and policy testing.</p>
+                                <p class="card-desc">A walkthrough of the RHEL Initial Server Setup.</p>
                             </div>
                         </div>
                         <div class="card-footer-action">
@@ -124,13 +280,14 @@ $ cilium bpf endpoint list</code></pre>
                 </div>
 
                 <h2>Conclusion</h2>
-                <p>By shifting enforcement to the kernel level, we eliminate the latency penalty of user-space proxies while gaining a cryptographically verifiable identity for every packet.</p>
+                <p>By implementing these foundational hardening steps, you have transformed a raw OS installation into a secure, production-ready environment.</p>
             </section>
         </article>
     </div>
 </main>
 
 <script>
+    // 1. Copy to Clipboard Function
     function copyCode(button) {
         const pre = button.parentElement.nextElementSibling;
         const text = pre.innerText;
@@ -141,6 +298,35 @@ $ cilium bpf endpoint list</code></pre>
             }, 2000);
         });
     }
+
+    // 2. Automated Terminal Syntax Highlighting (User vs Root)
+    document.addEventListener("DOMContentLoaded", function() {
+        const terminals = document.querySelectorAll('.terminal-body code');
+        terminals.forEach(terminal => {
+            const lines = terminal.innerHTML.split('\n');
+            const formattedLines = lines.map(line => {
+                let separatorIndex = -1;
+                let promptClass = 't-prompt'; // Default green
+
+                if (line.includes('#')) {
+                    separatorIndex = line.lastIndexOf('#');
+                    promptClass = 't-prompt-root'; // Root red
+                } else if (line.includes('$')) {
+                    separatorIndex = line.lastIndexOf('$');
+                } else if (line.includes('~')) {
+                    separatorIndex = line.lastIndexOf('~');
+                }
+
+                if (separatorIndex !== -1) {
+                    const prompt = line.substring(0, separatorIndex + 1);
+                    const command = line.substring(separatorIndex + 1);
+                    return `<span class="${promptClass}">${prompt}</span><span class="t-command">${command}</span>`;
+                }
+                return line; 
+            });
+            terminal.innerHTML = formattedLines.join('\n');
+        });
+    });
 </script>
 
 </body>
