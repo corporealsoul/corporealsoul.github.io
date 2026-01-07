@@ -189,18 +189,63 @@ root@corporealsoul-server:~# source ~/.bashrc</code></pre>
 
 
 
+
+                <h2>Enable / Disable Password Login </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 15:57:46 ~]$ sudo vi /etc/ssh/sshd_config
+[corporealsoul@corporealsoul-server 16:54:44 ~]$ systemctl restart sshd</code></pre>
+                </div> 
+                <div class="code-wrapper">
+                    <div class="code-header">
+                        <span class="file-name">code-wrap</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> Copy</button>
+                    </div>
+                    <pre><code>PermitRootLogin yes
+PasswordAuthentication yes</code></pre>
+                </div>
+
+
+
+                <h2>Enable EPEL repository </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum update -y
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install epel-release -y</code></pre>
+                </div> 
+                
+
+
+
+
                 <h2>Required Software Installation </h2>
                 <div class="terminal-block">
                     <div class="terminal-header">
                         <span class="terminal-title">Terminal</span>
                     </div>
                     <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum update -y
-[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install epel-release -y
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install htop -y
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install make -y
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install git -y
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install curl wget -y
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo yum install net-tools -y</code></pre>
+                </div> 
+
+
+
+
+
+                <h2>Disable Unused Services </h2>
+                <div class="terminal-block">
+                    <div class="terminal-header">
+                        <span class="terminal-title">Terminal</span>
+                    </div>
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:16:19 ~]$ systemctl list-unit-files --type=service --state=enabled
+[corporealsoul@corporealsoul-server 16:16:19 ~]$ systemctl disable postfix</code></pre>
                 </div> 
 
 
@@ -217,7 +262,8 @@ root@corporealsoul-server:~# source ~/.bashrc</code></pre>
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --permanent --add-service=ssh
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --permanent --add-service=http
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --permanent --add-service=https
-[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --reload</code></pre>
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --reload
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo firewall-cmd --list-all</code></pre>
                 </div>
 
 
@@ -228,7 +274,8 @@ root@corporealsoul-server:~# source ~/.bashrc</code></pre>
                     <div class="terminal-header">
                         <span class="terminal-title">Terminal</span>
                     </div>
-                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo setenforce 1
+                    <pre class="terminal-body"><code>[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo getenforce
+[corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo setenforce 1
 [corporealsoul@corporealsoul-server 16:18:27 ~]$ sudo vi /etc/selinux/config</code></pre>
                 </div> 
                 <div class="code-wrapper">
@@ -238,6 +285,9 @@ root@corporealsoul-server:~# source ~/.bashrc</code></pre>
                     </div>
                     <pre><code># Set SELINUX=enforcing </code></pre>
                 </div>
+
+
+
 
 
                 <h2>Explore the Verified Assets Below.</h2>
