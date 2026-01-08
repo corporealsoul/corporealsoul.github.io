@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring & Observability | corporealsoul.archive</title>
+    <link rel="stylesheet" href="/assets/pages/certificates/certificates-view.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="archive-theme">
+
+<nav class="archive-nav">
+    <div class="container nav-flex">
+        <div class="nav-brand">corporealsoul</div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Portfolio</a></li>
+            <li><a href="/index.html#certificates">Certificates</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="category-header">
+    <div class="container">
+        <h1 class="section-title">Certifications & Recognitions</h1>
+        
+        <div class="registry-filters">
+            <div class="filter-capsule">
+                <div class="custom-select">
+                    <div class="select-trigger">All Years</div>
+                    <div class="select-options">
+                        <div class="option" data-value="all">All Years</div>
+                        <div class="option" data-value="2026">2026</div>
+                        <div class="option" data-value="2025">2025</div>
+                    </div>
+                    <input type="hidden" id="yearFilter" value="all">
+                </div>
+
+                <div class="custom-select">
+                    <div class="select-trigger">All Categories</div>
+                    <div class="select-options">
+                        <div class="option" data-value="all">All Categories</div>
+                        <div class="option" data-value="enterprise">Enterprise Recognitions</div>
+                        <div class="option" data-value="badges">Competitive Badges</div>
+                        <div class="option" data-value="creative">Creative & Personal</div>
+                        <div class="option" data-value="management">Team & Ops Management</div>
+                        <div class="option" data-value="languages">Languages & Scripting</div>
+                        <div class="option" data-value="reliability">SRE & Reliability</div>
+                        <div class="option" data-value="cloud">Cloud Architecture</div>
+                        <div class="option" data-value="containerization">Containerization & K8s</div>
+                        <div class="option" data-value="iac">Infrastructure as Code</div>
+                        <div class="option" data-value="automation">Automated Delivery</div>
+                        <div class="option" data-value="observability">Monitoring & Observability</div>
+                        <div class="option" data-value="devsecops">Security & DevSecOps</div>
+                        <div class="option" data-value="networking">Core Systems & Networking</div>
+                        <div class="option" data-value="aiops">AI & AIOps Innovation</div>
+                    </div>
+                    <input type="hidden" id="catFilter" value="all">
+                </div>
+
+                <div class="custom-select">
+                    <div class="select-trigger">All Tools</div>
+                    <div class="select-options">
+                        <div class="option" data-value="all">All Tools</div>
+                        <div class="option" data-value="clang">C Language</div>
+                        <div class="option" data-value="devops">DevOps and SRE</div>
+                        <div class="option" data-value="grafana">Grafana</div>
+                        <div class="option" data-value="premierepro">Adobe Premiere Pro</div>
+                    </div>
+                    <input type="hidden" id="techFilter" value="all">
+                </div>
+
+                <div class="custom-select">
+                    <div class="select-trigger">All Types</div>
+                    <div class="select-options">
+                        <div class="option" data-value="all">All Types</div>
+                        <div class="option" data-value="certificates">Certificates</div>
+                        <div class="option" data-value="recognizations">Recognizations</div>
+                        <div class="option" data-value="badges">Badges</div>
+                        <div class="option" data-value="goodwords">Good Words</div>
+                    </div>
+                    <input type="hidden" id="typeFilter" value="all">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="cert-gallery" id="certGallery">
+
+        <div class="cert-mini-card" data-year="2025" data-cat="creative" data-tech="premierepro" data-type="certificates"
+             onclick="openVault('/assets/files/certificates/creative-and-personal/adobe-premiere-pro/UC-cf1c2e46-bf39-4e28-a6b5-c4890f651ecc.pdf', 'Adobe Premiere Pro')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-vector-square"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Specialist</span>
+                    <span class="cert-id">ID: CS-2025-01</span>
+                </div>
+                <h3 class="cert-title">Adobe Premiere Pro</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy / Adobe</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jan 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2026" data-cat="observability" data-tech="grafana" data-type="certificates"
+             onclick="openVault('../../assets/certs/grafana.pdf', 'Grafana Expert')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Professional</span>
+                    <span class="cert-id">ID: CS-2026-04</span>
+                </div>
+                <h3 class="cert-title">Grafana Observability Expert</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Grafana Labs</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Feb 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="noResults" style="display:none;" class="no-results-state">
+        <i class="fas fa-search"></i>
+        <h3>No matching records</h3>
+        <p>Try resetting your filters to explore more certificates.</p>
+    </div>
+</main>
+
+<div id="vaultModal" class="vault-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Certificate Viewer</h2>
+            <button class="close-vault" onclick="closeVault()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <object id="vaultFrame" data="" type="application/pdf" width="100%" height="100%">
+                <p>Unable to display PDF. <a id="vaultDownload" href="#">Download Document</a></p>
+            </object>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Custom Select Logic
+    document.querySelectorAll('.custom-select').forEach(select => {
+        const trigger = select.querySelector('.select-trigger');
+        const optionsContainer = select.querySelector('.select-options');
+        const hiddenInput = select.querySelector('input');
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelectorAll('.select-options').forEach(opt => {
+                if(opt !== optionsContainer) opt.classList.remove('active');
+            });
+            optionsContainer.classList.toggle('active');
+        });
+
+        optionsContainer.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', () => {
+                const val = option.getAttribute('data-value');
+                trigger.innerText = option.innerText;
+                hiddenInput.value = val;
+                optionsContainer.classList.remove('active');
+                applyFilters();
+            });
+        });
+    });
+
+    window.addEventListener('click', () => {
+        document.querySelectorAll('.select-options').forEach(opt => opt.classList.remove('active'));
+    });
+
+    function applyFilters() {
+        const yearVal = document.getElementById('yearFilter').value;
+        const catVal = document.getElementById('catFilter').value;
+        const techVal = document.getElementById('techFilter').value;
+        const typeVal = document.getElementById('typeFilter').value;
+        const cards = document.querySelectorAll('.cert-mini-card');
+
+        let visibleCount = 0;
+        cards.forEach(card => {
+            const matchesYear = yearVal === 'all' || card.dataset.year === yearVal;
+            const matchesCat = catVal === 'all' || card.dataset.cat === catVal;
+            const matchesTech = techVal === 'all' || card.dataset.tech === techVal;
+            const matchesType = typeVal === 'all' || card.dataset.type === typeVal;
+
+            if (matchesYear && matchesCat && matchesTech && matchesType) {
+                card.style.display = 'block';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    function openVault(pdfPath, title) {
+        document.getElementById('vaultFrame').data = pdfPath;
+        document.getElementById('vaultDownload').href = pdfPath;
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('vaultModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVault() {
+        document.getElementById('vaultModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+</script>
+</body>
+</html>
