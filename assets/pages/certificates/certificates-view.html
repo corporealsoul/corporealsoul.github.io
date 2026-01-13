@@ -53,10 +53,12 @@
                         <div class="option" data-value="cloud">Cloud Architecture</div>
                         <div class="option" data-value="containerization">Containerization & K8s</div>
                         <div class="option" data-value="iac">Infrastructure as Code</div>
+                        <div class="option" data-value="configuration">Configuration Management</div>
                         <div class="option" data-value="automation">Automated Delivery</div>
                         <div class="option" data-value="observability">Monitoring & Observability</div>
                         <div class="option" data-value="devsecops">Security & DevSecOps</div>
-                        <div class="option" data-value="networking">Core Systems & Networking</div>
+                        <div class="option" data-value="core">Core Systems & Networking</div>
+                        <div class="option" data-value="webtech">Web Technologies</div>
                         <div class="option" data-value="aiops">AI & AIOps Innovation</div>
                     </div>
                     <input type="hidden" id="catFilter" value="all">
@@ -68,9 +70,13 @@
                         <div class="option" data-value="all">All Tools</div>
                         <div class="option" data-value="clang">C Language</div>
                         <div class="option" data-value="devops">DevOps and SRE</div>
+                        <div class="option" data-value="linux">Linux</div>
+                        <div class="option" data-value="ansible">Ansible</div>
                         <div class="option" data-value="grafana">Grafana</div>
                         <div class="option" data-value="premierepro">Adobe Premiere Pro</div>
-                        <div class="option" data-value="premierepro">Adobe Premiere Pro</div>
+                        <div class="option" data-value="chatgpt">ChatGPT</div>
+                        <div class="option" data-value="httpd">Apache HTTPD</div>
+                        <div class="option" data-value="postman">Postman</div>
                     </div>
                     <input type="hidden" id="techFilter" value="all">
                 </div>
@@ -79,14 +85,21 @@
                     <div class="select-trigger">All Types</div>
                     <div class="select-options">
                         <div class="option" data-value="all">All Types</div>
-                        <div class="option" data-value="certificates">Certificates</div>
-                        <div class="option" data-value="recognizations">Recognizations</div>
-                        <div class="option" data-value="badges">Badges</div>
-                        <div class="option" data-value="goodwords">Good Words</div>
+                        <div class="option" data-value="ceritificates-udemy">Certificates Udemy</div>
+                        <div class="option" data-value="ceritificates-linkedin">Certificates LinkedIN</div>
+                        <div class="option" data-value="recognizations-wipro">Recognizations Wipro</div>
+                        <div class="option" data-value="recognizations-hcl">Recognizations HCL</div>
+                        <div class="option" data-value="badges-hcl">Badges HCL</div>
+                        <div class="option" data-value="goodwords-wipro">Good Words Wipro</div>
+                        <div class="option" data-value="goodwords-hcl">Good Words HCL</div>
                     </div>
                     <input type="hidden" id="typeFilter" value="all">
                 </div>
             </div>
+        </div>
+        
+        <div class="results-meta container">
+            <p id="certCount">Showing all records</p>
         </div>
     </div>
 </header>
@@ -94,7 +107,7 @@
 <main class="container">
     <div class="cert-gallery" id="certGallery">
 
-        <div class="cert-mini-card" data-year="2023" data-cat="creative" data-tech="premierepro" data-type="certificates"
+        <div class="cert-mini-card" data-year="2023" data-cat="creative" data-tech="premierepro" data-type="ceritificates-udemy"
              onclick="openVault('/assets/files/certificates/creative-and-personal/adobe-premiere-pro/UC-cf1c2e46-bf39-4e28-a6b5-c4890f651ecc.pdf', 'Adobe Premiere Pro CC Masterclass: Video Editing in Premiere')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-vector-square"></i></div>
@@ -119,10 +132,10 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="certificates"
+        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-5a451991-ca71-43b1-a302-3c2e1f26839e.pdf', 'ChatGPT Complete Guide: Learn Midjourney, ChatGPT 4 & More')">
             <div class="card-preview">
-                <div class="icon-box"><i class="fas fa-robot"></i></div>
+                <div class="icon-box"><i class="fas fa-brain"></i></div>
                 <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
             </div>
             <div class="card-content">
@@ -144,7 +157,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="certificates"
+        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-4d446828-b5d7-4e14-8aec-7589db7dc668.pdf', 'Intro to ChatGPT and Generative AI')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -169,10 +182,10 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="certificates"
+        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-1fb17bf1-5906-470c-a302-6cc17b4f6e24.pdf', 'Executive Briefing: Artificial Intelligence (AI) + ChatGPT')">
             <div class="card-preview">
-                <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                <div class="icon-box"><i class="fas fa-brain"></i></div>
                 <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
             </div>
             <div class="card-content">
@@ -194,10 +207,10 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="certificates"
+        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-400da1dd-603e-427e-b8d2-440a501619e7.pdf', 'ChatGPT Masters: AI Prompt Engineering, Midjourney, Chat GPT')">
             <div class="card-preview">
-                <div class="icon-box"><i class="fas fa-wand-magic-sparkles"></i></div>
+                <div class="icon-box"><i class="fas fa-brain"></i></div>
                 <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
             </div>
             <div class="card-content">
@@ -219,7 +232,182 @@
             </div>
         </div>
 
-    </div>
+        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-c5bdf76f-efe0-4adb-a0ca-e63584ad7585.pdf', 'Ansible for the Absolute Beginner - Hands-On - DevOps')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps</span>
+                    <span class="cert-id">ID: UC-c5bdf76f</span>
+                </div>
+                <h3 class="cert-title">Ansible Beginner Hands-On</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Oct 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2022" data-cat="core" data-tech="linux" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-660a564d-7c7f-489b-83fd-7ffcc95fc772.pdf', 'Linux Red Hat Certified Engineer (RHCE - EX294)')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-server"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">RHCE</span>
+                    <span class="cert-id">ID: UC-660a564d</span>
+                </div>
+                <h3 class="cert-title">Red Hat Engineer (EX294)</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Oct 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-f4cc47e4-fa79-49d5-b465-94844bc6344b.pdf', 'Ansible Tower Overview')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Automation</span>
+                    <span class="cert-id">ID: UC-14cc47e4</span>
+                </div>
+                <h3 class="cert-title">Ansible Tower Overview</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Oct 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-50595e61-0302-4af8-83fc-a82936db5c0e.pdf', 'Mastering Ansible')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Mastery</span>
+                    <span class="cert-id">ID: UC-50595e61</span>
+                </div>
+                <h3 class="cert-title">Mastering Ansible</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Oct 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-7ffd7ec2-bbc1-4e6f-a012-d171b36bf70e.pdf', 'Complete DevOps Ansible Automation Training')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Full Training</span>
+                    <span class="cert-id">ID: UC-7ffd7ec2</span>
+                </div>
+                <h3 class="cert-title">DevOps Ansible Automation</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Oct 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2023" data-cat="webtech" data-tech="httpd" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/web-technologies/apache-httpd/UC-7d7b3856-8ca2-4640-953a-f8a411678b23.pdf', 'Apache Web Server - not just learn, Master it.')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-globe"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Masterclass</span>
+                    <span class="cert-id">ID: UC-7d7b3856</span>
+                </div>
+                <h3 class="cert-title">Apache Web Server</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" data-year="2023" data-cat="webtech" data-tech="postman" data-type="ceritificates-udemy"
+            onclick="openVault('/assets/files/certificates/web-technologies/postman/UC-f5b319d0-53f7-40c9-b298-8e74106f748c.pdf', 'Quick Introduction to Postman and API Testing for Beginners')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-globe"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">API Testing</span>
+                    <span class="cert-id">ID: UC-f5b319d0</span>
+                </div>
+                <h3 class="cert-title">Postman & API Testing</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
 
     <div id="noResults" style="display:none;" class="no-results-state">
         <i class="fas fa-search"></i>
@@ -235,15 +423,16 @@
             <button class="close-vault" onclick="closeVault()"><i class="fas fa-times"></i></button>
         </div>
         <div class="modal-body">
-            <object id="vaultFrame" data="" type="application/pdf" width="100%" height="100%">
-                <p>Unable to display PDF. <a id="vaultDownload" href="#">Download Document</a></p>
-            </object>
-        </div>
+            </div>
     </div>
 </div>
 
 <script>
-    // Custom Select Logic
+    // Initial Filter Run to set Count
+    window.onload = () => {
+        applyFilters();
+    };
+
     document.querySelectorAll('.custom-select').forEach(select => {
         const trigger = select.querySelector('.select-trigger');
         const optionsContainer = select.querySelector('.select-options');
@@ -252,7 +441,7 @@
         trigger.addEventListener('click', (e) => {
             e.stopPropagation();
             document.querySelectorAll('.select-options').forEach(opt => {
-                if(opt !== optionsContainer) opt.classList.remove('active');
+                if (opt !== optionsContainer) opt.classList.remove('active');
             });
             optionsContainer.classList.toggle('active');
         });
@@ -278,8 +467,10 @@
         const techVal = document.getElementById('techFilter').value;
         const typeVal = document.getElementById('typeFilter').value;
         const cards = document.querySelectorAll('.cert-mini-card');
+        const countDisplay = document.getElementById('certCount');
 
         let visibleCount = 0;
+        
         cards.forEach(card => {
             const matchesYear = yearVal === 'all' || card.dataset.year === yearVal;
             const matchesCat = catVal === 'all' || card.dataset.cat === catVal;
@@ -293,20 +484,48 @@
                 card.style.display = 'none';
             }
         });
-        document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+
+        // Update Count Display
+        if (yearVal === 'all' && catVal === 'all' && techVal === 'all' && typeVal === 'all') {
+            countDisplay.innerText = `Showing all records (${visibleCount})`;
+        } else {
+            countDisplay.innerText = `Found ${visibleCount} matching ${visibleCount === 1 ? 'record' : 'records'}`;
+        }
+
+        const noResults = document.getElementById('noResults');
+        if (noResults) {
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
     }
 
     function openVault(pdfPath, title) {
-        document.getElementById('vaultFrame').data = pdfPath;
-        document.getElementById('vaultDownload').href = pdfPath;
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('vaultModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
+        const modal = document.getElementById('vaultModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = modal.querySelector('.modal-body');
+
+        modalTitle.innerText = title;
+        modalBody.innerHTML = `
+            <object id="vaultFrame" data="${pdfPath}" type="application/pdf" width="100%" height="100%">
+                <div style="padding: 40px; color: white; text-align: center; font-family: sans-serif;">
+                    <i class="fas fa-file-pdf" style="font-size: 3rem; margin-bottom: 20px; display: block;"></i>
+                    <p>Your browser cannot display this PDF inside the app.</p>
+                    <a href="${pdfPath}" target="_blank" style="color: #0D6EFD; text-decoration: underline; font-weight: bold;">
+                        Click here to open the Certificate in a new tab
+                    </a>
+                </div>
+            </object>
+        `;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; 
     }
 
     function closeVault() {
-        document.getElementById('vaultModal').classList.remove('active');
+        const modal = document.getElementById('vaultModal');
+        const modalBody = modal.querySelector('.modal-body');
+        modal.classList.remove('active');
         document.body.style.overflow = 'auto';
+        modalBody.innerHTML = '';
     }
 </script>
 </body>
