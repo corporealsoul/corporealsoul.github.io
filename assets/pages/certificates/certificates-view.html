@@ -48,6 +48,7 @@
                         <div class="option" data-value="badges">Competitive Badges</div>
                         <div class="option" data-value="creative">Creative & Personal</div>
                         <div class="option" data-value="management">Team & Ops Management</div>
+                        <div class="option" data-value="architecture">Architecture and System Design</div>
                         <div class="option" data-value="languages">Languages & Scripting</div>
                         <div class="option" data-value="reliability">SRE & Reliability</div>
                         <div class="option" data-value="cloud">Cloud Architecture</div>
@@ -69,11 +70,16 @@
                     <div class="select-options">
                         <div class="option" data-value="all">All Tools</div>
                         <div class="option" data-value="clang">C Language</div>
+                        <div class="option" data-value="architecture">Architecture</div>
                         <div class="option" data-value="devops">DevOps and SRE</div>
+                        <div class="option" data-value="cloudcomputing">Cloud Computing</div>
+                        <div class="option" data-value="aws">AWS Cloud</div>
+                        <div class="option" data-value="azure">Azure Cloud</div>
+                        <div class="option" data-value="openstack">OpenStack</div>
                         <div class="option" data-value="linux">Linux</div>
                         <div class="option" data-value="ansible">Ansible</div>
                         <div class="option" data-value="grafana">Grafana</div>
-                        <div class="option" data-value="premierepro">Adobe Premiere Pro</div>
+                        <div class="option" data-value="premierepro">Premiere Pro</div>
                         <div class="option" data-value="chatgpt">ChatGPT</div>
                         <div class="option" data-value="httpd">Apache HTTPD</div>
                         <div class="option" data-value="postman">Postman</div>
@@ -85,13 +91,11 @@
                     <div class="select-trigger">All Types</div>
                     <div class="select-options">
                         <div class="option" data-value="all">All Types</div>
-                        <div class="option" data-value="ceritificates-udemy">Certificates Udemy</div>
-                        <div class="option" data-value="ceritificates-linkedin">Certificates LinkedIN</div>
-                        <div class="option" data-value="recognizations-wipro">Recognizations Wipro</div>
-                        <div class="option" data-value="recognizations-hcl">Recognizations HCL</div>
-                        <div class="option" data-value="badges-hcl">Badges HCL</div>
-                        <div class="option" data-value="goodwords-wipro">Good Words Wipro</div>
-                        <div class="option" data-value="goodwords-hcl">Good Words HCL</div>
+                        <div class="option" data-value="courses">Courses</div>
+                        <div class="option" data-value="certificates">Certificates</div>
+                        <div class="option" data-value="recognizations">Recognizations</div>
+                        <div class="option" data-value="badges">Badges</div>
+                        <div class="option" data-value="goodwords">Good Words</div>
                     </div>
                     <input type="hidden" id="typeFilter" value="all">
                 </div>
@@ -107,7 +111,7 @@
 <main class="container">
     <div class="cert-gallery" id="certGallery">
 
-        <div class="cert-mini-card" data-year="2023" data-cat="creative" data-tech="premierepro" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #0a0057; data-year="2023" data-cat="creative" data-tech="premierepro" data-type="courses"
              onclick="openVault('/assets/files/certificates/creative-and-personal/adobe-premiere-pro/UC-cf1c2e46-bf39-4e28-a6b5-c4890f651ecc.pdf', 'Adobe Premiere Pro CC Masterclass: Video Editing in Premiere')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-vector-square"></i></div>
@@ -115,7 +119,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Masterclass</span>
+                    <span class="card-tag">Creative & Personal</span>
                     <span class="cert-id">ID: UC-cf1c2e46</span>
                 </div>
                 <h3 class="cert-title">Adobe Premiere Pro</h3>
@@ -132,7 +136,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-5a451991-ca71-43b1-a302-3c2e1f26839e.pdf', 'ChatGPT Complete Guide: Learn Midjourney, ChatGPT 4 & More')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -140,7 +144,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">AI Guide</span>
+                    <span class="card-tag">AI & AIOps Innovation</span>
                     <span class="cert-id">ID: UC-5a451991</span>
                 </div>
                 <h3 class="cert-title">ChatGPT Complete Guide</h3>
@@ -157,7 +161,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-4d446828-b5d7-4e14-8aec-7589db7dc668.pdf', 'Intro to ChatGPT and Generative AI')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -165,7 +169,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Generative AI</span>
+                    <span class="card-tag">AI & AIOps Innovation</span>
                     <span class="cert-id">ID: UC-4d446828</span>
                 </div>
                 <h3 class="cert-title">Intro to ChatGPT & GenAI</h3>
@@ -182,7 +186,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-1fb17bf1-5906-470c-a302-6cc17b4f6e24.pdf', 'Executive Briefing: Artificial Intelligence (AI) + ChatGPT')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -190,7 +194,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Executive</span>
+                    <span class="card-tag">AI & AIOps Innovation</span>
                     <span class="cert-id">ID: UC-1fb17bf1</span>
                 </div>
                 <h3 class="cert-title">AI Executive Briefing</h3>
@@ -207,7 +211,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-400da1dd-603e-427e-b8d2-440a501619e7.pdf', 'ChatGPT Masters: AI Prompt Engineering, Midjourney, Chat GPT')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -215,7 +219,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Prompt Engineering</span>
+                    <span class="card-tag">AI & AIOps Innovation</span>
                     <span class="cert-id">ID: UC-400da1dd</span>
                 </div>
                 <h3 class="cert-title">ChatGPT Masters</h3>
@@ -232,7 +236,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-c5bdf76f-efe0-4adb-a0ca-e63584ad7585.pdf', 'Ansible for the Absolute Beginner - Hands-On - DevOps')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -240,7 +244,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">DevOps</span>
+                    <span class="card-tag">Configuration Management</span>
                     <span class="cert-id">ID: UC-c5bdf76f</span>
                 </div>
                 <h3 class="cert-title">Ansible Beginner Hands-On</h3>
@@ -257,7 +261,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="core" data-tech="linux" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #dd2214; data-year="2022" data-cat="core" data-tech="linux" data-type="courses"
             onclick="openVault('/assets/files/certificates/core-system/linux/UC-660a564d-7c7f-489b-83fd-7ffcc95fc772.pdf', 'Linux Red Hat Certified Engineer (RHCE - EX294)')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-server"></i></div>
@@ -265,7 +269,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">RHCE</span>
+                    <span class="card-tag">Core Systems & Networking</span>
                     <span class="cert-id">ID: UC-660a564d</span>
                 </div>
                 <h3 class="cert-title">Red Hat Engineer (EX294)</h3>
@@ -282,7 +286,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-f4cc47e4-fa79-49d5-b465-94844bc6344b.pdf', 'Ansible Tower Overview')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -290,7 +294,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Automation</span>
+                    <span class="card-tag">Configuration Management</span>
                     <span class="cert-id">ID: UC-14cc47e4</span>
                 </div>
                 <h3 class="cert-title">Ansible Tower Overview</h3>
@@ -307,7 +311,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-50595e61-0302-4af8-83fc-a82936db5c0e.pdf', 'Mastering Ansible')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -315,7 +319,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Mastery</span>
+                    <span class="card-tag">Configuration Management</span>
                     <span class="cert-id">ID: UC-50595e61</span>
                 </div>
                 <h3 class="cert-title">Mastering Ansible</h3>
@@ -332,7 +336,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-7ffd7ec2-bbc1-4e6f-a012-d171b36bf70e.pdf', 'Complete DevOps Ansible Automation Training')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -340,7 +344,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Full Training</span>
+                    <span class="card-tag">Configuration Management</span>
                     <span class="cert-id">ID: UC-7ffd7ec2</span>
                 </div>
                 <h3 class="cert-title">DevOps Ansible Automation</h3>
@@ -357,7 +361,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="webtech" data-tech="httpd" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #e8942e; data-year="2023" data-cat="webtech" data-tech="httpd" data-type="courses"
             onclick="openVault('/assets/files/certificates/web-technologies/apache-httpd/UC-7d7b3856-8ca2-4640-953a-f8a411678b23.pdf', 'Apache Web Server - not just learn, Master it.')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-globe"></i></div>
@@ -365,7 +369,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Masterclass</span>
+                    <span class="card-tag">Web Technologies</span>
                     <span class="cert-id">ID: UC-7d7b3856</span>
                 </div>
                 <h3 class="cert-title">Apache Web Server</h3>
@@ -382,7 +386,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2023" data-cat="webtech" data-tech="postman" data-type="ceritificates-udemy"
+        <div class="cert-mini-card" style="--card-color: #de6e42; data-year="2023" data-cat="webtech" data-tech="postman" data-type="courses"
             onclick="openVault('/assets/files/certificates/web-technologies/postman/UC-f5b319d0-53f7-40c9-b298-8e74106f748c.pdf', 'Quick Introduction to Postman and API Testing for Beginners')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-globe"></i></div>
@@ -390,7 +394,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">API Testing</span>
+                    <span class="card-tag">Web Technologies</span>
                     <span class="cert-id">ID: UC-f5b319d0</span>
                 </div>
                 <h3 class="cert-title">Postman & API Testing</h3>
@@ -407,7 +411,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022"  data-cat="configuration" data-tech="ansible" data-type="ceritificates-linkedin"
+        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022"  data-cat="configuration" data-tech="ansible" data-type="courses"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/CertificateOfCompletion_Ansible_Essential_Training.pdf', 'Ansible Essential Training')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -415,7 +419,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Course</span>
+                    <span class="card-tag">Configuration Management</span>
                     <span class="cert-id" title="AQovjRLvl33Gt1BvrvjqjZQJ59WC">ID: AQovjRLv...</span>
                 </div>
                 <h3 class="cert-title">Ansible Essential Training</h3>
@@ -432,7 +436,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="core" data-tech="linux" data-type="ceritificates-linkedin"
+        <div class="cert-mini-card" style="--card-color: #dd2214; data-year="2022" data-cat="core" data-tech="linux" data-type="courses"
             onclick="openVault('/assets/files/certificates/core-system/linux/CertificateOfCompletion_Prepare_for_the_Red_Hat_Certified_Engineer_EX294_Exam.pdf', 'Prepare for the Red Hat Certified Engineer (EX294) Exam')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-network-wired"></i></div>
@@ -440,7 +444,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Learning Path</span>
+                    <span class="card-tag">Core Systems & Networking</span>
                     <span class="cert-id" title="Abgctf1hiDgoSHsBQaExof9auKOр">ID: Abgctf1h...</span>
                 </div>
                 <h3 class="cert-title">Red Hat Certified Engineer (EX294)</h3>
@@ -457,7 +461,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="ceritificates-linkedin"
+        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/CertificateOfCompletion_Learning_Ansible.pdf', 'Learning Ansible')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -465,7 +469,7 @@
             </div>
             <div class="card-content">
                 <div class="card-header">
-                    <span class="card-tag">Course</span>
+                    <span class="card-tag">Configuration Management</span>
                     <span class="cert-id" title="AUIo5M4rBxrJHaDYHqboCLVcUlqX">ID: AUIo5M4r...</span>
                 </div>
                 <h3 class="cert-title">Learning Ansible</h3>
@@ -477,6 +481,281 @@
                     <div class="footer-item">
                         <span class="label">DATE</span>
                         <span class="value">Oct 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #aacee3; data-year="2023" data-cat="architecture" data-tech="architecture" data-type="courses"
+            onclick="openVault('/assets/files/certificates/architecture-and-system-design/architecture/CertificateOfCompletion_Software_Architecture_Foundations.pdf', 'Software Architecture Foundations')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-project-diagram"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Architecture and System Design</span>
+                    <span class="cert-id">ID: fd83f169</span>
+                </div>
+                <h3 class="cert-title">Software Architecture Foundations</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jul 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #ef971d; data-year="2022" data-cat="cloud" data-tech="aws" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/aws/CertificateOfCompletion_Prepare-for-the-AWS-Certified-Solutions-Architect-Associate-Exam-SAAC01.pdf', 'Prepare for the AWS Certified Solutions Architect (Associate) Exam (SAA-C01)')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: AYETGIOO</span>
+                </div>
+                <h3 class="cert-title">AWS Solutions Architect Prep</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Sep 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #ef971d; data-year="2023" data-cat="cloud" data-tech="aws" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/aws/CertificateOfCompletion_AWS-Certified-Cloud-Practitioner-CLFC01-Cert-Prep-4-Billing-and-Pricing.pdf', 'AWS Certified Cloud Practitioner (CLF-C01) Cert Prep: 4 Billing and Pricing')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: 080120c1</span>
+                </div>
+                <h3 class="cert-title">AWS CCP: Billing & Pricing</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #ef971d; data-year="2022" data-cat="cloud" data-tech="aws" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/aws/AWS-Training-and-Certification-Certificate-of-Completion.pdf', 'AWS Partner: AWS Cloud Practitioner Essentials (Classroom)')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: 119UFydz</span>
+                </div>
+                <h3 class="cert-title">AWS Cloud Practitioner Essentials</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Amazon</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Sep 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-839fd0e5-be47-4a69-93d0-f65c3ec443be.pdf', 'AZ-900: Microsoft Azure Fundamentals Exam Prep 2023')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-839fd0e5</span>
+                </div>
+                <h3 class="cert-title">Azure Fundamentals Prep</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-455c0a7a-d2ca-48d4-8632-c24a407edc15.pdf', 'Microsoft Azure: From Zero to Hero - The Complete Guide')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-455c0a7a</span>
+                </div>
+                <h3 class="cert-title">Azure: Zero to Hero</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-29f2b719-a05c-4c9f-9584-94c966ce121f.pdf', 'Azure DevOps Fundamentals for Beginners')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-29f2b719</span>
+                </div>
+                <h3 class="cert-title">Azure DevOps Fundamentals</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-bc28aeb4-b90c-4960-b20d-ca2b83a9369f.pdf', 'AZ-900 Microsoft Azure Fundamentals in a Weekend')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-bc28aeb4</span>
+                </div>
+                <h3 class="cert-title">Azure Fundamentals Weekend</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3164cd; data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/cloud-computing/UC-1a2aabf9-e49a-4ce7-bb23-b748ae83c226.pdf', 'Introduction to Cloud Computing')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-1a2aab</span>
+                </div>
+                <h3 class="cert-title">Intro to Cloud Computing</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Mar 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3164cd; data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/cloud-computing/UC-db555ee2-335b-4f39-a659-1db69323c879.pdf', 'Cloud Computing Fundamentals')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-db555e</span>
+                </div>
+                <h3 class="cert-title">Cloud Computing Fundamentals</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Mar 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3164cd; data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/cloud-computing/CertificateOfCompletion_Build-your-Cloud-Computing-Skills.pdf', 'Build your Cloud Computing Skills')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: AfeZVz9L</span>
+                </div>
+                <h3 class="cert-title">Cloud Computing Skills</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
                     </div>
                 </div>
             </div>
