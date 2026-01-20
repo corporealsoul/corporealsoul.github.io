@@ -49,8 +49,9 @@
                         <div class="option" data-value="creative">Creative & Personal</div>
                         <div class="option" data-value="management">Team & Ops Management</div>
                         <div class="option" data-value="architecture">Architecture and System Design</div>
+                        <div class="option" data-value="scm">Source Code Management</div>
                         <div class="option" data-value="languages">Languages & Scripting</div>
-                        <div class="option" data-value="reliability">SRE & Reliability</div>
+                        <div class="option" data-value="reliability">DevOps & Reliability</div>
                         <div class="option" data-value="cloud">Cloud Architecture</div>
                         <div class="option" data-value="containerization">Containerization & K8s</div>
                         <div class="option" data-value="iac">Infrastructure as Code</div>
@@ -70,19 +71,24 @@
                     <div class="select-options">
                         <div class="option" data-value="all">All Tools</div>
                         <div class="option" data-value="clang">C Language</div>
+                        <div class="option" data-value="git">Git</div>
                         <div class="option" data-value="architecture">Architecture</div>
-                        <div class="option" data-value="devops">DevOps and SRE</div>
+                        <div class="option" data-value="devops">DevOps</div>
+                        <div class="option" data-value="sre">SRE</div>
                         <div class="option" data-value="cloudcomputing">Cloud Computing</div>
                         <div class="option" data-value="aws">AWS Cloud</div>
                         <div class="option" data-value="azure">Azure Cloud</div>
+                        <div class="option" data-value="gcp">GCP</div>
                         <div class="option" data-value="openstack">OpenStack</div>
                         <div class="option" data-value="linux">Linux</div>
+                        <div class="option" data-value="docker">Docker</div>
                         <div class="option" data-value="ansible">Ansible</div>
                         <div class="option" data-value="grafana">Grafana</div>
-                        <div class="option" data-value="premierepro">Premiere Pro</div>
-                        <div class="option" data-value="chatgpt">ChatGPT</div>
                         <div class="option" data-value="httpd">Apache HTTPD</div>
                         <div class="option" data-value="postman">Postman</div>
+                        <div class="option" data-value="chatgpt">ChatGPT</div>
+                        <div class="option" data-value="premierepro">Premiere Pro</div>
+                        <div class="option" data-value="illustrator">Illustrator</div>
                     </div>
                     <input type="hidden" id="techFilter" value="all">
                 </div>
@@ -99,6 +105,18 @@
                     </div>
                     <input type="hidden" id="typeFilter" value="all">
                 </div>
+
+                <div class="custom-select">
+                    <div class="select-trigger">All Issuer</div>
+                    <div class="select-options">
+                        <div class="option" data-value="all">All Issuer</div>
+                        <div class="option" data-value="udemy">Udemy</div>
+                        <div class="option" data-value="scaler">Scaler</div>
+                        <div class="option" data-value="linkedin">LinkedIn</div>
+                        <div class="option" data-value="aws">AWS</div> 
+                    </div>
+                    <input type="hidden" id="issuerFilter" value="all">
+                </div>
             </div>
         </div>
         
@@ -111,7 +129,7 @@
 <main class="container">
     <div class="cert-gallery" id="certGallery">
 
-        <div class="cert-mini-card" style="--card-color: #0a0057; data-year="2023" data-cat="creative" data-tech="premierepro" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #0a0057" data-year="2023" data-cat="creative" data-tech="premierepro" data-type="courses" data-issuer="udemy"
              onclick="openVault('/assets/files/certificates/creative-and-personal/adobe-premiere-pro/UC-cf1c2e46-bf39-4e28-a6b5-c4890f651ecc.pdf', 'Adobe Premiere Pro CC Masterclass: Video Editing in Premiere')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-vector-square"></i></div>
@@ -136,7 +154,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #38ac87" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-5a451991-ca71-43b1-a302-3c2e1f26839e.pdf', 'ChatGPT Complete Guide: Learn Midjourney, ChatGPT 4 & More')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -161,7 +179,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #38ac87" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-4d446828-b5d7-4e14-8aec-7589db7dc668.pdf', 'Intro to ChatGPT and Generative AI')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -186,7 +204,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #38ac87" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-1fb17bf1-5906-470c-a302-6cc17b4f6e24.pdf', 'Executive Briefing: Artificial Intelligence (AI) + ChatGPT')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -211,7 +229,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #38ac87; data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #38ac87" data-year="2023" data-cat="aiops" data-tech="chatgpt" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/ai-and-aiops-innovation/ai/UC-400da1dd-603e-427e-b8d2-440a501619e7.pdf', 'ChatGPT Masters: AI Prompt Engineering, Midjourney, Chat GPT')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-brain"></i></div>
@@ -236,7 +254,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #191817" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-c5bdf76f-efe0-4adb-a0ca-e63584ad7585.pdf', 'Ansible for the Absolute Beginner - Hands-On - DevOps')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -261,7 +279,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #dd2214; data-year="2022" data-cat="core" data-tech="linux" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #dd2214" data-year="2022" data-cat="core" data-tech="linux" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/core-system/linux/UC-660a564d-7c7f-489b-83fd-7ffcc95fc772.pdf', 'Linux Red Hat Certified Engineer (RHCE - EX294)')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-server"></i></div>
@@ -286,7 +304,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #191817" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-f4cc47e4-fa79-49d5-b465-94844bc6344b.pdf', 'Ansible Tower Overview')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -311,7 +329,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #191817" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-50595e61-0302-4af8-83fc-a82936db5c0e.pdf', 'Mastering Ansible')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -336,7 +354,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #191817" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/UC-7ffd7ec2-bbc1-4e6f-a012-d171b36bf70e.pdf', 'Complete DevOps Ansible Automation Training')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -361,7 +379,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #e8942e; data-year="2023" data-cat="webtech" data-tech="httpd" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #e8942e" data-year="2023" data-cat="webtech" data-tech="httpd" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/web-technologies/apache-httpd/UC-7d7b3856-8ca2-4640-953a-f8a411678b23.pdf', 'Apache Web Server - not just learn, Master it.')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-globe"></i></div>
@@ -386,7 +404,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #de6e42; data-year="2023" data-cat="webtech" data-tech="postman" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #de6e42" data-year="2023" data-cat="webtech" data-tech="postman" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/web-technologies/postman/UC-f5b319d0-53f7-40c9-b298-8e74106f748c.pdf', 'Quick Introduction to Postman and API Testing for Beginners')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-globe"></i></div>
@@ -411,7 +429,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022"  data-cat="configuration" data-tech="ansible" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #191817" data-year="2022"  data-cat="configuration" data-tech="ansible" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/CertificateOfCompletion_Ansible_Essential_Training.pdf', 'Ansible Essential Training')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -436,7 +454,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #dd2214; data-year="2022" data-cat="core" data-tech="linux" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #dd2214" data-year="2022" data-cat="core" data-tech="linux" data-type="courses" data-issuer="linkedin"
             onclick="openVault('/assets/files/certificates/core-system/linux/CertificateOfCompletion_Prepare_for_the_Red_Hat_Certified_Engineer_EX294_Exam.pdf', 'Prepare for the Red Hat Certified Engineer (EX294) Exam')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-network-wired"></i></div>
@@ -461,7 +479,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #191817; data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #191817" data-year="2022" data-cat="configuration" data-tech="ansible" data-type="courses" data-issuer="linkedin"
             onclick="openVault('/assets/files/certificates/configuration-management/ansible/CertificateOfCompletion_Learning_Ansible.pdf', 'Learning Ansible')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-sliders-h"></i></div>
@@ -486,7 +504,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #aacee3; data-year="2023" data-cat="architecture" data-tech="architecture" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #aacee3" data-year="2023" data-cat="architecture" data-tech="architecture" data-type="courses" data-issuer="linkedin"
             onclick="openVault('/assets/files/certificates/architecture-and-system-design/architecture/CertificateOfCompletion_Software_Architecture_Foundations.pdf', 'Software Architecture Foundations')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-project-diagram"></i></div>
@@ -511,7 +529,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #ef971d; data-year="2022" data-cat="cloud" data-tech="aws" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #ef971d" data-year="2022" data-cat="cloud" data-tech="aws" data-type="courses" data-issuer="linkedin"
             onclick="openVault('/assets/files/certificates/cloud-architecture/aws/CertificateOfCompletion_Prepare-for-the-AWS-Certified-Solutions-Architect-Associate-Exam-SAAC01.pdf', 'Prepare for the AWS Certified Solutions Architect (Associate) Exam (SAA-C01)')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -536,7 +554,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #ef971d; data-year="2023" data-cat="cloud" data-tech="aws" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #ef971d" data-year="2023" data-cat="cloud" data-tech="aws" data-type="courses" data-issuer="linkedin"
             onclick="openVault('/assets/files/certificates/cloud-architecture/aws/CertificateOfCompletion_AWS-Certified-Cloud-Practitioner-CLFC01-Cert-Prep-4-Billing-and-Pricing.pdf', 'AWS Certified Cloud Practitioner (CLF-C01) Cert Prep: 4 Billing and Pricing')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -561,7 +579,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #ef971d; data-year="2022" data-cat="cloud" data-tech="aws" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #ef971d" data-year="2022" data-cat="cloud" data-tech="aws" data-type="courses" data-issuer="aws"
             onclick="openVault('/assets/files/certificates/cloud-architecture/aws/AWS-Training-and-Certification-Certificate-of-Completion.pdf', 'AWS Partner: AWS Cloud Practitioner Essentials (Classroom)')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -586,7 +604,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #41b0e8" data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-839fd0e5-be47-4a69-93d0-f65c3ec443be.pdf', 'AZ-900: Microsoft Azure Fundamentals Exam Prep 2023')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -611,7 +629,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #41b0e8" data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-455c0a7a-d2ca-48d4-8632-c24a407edc15.pdf', 'Microsoft Azure: From Zero to Hero - The Complete Guide')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -636,7 +654,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #41b0e8" data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-29f2b719-a05c-4c9f-9584-94c966ce121f.pdf', 'Azure DevOps Fundamentals for Beginners')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -661,7 +679,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #41b0e8; data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #41b0e8" data-year="2023" data-cat="cloud" data-tech="azure" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/cloud-architecture/azure/UC-bc28aeb4-b90c-4960-b20d-ca2b83a9369f.pdf', 'AZ-900 Microsoft Azure Fundamentals in a Weekend')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -686,7 +704,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #3164cd; data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #3164cd" data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/cloud-architecture/cloud-computing/UC-1a2aabf9-e49a-4ce7-bb23-b748ae83c226.pdf', 'Introduction to Cloud Computing')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -711,7 +729,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #3164cd; data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #3164cd" data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses" data-issuer="udemy"
             onclick="openVault('/assets/files/certificates/cloud-architecture/cloud-computing/UC-db555ee2-335b-4f39-a659-1db69323c879.pdf', 'Cloud Computing Fundamentals')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -736,7 +754,7 @@
             </div>
         </div>
 
-        <div class="cert-mini-card" style="--card-color: #3164cd; data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses"
+        <div class="cert-mini-card" style="--card-color: #3164cd" data-year="2023" data-cat="cloud" data-tech="cloudcomputing" data-type="courses" data-issuer="linkedin"
             onclick="openVault('/assets/files/certificates/cloud-architecture/cloud-computing/CertificateOfCompletion_Build-your-Cloud-Computing-Skills.pdf', 'Build your Cloud Computing Skills')">
             <div class="card-preview">
                 <div class="icon-box"><i class="fas fa-cloud"></i></div>
@@ -756,6 +774,431 @@
                     <div class="footer-item">
                         <span class="label">DATE</span>
                         <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #dc2c46" data-year="2023" data-cat="cloud" data-tech="openstack" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/openstack/UC-975100e6-8fc8-4e99-9d5a-19092df1660e.pdf', 'OpenStack Installation and Deployment')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-975100</span>
+                </div>
+                <h3 class="cert-title">OpenStack Install & Deploy</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Mar 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #dc2c46" data-year="2023" data-cat="cloud" data-tech="openstack" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/openstack/UC-579db3ef-79a7-4983-bf7c-c8f70e010866.pdf', 'OpenStack Essentials')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-579db3</span>
+                </div>
+                <h3 class="cert-title">OpenStack Essentials</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Mar 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/UC-b6db7e1a-96fb-43db-9723-70af047d8d60.pdf', 'The Ultimate DevOps Bootcamp - 2023')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: UC-b6db7e</span>
+                </div>
+                <h3 class="cert-title">Ultimate DevOps Bootcamp</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">May 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/UC-a51bab6f-9b24-47cb-beaf-1e060b90ab86.pdf', 'DevOps Beginners to Advanced | Decoding DevOps with Projects')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: UC-a51bab</span>
+                </div>
+                <h3 class="cert-title">Decoding DevOps Projects</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">May 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/UC-597a009e-ac60-451d-90ad-03193e6c970d.pdf', 'Introduction to Devops - 90 Minute Crash Course')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: UC-597a00</span>
+                </div>
+                <h3 class="cert-title">DevOps 90-Min Crash Course</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">May 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/UC-d8a0897f-a5df-4859-810d-01f97d493f1a.pdf', 'The DevOps Essentials - The Handbook')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: UC-d8a089</span>
+                </div>
+                <h3 class="cert-title">DevOps Essentials Handbook</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">May 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/UC-e29bfb31-84e8-4671-978c-8826d84a32e9.pdf', 'DevOps, CI/CD for Beginners')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: UC-e29bfb</span>
+                </div>
+                <h3 class="cert-title">DevOps & CI/CD Beginners</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">May 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/UC-689a0b08-f7a1-4275-875e-11979125a053.pdf', 'DevOps Project - CI/CD with Git Jenkins Ansible Kubernetes')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: UC-689a0b</span>
+                </div>
+                <h3 class="cert-title">DevOps Project: CI/CD Stack</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2022" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="linkedin"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/CertificateOfCompletion_DevOps-Foundations.pdf', 'DevOps Foundations')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: AeMBOpb1</span>
+                </div>
+                <h3 class="cert-title">DevOps Foundations</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jul 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="linkedin"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/CertificateOfCompletion_DevOps-with-AWS.pdf', 'DevOps with AWS')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: 491c4af6</span>
+                </div>
+                <h3 class="cert-title">DevOps with AWS</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #3a6bfb; data-year="2023" data-cat="reliability" data-tech="devops" data-type="courses" data-issuer="linkedin"
+            onclick="openVault('/assets/files/certificates/devops-and-reliability/devops/CertificateOfCompletion_Getting-Started-with-DevOps.pdf', 'Getting Started with DevOps')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">DevOps & Reliability</span>
+                    <span class="cert-id">ID: AVrigFBB</span>
+                </div>
+                <h3 class="cert-title">Getting Started with DevOps</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #4490e5;" data-year="2022" data-cat="containerization" data-tech="docker" data-type="courses" data-issuer="linkedin"
+            onclick="openVault('/assets/files/certificates/containerization-and-k8s/docker/CertificateOfCompletion_Learning-Docker.pdf', 'Learning Docker')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-box-open"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Containerization & K8s</span>
+                    <span class="cert-id">ID: AbaQm9Uk</span>
+                </div>
+                <h3 class="cert-title">Learning Docker</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #4490e5;" data-year="2023" data-cat="containerization" data-tech="docker" data-type="courses" data-issuer="scaler"
+            onclick="openVault('/assets/files/certificates/containerization-and-k8s/docker/7096383ab8fa902b2a4941782eec6a34ec6ff9878d61267a34690e78f9e74b2b.png', 'Learning Docker')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-box-open"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Containerization & K8s</span>
+                    <span class="cert-id">ID: Scaler</span>
+                </div>
+                <h3 class="cert-title">Docker Bootcamp</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Scaler</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jan 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #54a94f;" data-year="2023" data-cat="cloud" data-tech="gcp" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/cloud-architecture/gcp/UC-a7d14142-6cbe-4335-9a40-89e0e8c15b33.pdf', 'GCP Associate Cloud Engineer - Google Cloud Certification')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Cloud Architecture</span>
+                    <span class="cert-id">ID: UC-a7d141</span>
+                </div>
+                <h3 class="cert-title">GCP Associate Cloud Engineer</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Aug 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #cf5039;" data-year="2023" data-cat="scm" data-tech="git" data-type="courses" data-issuer="linkedin"
+            onclick="openVault('/assets/files/certificates/source-code-management/git/CertificateOfCompletion_Git-from-Scratch.pdf', 'Git from Scratch')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fab fa-git-alt"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Source Code Management</span>
+                    <span class="cert-id">ID: ebcb56ac</span>
+                </div>
+                <h3 class="cert-title">Git from Scratch</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">LinkedIn</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #cf5039;" data-year="2023" data-cat="scm" data-tech="git" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/source-code-management/git/UC-ae179c86-bfca-429f-afc7-b6dbec1d6e53.pdf', 'Git and GitHub for DevOps Engineers')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fab fa-git-alt"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Source Code Management</span>
+                    <span class="cert-id">ID: UC-ae179c</span>
+                </div>
+                <h3 class="cert-title">Git & GitHub for DevOps</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Jun 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-mini-card" style="--card-color: #ef981d;" data-year="2023" data-cat="creative" data-tech="illustrator" data-type="courses" data-issuer="udemy"
+            onclick="openVault('/assets/files/certificates/creative-personal/illustrator/UC-4047d146-04e1-4c87-88bb-9375839503e4.pdf', 'Logo Design Mastery In Adobe Illustrator')">
+            <div class="card-preview">
+                <div class="icon-box"><i class="fas fa-palette"></i></div>
+                <div class="card-overlay"><span>VIEW FULL RECORD</span></div>
+            </div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="card-tag">Creative & Personal</span>
+                    <span class="cert-id">ID: UC-404701</span>
+                </div>
+                <h3 class="cert-title">Logo Design Mastery - Illustrator</h3>
+                <div class="card-footer">
+                    <div class="footer-item">
+                        <span class="label">ISSUED BY</span>
+                        <span class="value">Udemy</span>
+                    </div>
+                    <div class="footer-item">
+                        <span class="label">DATE</span>
+                        <span class="value">Mar 2023</span>
                     </div>
                 </div>
             </div>
@@ -821,6 +1264,7 @@
         const catVal = document.getElementById('catFilter').value;
         const techVal = document.getElementById('techFilter').value;
         const typeVal = document.getElementById('typeFilter').value;
+        const issuerVal = document.getElementById('issuerFilter').value;
         const cards = document.querySelectorAll('.cert-mini-card');
         const countDisplay = document.getElementById('certCount');
 
@@ -831,8 +1275,9 @@
             const matchesCat = catVal === 'all' || card.dataset.cat === catVal;
             const matchesTech = techVal === 'all' || card.dataset.tech === techVal;
             const matchesType = typeVal === 'all' || card.dataset.type === typeVal;
+            const matchesIssuer = issuerVal === 'all' || card.dataset.issuer === issuerVal;
 
-            if (matchesYear && matchesCat && matchesTech && matchesType) {
+            if (matchesYear && matchesCat && matchesTech && matchesType && matchesIssuer) {
                 card.style.display = 'block';
                 visibleCount++;
             } else {
@@ -841,7 +1286,7 @@
         });
 
         // Update Count Display
-        if (yearVal === 'all' && catVal === 'all' && techVal === 'all' && typeVal === 'all') {
+        if (yearVal === 'all' && catVal === 'all' && techVal === 'all' && typeVal === 'all' && issuerVal === 'all') {
             countDisplay.innerText = `Showing all records (${visibleCount})`;
         } else {
             countDisplay.innerText = `Found ${visibleCount} matching ${visibleCount === 1 ? 'record' : 'records'}`;
