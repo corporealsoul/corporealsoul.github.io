@@ -15,58 +15,50 @@ body {
     padding: 0 5%;
 }
 
-.teaching-header { padding: 100px 0 80px; text-align: center; }
+/* --- UNIFIED NAVIGATION --- */
+.management-nav {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 25px 0;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-.btn-ghost {
-    display: inline-block;
-    padding: 12px 32px;
-    background: transparent;
-    border: 2px solid #0D6EFD;
-    color: #0D6EFD;
-    text-decoration: none;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
     font-weight: 800;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 30px;
-    border-radius: 50px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    color: #0f172a;
 }
 
-.btn-ghost:hover {
-    background: #0D6EFD;
-    color: #ffffff;
-    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
-    transform: translateY(-3px);
-}
-
-.header-actions {
+.nav-menu {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;             
-    margin-bottom: 30px;   
-    flex-wrap: wrap;       
+    gap: 40px;
 }
 
-.header-actions .btn-ghost {
-    margin-bottom: 0;
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
-.header-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;             
-    margin-bottom: 30px;   
-    flex-wrap: wrap;       
+.nav-link:hover {
+    color: #0D6EFD;
 }
 
-.header-actions .btn-ghost {
-    margin-bottom: 0;
-}
-
+/* --- TEACHING HEADER --- */
+.teaching-header { padding: 80px 0 60px; text-align: center; }
 
 .teaching-title {
     font-size: 3.5rem;
@@ -93,6 +85,7 @@ body {
     margin: 25px auto 0;
 }
 
+/* --- TEACHING GRID --- */
 .teaching-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,7 +104,7 @@ body {
 .image-box {
     position: relative;
     overflow: hidden;
-    margin: 15px; 
+    margin: 15px;
     background: #f8fafc;
     aspect-ratio: 16 / 10;
 }
@@ -180,13 +173,24 @@ body {
     line-height: 1.5;
 }
 
-
-
-
-
-
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
+    /* Nav Mobile Fix */
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-menu::-webkit-scrollbar { display: none; }
+    .nav-link { font-size: 0.8rem; white-space: nowrap; }
+
+    /* Layout Mobile Fix */
     .teaching-grid { grid-template-columns: 1fr; gap: 30px; }
     .teaching-title { font-size: 2.5rem; }
-    .teaching-header { padding: 60px 0 40px; }
+    .teaching-header { padding: 40px 0 30px; }
 }

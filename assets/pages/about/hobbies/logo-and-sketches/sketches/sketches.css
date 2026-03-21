@@ -15,21 +15,50 @@ body {
     padding: 0 5%;
 }
 
-.sketch-header { padding: 100px 0 60px; text-align: center; }
-
-.back-link {
-    display: inline-block;
-    color: #0D6EFD;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
+/* --- UNIFIED NAVIGATION --- */
+.management-nav {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 25px 0;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.back-link:hover { transform: translateY(-3px); opacity: 0.7; }
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    color: #0f172a;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0D6EFD;
+}
+
+/* --- SKETCH HEADER --- */
+.sketch-header { padding: 80px 0 60px; text-align: center; }
 
 .sketch-title {
     font-size: 3.5rem;
@@ -51,13 +80,14 @@ body {
     background-color: #0D6EFD;
 }
 
-.sketch-subtitle { 
-    color: #444e59; 
+.sketch-subtitle {
+    color: #444e59;
     margin: 25px auto 0;
     max-width: 500px;
     font-size: 1.1rem;
 }
 
+/* --- SKETCH GRIDS --- */
 .sketch-grid-landscape {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -93,7 +123,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1s ease; 
+    transition: transform 1s ease;
 }
 
 .image-box::after {
@@ -145,55 +175,29 @@ body {
     color: #0f172a;
 }
 
-.btn-ghost {
-    display: inline-block;
-    padding: 12px 32px;
-    background: transparent;
-    border: 2px solid #0D6EFD;
-    color: #0D6EFD;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 30px;
-    border-radius: 50px; /* Perfect pill shape */
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
-}
-
-.btn-ghost:hover {
-    background: #0D6EFD;
-    color: #ffffff;
-    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
-    transform: translateY(-3px);
-}
-
-.header-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px; 
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.header-actions .btn-ghost {
-    margin-bottom: 0;
-}
-
-
-
-
-
-
+/* --- RESPONSIVE --- */
 @media (max-width: 900px) {
     .sketch-grid-portrait { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
+    /* Nav Mobile Fix */
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-menu::-webkit-scrollbar { display: none; }
+    .nav-link { font-size: 0.8rem; white-space: nowrap; }
+
+    /* Layout Mobile Fix */
     .sketch-grid-landscape, .sketch-grid-portrait { grid-template-columns: 1fr; }
     .sketch-title { font-size: 2.5rem; }
-    .sketch-header { padding: 60px 0 40px; }
+    .sketch-header { padding: 40px 0 30px; }
     .sketch-grid-landscape { margin-bottom: 40px; }
 }

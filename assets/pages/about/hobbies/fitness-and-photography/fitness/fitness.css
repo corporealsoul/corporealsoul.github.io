@@ -16,26 +16,55 @@ body {
     padding: 0 5%;
 }
 
-.fitness-header { padding: 100px 0 60px; text-align: center; }
-
-.back-link {
-    display: inline-block;
-    color: #0D6EFD;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
+/* --- UNIFIED NAVIGATION --- */
+.management-nav {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 25px 0;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.back-link:hover { opacity: 0.7; transform: translateX(-5px); }
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.portal-title { 
-    font-size: 3.8rem; 
-    font-weight: 900; 
-    letter-spacing: -2.5px; 
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    color: #0f172a;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0D6EFD;
+}
+
+/* --- FITNESS HEADER --- */
+.fitness-header { padding: 80px 0 60px; text-align: center; }
+
+.portal-title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    letter-spacing: -2.5px;
     position: relative;
     padding-bottom: 25px;
     line-height: 1;
@@ -50,15 +79,16 @@ body {
     background-color: #0D6EFD;
 }
 
-.portal-subtitle { 
-    color: #64748b; 
-    margin-top: 25px; 
-    font-size: 1.15rem; 
-    max-width: 600px; 
-    margin-left: auto; 
+.portal-subtitle {
+    color: #64748b;
+    margin-top: 25px;
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-left: auto;
     margin-right: auto;
 }
 
+/* --- AWARDS & PERFORMANCE --- */
 .awards-section { margin-bottom: 50px; }
 .awards-grid {
     display: grid;
@@ -120,6 +150,7 @@ body {
 .lift-meta { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; margin-top: 15px; letter-spacing: 1px; color: #64748b; }
 .pr-card.highlight .lift-meta { color: #94a3b8; }
 
+/* --- GALLERIES --- */
 .action-gallery { margin-bottom: 20px; }
 .masonry-grid {
     display: grid;
@@ -178,57 +209,31 @@ body {
 }
 .triple-item:hover img { transform: scale(1.15); }
 
-.fitness-footer { padding: 100px 0; text-align: center; border-top: 1px solid #f1f5f9; }
-.fitness-footer p { opacity: 0.4; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
-
-.btn-ghost {
-    display: inline-block;
-    padding: 12px 32px;
-    background: transparent;
-    border: 2px solid #0D6EFD;
-    color: #0D6EFD;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 40px;
-    border-radius: 50px; /* Makes the button perfectly rounded */
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.btn-ghost:hover {
-    background: #0D6EFD;
-    color: #ffffff;
-    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.2);
-    transform: translateY(-3px);
-}
-
-.header-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.header-actions .btn-ghost {
-    margin-bottom: 0;
-}
-
-
-
-
-
-
+/* --- RESPONSIVE --- */
 @media (max-width: 900px) {
     .pr-grid { grid-template-columns: 1fr 1fr; }
     .portal-title { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+    /* Nav Mobile Fix */
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-menu::-webkit-scrollbar { display: none; }
+    .nav-link { font-size: 0.8rem; white-space: nowrap; }
 }
 
 @media (max-width: 600px) {
     .awards-grid, .triple-grid { grid-template-columns: 1fr; }
     .masonry-grid { grid-template-columns: 1fr 1fr; }
     .masonry-item.large { grid-column: span 2; }
+    .fitness-header { padding: 40px 0 30px; }
 }
